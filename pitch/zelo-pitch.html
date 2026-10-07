@@ -2687,7 +2687,7 @@ var qrcode = function() {
 "use strict";
 // Endereço da demo para o QR code. Publicado no Vercel em /pitch/, a demo fica na raiz do site.
 // Para outro endereço, abra o pitch com ?demo=https://seu-site.vercel.app
-const DEMO_PADRAO = "";
+const DEMO_PADRAO = "https://zeloapp-mu.vercel.app/";
 const params = new URLSearchParams(location.search);
 const DEMO = params.get("demo") || DEMO_PADRAO || (/^https?:/.test(location.protocol) ? new URL("../", location.href).href : "");
 
