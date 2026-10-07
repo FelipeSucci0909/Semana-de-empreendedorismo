@@ -1,0 +1,6778 @@
+[
+ {
+  "fundo": {
+   "hex": "08494C",
+   "a": 1
+  },
+  "notas": "[0:00–0:15] Pausa de 1 segundo antes de falar. 'Quatro vezes. Foi quantas vezes a família que entrevistamos precisou faltar ao trabalho, em um só mês, para levar os avós ao médico.' Pergunte: 'Quem aqui já saiu do trabalho para levar um pai ou um avô a uma consulta?' e espere as mãos subirem.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 242.828125,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Pesquisa de campo · 5 de outubro de 2026",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "BFE3E1",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 280.828125,
+    "w": 1680,
+    "h": 375,
+    "runs": [
+     {
+      "t": "4 vezes",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 300,
+      "cor": {
+       "hex": "F0A27E",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -12
+     }
+    ],
+    "alinh": "l",
+    "lh": 270
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 631.828125,
+    "w": 1450,
+    "h": 218.21875,
+    "runs": [
+     {
+      "t": "em um único mês, uma família que entrevistamos precisou ",
+      "fam": "Lexend",
+      "peso": 500,
+      "tam": 64,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": "faltar ao trabalho",
+      "fam": "Lexend",
+      "peso": 500,
+      "tam": 64,
+      "cor": {
+       "hex": "F0A27E",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": " para levar os avós ao médico.",
+      "fam": "Lexend",
+      "peso": 500,
+      "tam": 64,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 69.12
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r0_0",
+    "arquivo": "pitch/pptx/build/raster/r0_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "1",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "9CC9C5",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[0:15–0:40] O problema não é só o transporte. São três dores juntas: (1) a família se reveza num grupo de WhatsApp e alguém sempre falta ao trabalho; (2) o idoso não pode ir de Uber sozinho, porque o motorista não desce, não ajuda e não espera; (3) mesmo quando vai, sai da consulta sem entender o remédio ou o retorno. Quando ninguém pode ir, a família paga cerca de R$ 300 por dia a alguém de confiança.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "A dor",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "Levar um idoso ao médico virou um quebra-cabeça.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 275.390625,
+    "w": 541.328125,
+    "h": 322.1875,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 311.390625,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 18,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 171,
+    "y": 326.390625,
+    "w": 34,
+    "h": 34,
+    "id": "r1_0",
+    "arquivo": "pitch/pptx/build/raster/r1_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 389.390625,
+    "w": 469.328125,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Ninguém disponível",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 447.1875,
+    "w": 469.328125,
+    "h": 114.59375,
+    "runs": [
+     {
+      "t": "A família se reveza no grupo de WhatsApp. Alguém sempre falta ao trabalho.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 689.328125,
+    "y": 275.390625,
+    "w": 541.328125,
+    "h": 322.1875,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 725.328125,
+    "y": 311.390625,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 18,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 740.328125,
+    "y": 326.390625,
+    "w": 34,
+    "h": 34,
+    "id": "r1_1",
+    "arquivo": "pitch/pptx/build/raster/r1_1.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 725.328125,
+    "y": 389.390625,
+    "w": 469.328125,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Uber não resolve",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 725.328125,
+    "y": 447.1875,
+    "w": 469.328125,
+    "h": 114.59375,
+    "runs": [
+     {
+      "t": "\"O motorista precisa descer, ajudar a entrar e estacionar perto.\" Não dá para mandar sozinha.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 1258.65625,
+    "y": 275.390625,
+    "w": 541.328125,
+    "h": 322.1875,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1294.65625,
+    "y": 311.390625,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 18,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 1309.65625,
+    "y": 326.390625,
+    "w": 34,
+    "h": 34,
+    "id": "r1_2",
+    "arquivo": "pitch/pptx/build/raster/r1_2.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1294.65625,
+    "y": 389.390625,
+    "w": 469.328125,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Sai sem entender",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1294.65625,
+    "y": 447.1875,
+    "w": 469.328125,
+    "h": 114.59375,
+    "runs": [
+     {
+      "t": "Remédio, retorno, o que levar: a informação se perde entre a consulta e a família.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 965.609375,
+    "w": 1680,
+    "h": 30,
+    "runs": [
+     {
+      "t": "Quando ninguém da família pode ir: ",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 21,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "~R$ 300 por dia",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 21,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": " para alguém de confiança. Fonte: entrevista de campo com família cuidadora, 5/10/2026.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 21,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 29.4
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r1_3",
+    "arquivo": "pitch/pptx/build/raster/r1_3.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "2",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[0:40–1:00] Quem sofre é o idoso; quem paga é o filho de 35 a 60 anos que trabalha. O Brasil tem 32,1 milhões de pessoas com 60 anos ou mais, segundo o Censo 2022 do IBGE. A conta do mercado é uma hipótese explícita: se 1% desses idosos usar o Zelo uma vez por mês, com tíquete de R$ 260, são cerca de R$ 1 bilhão por ano em serviços. Começamos por São Paulo.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Quem tem o problema e quanto vale",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 234.109375,
+    "w": 852.59375,
+    "h": 382.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 259.109375,
+    "w": 764.59375,
+    "h": 188,
+    "runs": [
+     {
+      "t": "32,1 mi",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 150,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 150
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 442.109375,
+    "w": 764.59375,
+    "h": 83.796875,
+    "runs": [
+     {
+      "t": "de brasileiros têm 60 anos ou mais: 15,6% da população.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 540.703125,
+    "w": 764.59375,
+    "h": 32,
+    "runs": [
+     {
+      "t": "Fonte: IBGE, Censo Demográfico 2022.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.8
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 644.5,
+    "w": 412.296875,
+    "h": 266.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 680.5,
+    "w": 138.46875,
+    "h": 46,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": {
+     "w": 2,
+     "cor": {
+      "hex": "D3E2E0",
+      "a": 1
+     }
+    },
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 174,
+    "y": 689.5,
+    "w": 102.46875,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Quem usa",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 740.5,
+    "w": 340.296875,
+    "h": 43,
+    "runs": [
+     {
+      "t": "O idoso",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 798.296875,
+    "w": 340.296875,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Mobilidade reduzida, pouca intimidade com apps.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 560.296875,
+    "y": 644.5,
+    "w": 412.296875,
+    "h": 266.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 596.296875,
+    "y": 680.5,
+    "w": 150.390625,
+    "h": 46,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": {
+     "w": 2,
+     "cor": {
+      "hex": "D3E2E0",
+      "a": 1
+     }
+    },
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 614.296875,
+    "y": 689.5,
+    "w": 114.390625,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Quem paga",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 596.296875,
+    "y": 740.5,
+    "w": 340.296875,
+    "h": 43,
+    "runs": [
+     {
+      "t": "O filho",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 596.296875,
+    "y": 798.296875,
+    "w": 340.296875,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "35 a 60 anos, trabalha e coordena o cuidado.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 1028.59375,
+    "y": 316.296875,
+    "w": 267.109375,
+    "h": 46,
+    "fundo": {
+     "hex": "FBF0D6",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1046.59375,
+    "y": 325.296875,
+    "w": 231.109375,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Hipótese de mercado",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "8A5A00",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "rect",
+    "x": 1028.59375,
+    "y": 390.296875,
+    "w": 771.40625,
+    "h": 438.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1072.59375,
+    "y": 433.296875,
+    "w": 683.40625,
+    "h": 85,
+    "runs": [
+     {
+      "t": "32,1 mi idosos × ",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "1%",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": " de adoção",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "quebra": true
+     },
+     {
+      "t": "× 1 atendimento/mês × ",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "R$ 260",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": " × 12",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 42
+   },
+   {
+    "tipo": "texto",
+    "x": 1072.59375,
+    "y": 527.296875,
+    "w": 683.40625,
+    "h": 150,
+    "runs": [
+     {
+      "t": "≈ R$ 1 bi",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 120,
+      "cor": {
+       "hex": "B4532A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 120
+   },
+   {
+    "tipo": "texto",
+    "x": 1072.59375,
+    "y": 684.296875,
+    "w": 683.40625,
+    "h": 43,
+    "runs": [
+     {
+      "t": "por ano em serviços",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1072.59375,
+    "y": 750.09375,
+    "w": 683.40625,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Cabeça de praia: cidade de São Paulo, consultas de rotina.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 24,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r2_0",
+    "arquivo": "pitch/pptx/build/raster/r2_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "3",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[1:00–1:25] Apresento o Zelo. A Zélia é uma assistente com IA, no app e no WhatsApp. 1) A família ou o próprio idoso pede a consulta conversando. 2) Monta o dia: acompanhante Zelo, que é profissional de enfermagem, com carro por aplicativo ou com motorista Zelo. 3) Acompanha cada etapa ao vivo e recebe o registro: o que o médico disse, remédios e retorno.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 248.125,
+    "w": 1263.71875,
+    "h": 35,
+    "runs": [
+     {
+      "t": "A solução",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 328.125,
+    "w": 1263.71875,
+    "h": 150.390625,
+    "runs": [
+     {
+      "t": "A ",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": "Zélia",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "B4532A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": " marca a consulta e cuida de todo o caminho até lá.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 521.90625,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 32,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 533.90625,
+    "w": 64,
+    "h": 40,
+    "runs": [
+     {
+      "t": "1",
+      "fam": "Lexend",
+      "peso": 700,
+      "tam": 32,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 38.4
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 519.90625,
+    "w": 789.875,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Pede à Zélia",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 567.703125,
+    "w": 789.875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Conversa no app ou no WhatsApp: convênio, especialidade, horário.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 39.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 637.890625,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 32,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 649.890625,
+    "w": 64,
+    "h": 40,
+    "runs": [
+     {
+      "t": "2",
+      "fam": "Lexend",
+      "peso": 700,
+      "tam": 32,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 38.4
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 635.890625,
+    "w": 710.5625,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Monta o dia",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 683.6875,
+    "w": 710.5625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Acompanhante Zelo + carro por aplicativo, ou motorista Zelo.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 39.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 753.875,
+    "w": 64,
+    "h": 64,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 32,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 765.875,
+    "w": 64,
+    "h": 40,
+    "runs": [
+     {
+      "t": "3",
+      "fam": "Lexend",
+      "peso": 700,
+      "tam": 32,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 38.4
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 751.875,
+    "w": 665.25,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Acompanha e recebe o registro",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 210,
+    "y": 799.671875,
+    "w": 665.25,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Cada etapa ao vivo e o resumo da consulta para a família.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 39.2
+   },
+   {
+    "tipo": "img",
+    "x": 1439.71875,
+    "y": 154,
+    "w": 360.28125,
+    "h": 780,
+    "src": "img/app-chat-medicos.png",
+    "sombra": true
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r3_0",
+    "arquivo": "pitch/pptx/build/raster/r3_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "4",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[1:25–2:00] DEMO. Não é só tela: o protótipo funciona e a Zélia usa IA de verdade. Mostre os três momentos: o pacote com preço montado na hora, o acompanhamento ao vivo, com a família vendo cada etapa que a acompanhante marca, e o registro da consulta. Convide: 'Apontem a câmera para o QR e testem agora, sem baixar nada.' Se der tempo, alterne para a demo ao vivo em 'Lado a lado'.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Protótipo funcionando · com IA real",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "img",
+    "x": 120,
+    "y": 196.296875,
+    "w": 323.328125,
+    "h": 700,
+    "src": "img/app-pacote.png",
+    "sombra": true
+   },
+   {
+    "tipo": "texto",
+    "x": 198.40625,
+    "y": 911.296875,
+    "w": 166.5,
+    "h": 37,
+    "runs": [
+     {
+      "t": "Monta o pacote",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 26,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36.4
+   },
+   {
+    "tipo": "img",
+    "x": 483.328125,
+    "y": 196.296875,
+    "w": 322.5,
+    "h": 700,
+    "src": "img/app-acompanhar.png",
+    "sombra": true
+   },
+   {
+    "tipo": "texto",
+    "x": 538.578125,
+    "y": 911.296875,
+    "w": 212,
+    "h": 37,
+    "runs": [
+     {
+      "t": "Acompanha ao vivo",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 26,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36.4
+   },
+   {
+    "tipo": "img",
+    "x": 845.828125,
+    "y": 196.296875,
+    "w": 322.5,
+    "h": 700,
+    "src": "img/app-registro.png",
+    "sombra": true
+   },
+   {
+    "tipo": "texto",
+    "x": 913.921875,
+    "y": 911.296875,
+    "w": 186.3125,
+    "h": 37,
+    "runs": [
+     {
+      "t": "Recebe o registro",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 26,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36.4
+   },
+   {
+    "tipo": "rect",
+    "x": 1339.15625,
+    "y": 324.296875,
+    "w": 330,
+    "h": 330,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 24,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 1355.15625,
+    "y": 340.296875,
+    "w": 298,
+    "h": 298,
+    "id": "r4_0",
+    "arquivo": "pitch/pptx/build/raster/r4_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1286.5625,
+    "y": 672.296875,
+    "w": 435.203125,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Teste agora no seu celular",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "c",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1283.546875,
+    "y": 734.09375,
+    "w": 441.234375,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Sem baixar nada · Android também tem APK",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 24,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 1392.96875,
+    "y": 788.6875,
+    "w": 222.375,
+    "h": 32,
+    "runs": [
+     {
+      "t": "zeloapp-mu.vercel.app",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 22,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 26.4
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r4_1",
+    "arquivo": "pitch/pptx/build/raster/r4_1.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "5",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[2:00–2:15] Por que ninguém resolveu? Cada alternativa cobre só um pedaço. O app de corrida leva, mas não ajuda nem acompanha. O cuidador avulso acompanha, mas é caro, informal e sem registro. O app do convênio agenda, mas o idoso não consegue usar. O Zelo junta tudo, com parceiros certificados: COREN ativo, antecedentes verificados e treinamento.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Diferencial",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "Cada alternativa resolve só um pedaço.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 263.390625,
+    "w": 1680,
+    "h": 508,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 263.390625,
+    "w": 535.40625,
+    "h": 80,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": {
+     "canto": "tl",
+     "raio": 28
+    }
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 341.390625,
+    "w": 535.40625,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 263.390625,
+    "w": 278.296875,
+    "h": 80,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 341.390625,
+    "w": 278.296875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 285.390625,
+    "w": 226.296875,
+    "h": 34,
+    "runs": [
+     {
+      "t": "App de corrida",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 27,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 32.4
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 263.390625,
+    "w": 299.6875,
+    "h": 80,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 341.390625,
+    "w": 299.6875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 285.390625,
+    "w": 247.6875,
+    "h": 34,
+    "runs": [
+     {
+      "t": "Cuidador avulso",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 27,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 32.4
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 263.390625,
+    "w": 305.328125,
+    "h": 80,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 341.390625,
+    "w": 305.328125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 285.390625,
+    "w": 253.328125,
+    "h": 34,
+    "runs": [
+     {
+      "t": "App do convênio",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 27,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 32.4
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 263.390625,
+    "w": 261.28125,
+    "h": 80,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": {
+     "canto": "tr",
+     "raio": 28
+    }
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 341.390625,
+    "w": 261.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 285.390625,
+    "w": 209.28125,
+    "h": 34,
+    "runs": [
+     {
+      "t": "Zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 27,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 32.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 427.390625,
+    "w": 535.40625,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 365.390625,
+    "w": 483.40625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Agenda conversando, sem app difícil",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 427.390625,
+    "w": 278.296875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 365.390625,
+    "w": 226.296875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 427.390625,
+    "w": 299.6875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 365.390625,
+    "w": 247.6875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 427.390625,
+    "w": 305.328125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 365.390625,
+    "w": 253.328125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "difícil",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "8A5A00",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 343.390625,
+    "w": 261.28125,
+    "h": 86,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 427.390625,
+    "w": 261.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 365.390625,
+    "w": 209.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 513.390625,
+    "w": 535.40625,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 451.390625,
+    "w": 483.40625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Ajuda a entrar e sair do carro",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 513.390625,
+    "w": 278.296875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 451.390625,
+    "w": 226.296875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 513.390625,
+    "w": 299.6875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 451.390625,
+    "w": 247.6875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 513.390625,
+    "w": 305.328125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 451.390625,
+    "w": 253.328125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 429.390625,
+    "w": 261.28125,
+    "h": 86,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 513.390625,
+    "w": 261.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 451.390625,
+    "w": 209.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 599.390625,
+    "w": 535.40625,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 537.390625,
+    "w": 483.40625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Acompanha dentro da consulta",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 599.390625,
+    "w": 278.296875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 537.390625,
+    "w": 226.296875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 599.390625,
+    "w": 299.6875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 537.390625,
+    "w": 247.6875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 599.390625,
+    "w": 305.328125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 537.390625,
+    "w": 253.328125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 515.390625,
+    "w": 261.28125,
+    "h": 86,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 599.390625,
+    "w": 261.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 537.390625,
+    "w": 209.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 685.390625,
+    "w": 535.40625,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 623.390625,
+    "w": 483.40625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Registro para a família, ao vivo",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 655.40625,
+    "y": 685.390625,
+    "w": 278.296875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 623.390625,
+    "w": 226.296875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 933.703125,
+    "y": 685.390625,
+    "w": 299.6875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 623.390625,
+    "w": 247.6875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1233.390625,
+    "y": 685.390625,
+    "w": 305.328125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 623.390625,
+    "w": 253.328125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 601.390625,
+    "w": 261.28125,
+    "h": 86,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 685.390625,
+    "w": 261.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 623.390625,
+    "w": 209.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "✓",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 709.390625,
+    "w": 483.40625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Profissional verificado",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 681.40625,
+    "y": 709.390625,
+    "w": 226.296875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "motorista",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "8A5A00",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 959.703125,
+    "y": 709.390625,
+    "w": 247.6875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "informal",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.390625,
+    "y": 709.390625,
+    "w": 253.328125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "—",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "9AAEAC",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1538.71875,
+    "y": 687.390625,
+    "w": 261.28125,
+    "h": 84,
+    "fundo": {
+     "hex": "DCEFEE",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": {
+     "canto": "br",
+     "raio": 28
+    }
+   },
+   {
+    "tipo": "texto",
+    "x": 1564.71875,
+    "y": 709.390625,
+    "w": 209.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "COREN + treino",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r5_0",
+    "arquivo": "pitch/pptx/build/raster/r5_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "6",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[2:15–2:35] Como ganhamos dinheiro: o serviço é pago por atendimento e o Zelo fica com cerca de 21% depois de pagar a acompanhante, o carro, impostos e IA. Em um atendimento de R$ 275, sobram cerca de R$ 58. Três planos: Grátis, com taxa de R$ 15 por atendimento; Zelo+, por R$ 29,90 ao mês, sem taxa; e Zelo Empresas, em que o RH paga como benefício, porque cada falta para levar os pais custa caro para a empresa também.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Como o Zelo ganha dinheiro",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "Serviço pago por atendimento + planos.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 263.390625,
+    "w": 541.328125,
+    "h": 271.59375,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 299.390625,
+    "w": 106.328125,
+    "h": 46,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": {
+     "w": 2,
+     "cor": {
+      "hex": "D3E2E0",
+      "a": 1
+     }
+    },
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 174,
+    "y": 308.390625,
+    "w": 70.328125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Grátis",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 355.390625,
+    "w": 469.328125,
+    "h": 58,
+    "runs": [
+     {
+      "t": "R$ 0",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 46,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 55.199999999999996
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 422.390625,
+    "w": 469.328125,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Zélia agenda e acompanha. Taxa de ",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "R$ 15",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": " por atendimento.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 689.328125,
+    "y": 263.390625,
+    "w": 541.328125,
+    "h": 271.59375,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": {
+     "w": 4,
+     "cor": {
+      "hex": "B4532A",
+      "a": 1
+     },
+     "fora": true
+    },
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 725.328125,
+    "y": 299.390625,
+    "w": 97.671875,
+    "h": 46,
+    "fundo": {
+     "hex": "FBE9E0",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 743.328125,
+    "y": 308.390625,
+    "w": 61.671875,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Zelo+",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "B4532A",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 725.328125,
+    "y": 355.390625,
+    "w": 469.328125,
+    "h": 58,
+    "runs": [
+     {
+      "t": "R$ 29,90 ",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 46,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "/mês",
+      "fam": "Lexend",
+      "peso": 500,
+      "tam": 24,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 55.199999999999996
+   },
+   {
+    "tipo": "texto",
+    "x": 725.328125,
+    "y": 422.390625,
+    "w": 469.328125,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Sem taxa, família toda conectada, áudio da consulta.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 1258.65625,
+    "y": 263.390625,
+    "w": 541.328125,
+    "h": 271.59375,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1294.65625,
+    "y": 299.390625,
+    "w": 195.75,
+    "h": 46,
+    "fundo": {
+     "hex": "DDF2E6",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1312.65625,
+    "y": 308.390625,
+    "w": 159.75,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Zelo Empresas",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 1294.65625,
+    "y": 355.390625,
+    "w": 469.328125,
+    "h": 58,
+    "runs": [
+     {
+      "t": "RH paga",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 46,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 55.199999999999996
+   },
+   {
+    "tipo": "texto",
+    "x": 1294.65625,
+    "y": 422.390625,
+    "w": 469.328125,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Benefício para quem cuida dos pais. Menos faltas no trabalho.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 570.984375,
+    "w": 1680,
+    "h": 123,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 610.984375,
+    "w": 158.453125,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Família paga",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36
+   },
+   {
+    "tipo": "texto",
+    "x": 336.453125,
+    "y": 604.984375,
+    "w": 146.171875,
+    "h": 55,
+    "runs": [
+     {
+      "t": "R$ 275",
+      "fam": "Lexend",
+      "peso": 700,
+      "tam": 44,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 52.8
+   },
+   {
+    "tipo": "texto",
+    "x": 504.625,
+    "y": 600.984375,
+    "w": 41.984375,
+    "h": 63,
+    "runs": [
+     {
+      "t": "→",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 44,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 52.8
+   },
+   {
+    "tipo": "texto",
+    "x": 568.609375,
+    "y": 610.984375,
+    "w": 604.5,
+    "h": 43,
+    "runs": [
+     {
+      "t": "acompanhante, carro, pagamento, impostos e IA",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36
+   },
+   {
+    "tipo": "texto",
+    "x": 1195.109375,
+    "y": 600.984375,
+    "w": 41.984375,
+    "h": 63,
+    "runs": [
+     {
+      "t": "→",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 44,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 52.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1259.09375,
+    "y": 610.984375,
+    "w": 189.40625,
+    "h": 43,
+    "runs": [
+     {
+      "t": "fica para o Zelo",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 30,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 36
+   },
+   {
+    "tipo": "texto",
+    "x": 1470.5,
+    "y": 604.984375,
+    "w": 259.828125,
+    "h": 55,
+    "runs": [
+     {
+      "t": "R$ 58 (21%)",
+      "fam": "Lexend",
+      "peso": 700,
+      "tam": 44,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 52.8
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 965.609375,
+    "w": 1680,
+    "h": 30,
+    "runs": [
+     {
+      "t": "Premissas a validar: acompanhante R$ 180 (até 4h), carro por app ~R$ 60, repasse de 75% ao parceiro. Detalhes na planilha de EBIT (apêndice).",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 21,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 29.4
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r6_0",
+    "arquivo": "pitch/pptx/build/raster/r6_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "7",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "[2:35–2:50] O que já temos e o que vamos testar, com métrica. Já validado: a dor e os preços de referência, na entrevista com a família; a direção, com a mentoria; e um protótipo funcionando, com IA, que vocês podem testar agora. Próximos testes: preço com 10 famílias, adesão de técnicos de enfermagem ao repasse, interesse de 3 RHs e 5 agendamentos reais feitos à mão.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Evidências",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "O que já validamos e o que vamos medir.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 267.390625,
+    "w": 826,
+    "h": 469.9375,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 303.390625,
+    "w": 163.78125,
+    "h": 46,
+    "fundo": {
+     "hex": "DDF2E6",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 174,
+    "y": 312.390625,
+    "w": 127.78125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Já validado",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 369.390625,
+    "w": 30,
+    "h": 30,
+    "fundo": {
+     "hex": "1D7A4B",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 364.390625,
+    "w": 458.015625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Dor real: ~4 faltas ao trabalho em 1 mês",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 403.015625,
+    "w": 458.015625,
+    "h": 32,
+    "runs": [
+     {
+      "t": "Entrevista com família cuidadora",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 458.375,
+    "w": 30,
+    "h": 30,
+    "fundo": {
+     "hex": "1D7A4B",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 453.375,
+    "w": 643.515625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Preço de referência: R$ 300/dia (cuidador) e R$ 80 (app)",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 492,
+    "w": 643.515625,
+    "h": 32,
+    "runs": [
+     {
+      "t": "Mesma entrevista",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 547.359375,
+    "w": 30,
+    "h": 30,
+    "fundo": {
+     "hex": "1D7A4B",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 542.359375,
+    "w": 617.578125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Foco em simplicidade e parceria com apps de corrida",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 580.984375,
+    "w": 617.578125,
+    "h": 32,
+    "runs": [
+     {
+      "t": "Mentoria de negócios, 6/10",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 156,
+    "y": 636.34375,
+    "w": 30,
+    "h": 30,
+    "fundo": {
+     "hex": "1D7A4B",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 631.34375,
+    "w": 360.671875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Protótipo funcional com IA real",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 204,
+    "y": 669.96875,
+    "w": 360.671875,
+    "h": 32,
+    "runs": [
+     {
+      "t": "Disponível no QR, no celular de vocês",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 974,
+    "y": 267.390625,
+    "w": 826,
+    "h": 469.9375,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1010,
+    "y": 303.390625,
+    "w": 323.4375,
+    "h": 46,
+    "fundo": {
+     "hex": "FBF0D6",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1028,
+    "y": 312.390625,
+    "w": 287.4375,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Próximos testes · métrica",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "8A5A00",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "rect",
+    "x": 1010,
+    "y": 369.390625,
+    "w": 38,
+    "h": 38,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": {
+     "w": 4,
+     "cor": {
+      "hex": "8A5A00",
+      "a": 1
+     }
+    },
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 364.390625,
+    "w": 483.765625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Famílias pagam R$ 180–260 por consulta?",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 403.015625,
+    "w": 483.765625,
+    "h": 32,
+    "runs": [
+     {
+      "t": "10 famílias · % que aceita o preço",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 1010,
+    "y": 458.375,
+    "w": 38,
+    "h": 38,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": {
+     "w": 4,
+     "cor": {
+      "hex": "8A5A00",
+      "a": 1
+     }
+    },
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 453.375,
+    "w": 571.640625,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Técnicos de enfermagem topam 75% de repasse?",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 492,
+    "w": 571.640625,
+    "h": 32,
+    "runs": [
+     {
+      "t": "10 conversas · nº de cadastros",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 1010,
+    "y": 547.359375,
+    "w": 38,
+    "h": 38,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": {
+     "w": 4,
+     "cor": {
+      "hex": "8A5A00",
+      "a": 1
+     }
+    },
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 542.359375,
+    "w": 322.984375,
+    "h": 40,
+    "runs": [
+     {
+      "t": "RH oferece como benefício?",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 580.984375,
+    "w": 322.984375,
+    "h": 32,
+    "runs": [
+     {
+      "t": "3 conversas · interesse em piloto",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "rect",
+    "x": 1010,
+    "y": 636.34375,
+    "w": 38,
+    "h": 38,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": {
+     "w": 4,
+     "cor": {
+      "hex": "8A5A00",
+      "a": 1
+     }
+    },
+    "raio": 15
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 631.34375,
+    "w": 555.234375,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Agendar sem integração com convênio é viável?",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 38.64
+   },
+   {
+    "tipo": "texto",
+    "x": 1066,
+    "y": 669.96875,
+    "w": 555.234375,
+    "h": 32,
+    "runs": [
+     {
+      "t": "5 consultas reais · tempo e sucesso",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 22,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 30.36
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r7_0",
+    "arquivo": "pitch/pptx/build/raster/r7_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1790.046875,
+    "y": 1015,
+    "w": 9.953125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "8",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "08494C",
+   "a": 1
+  },
+  "notas": "[2:50–3:00] Frase final, devagar e olhando para a banca: 'Ninguém deveria ter que escolher entre o trabalho e o cuidado com os pais.' Depois: 'Zelo: a Zélia cuida do caminho, a família acompanha tudo.' Termine com o pedido: 3 empresas para o piloto do Zelo Empresas. Agradeça e pare.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 288.53125,
+    "w": 1120,
+    "h": 286.4375,
+    "runs": [
+     {
+      "t": "Ninguém deveria ter que escolher entre ",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 84,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -1.26
+     },
+     {
+      "t": "o trabalho",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 84,
+      "cor": {
+       "hex": "F0A27E",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -1.26
+     },
+     {
+      "t": " e ",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 84,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -1.26
+     },
+     {
+      "t": "o cuidado com os pais",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 84,
+      "cor": {
+       "hex": "F0A27E",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -1.26
+     },
+     {
+      "t": ".",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 84,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -1.26
+     }
+    ],
+    "alinh": "l",
+    "lh": 90.72
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 607.6875,
+    "w": 1120,
+    "h": 49,
+    "runs": [
+     {
+      "t": "Zelo: a Zélia cuida do caminho. A família acompanha tudo.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 34,
+      "cor": {
+       "hex": "D7ECEA",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 47.6
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 695.28125,
+    "w": 1120,
+    "h": 96.59375,
+    "runs": [
+     {
+      "t": "Próximo passo: piloto com 10 famílias em São Paulo e 3 empresas no Zelo Empresas.",
+      "fam": "Source",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 47.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1380,
+    "y": 309.796875,
+    "w": 360,
+    "h": 360,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 24,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 1396,
+    "y": 325.796875,
+    "w": 328,
+    "h": 328,
+    "id": "r8_0",
+    "arquivo": "pitch/pptx/build/raster/r8_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1462.46875,
+    "y": 688.796875,
+    "w": 195.046875,
+    "h": 37,
+    "runs": [
+     {
+      "t": "Teste o Zelo agora",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 26,
+      "cor": {
+       "hex": "D7ECEA",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 36.4
+   },
+   {
+    "tipo": "texto",
+    "x": 1448.8125,
+    "y": 746.1875,
+    "w": 222.375,
+    "h": 32,
+    "runs": [
+     {
+      "t": "zeloapp-mu.vercel.app",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 22,
+      "cor": {
+       "hex": "F0A27E",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "c",
+    "lh": 26.4
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "FFFFFF",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r8_1",
+    "arquivo": "pitch/pptx/build/raster/r8_1.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1336.296875,
+    "y": 1015,
+    "w": 463.703125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Semana Concentrada de Empreendedorismo FGV · 2026",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "9CC9C5",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "APÊNDICE, para perguntas: como garantimos a qualidade dos parceiros.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 1549.625,
+    "y": 44,
+    "w": 250.375,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Apêndice · perguntas",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Operação e parceiros",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "Dois jeitos de ir à consulta. Parceiros certificados.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 263.390625,
+    "w": 826,
+    "h": 204.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 297.390625,
+    "w": 754,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Acompanhante + carro por app",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 355.1875,
+    "w": 754,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "A acompanhante Zelo vai até a casa e a Zélia chama um 99 ou Uber para os dois. Sem frota própria: escala rápido.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 974,
+    "y": 263.390625,
+    "w": 826,
+    "h": 204.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1010,
+    "y": 297.390625,
+    "w": 754,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Acompanhante + motorista Zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1010,
+    "y": 355.1875,
+    "w": 754,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Para cadeirantes e casos que pedem um motorista treinado, com espera incluída.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 495.78125,
+    "w": 826,
+    "h": 204.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 529.78125,
+    "w": 754,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Requisitos da acompanhante",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 156,
+    "y": 587.578125,
+    "w": 754,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "Técnica de enfermagem com COREN ativo, ou cuidadora com curso. Antecedentes e referências verificados. Treinamento Zelo.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "rect",
+    "x": 974,
+    "y": 495.78125,
+    "w": 826,
+    "h": 204.390625,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 28,
+    "sombra": {
+     "blur": 32,
+     "dist": 12,
+     "alfa": 0.07
+    },
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 1010,
+    "y": 529.78125,
+    "w": 754,
+    "h": 43,
+    "runs": [
+     {
+      "t": "Requisitos do motorista",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 34,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.51
+     }
+    ],
+    "alinh": "l",
+    "lh": 40.8
+   },
+   {
+    "tipo": "texto",
+    "x": 1010,
+    "y": 587.578125,
+    "w": 754,
+    "h": 76.796875,
+    "runs": [
+     {
+      "t": "CNH com EAR, antecedentes verificados e carro vistoriado, com porta-malas para cadeira de rodas. Treinamento Zelo.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 27,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 37.8
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r9_0",
+    "arquivo": "pitch/pptx/build/raster/r9_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1779.1875,
+    "y": 1015,
+    "w": 20.8125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "A1",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "APÊNDICE: EBIT preliminar. O negócio fica de pé com escala, por volta de 7.300 atendimentos por mês em São Paulo. As alavancas são o preço do acompanhante, o percentual que o Zelo retém e o Zelo Empresas.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 1549.625,
+    "y": 44,
+    "w": 250.375,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Apêndice · perguntas",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 92,
+    "w": 1680,
+    "h": 35,
+    "runs": [
+     {
+      "t": "EBIT preliminar (hipóteses)",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 144,
+    "w": 1680,
+    "h": 80,
+    "runs": [
+     {
+      "t": "O negócio para em pé com escala.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 259.390625,
+    "w": 1680,
+    "h": 541,
+    "fundo": {
+     "hex": "FFFFFF",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 24,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 259.390625,
+    "w": 601,
+    "h": 72,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": {
+     "canto": "tl",
+     "raio": 24
+    }
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 329.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 277.390625,
+    "w": 549,
+    "h": 35,
+    "runs": [
+     {
+      "t": "R$ por mês",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 259.390625,
+    "w": 340.78125,
+    "h": 72,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 329.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 277.390625,
+    "w": 288.78125,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Piloto (mês 6)",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 259.390625,
+    "w": 327.1875,
+    "h": 72,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 329.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 277.390625,
+    "w": 275.1875,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Fim do ano 1",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 259.390625,
+    "w": 411.03125,
+    "h": 72,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 0,
+    "sombra": null,
+    "canto": {
+     "canto": "tr",
+     "raio": 24
+    }
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 329.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 277.390625,
+    "w": 359.03125,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Ano 3 (escala SP)",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 407.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 350.390625,
+    "w": 549,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Atendimentos por mês",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 407.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 350.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "300",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 407.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 350.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "1.500",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 407.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 350.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "8.000",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 485.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 428.390625,
+    "w": 549,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Entradas totais",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 485.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 428.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "73 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 485.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 428.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "368 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 485.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 428.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "1,97 mi",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 563.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 506.390625,
+    "w": 549,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Margem de contribuição",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 563.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 506.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "16 mil (22%)",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 563.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 506.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "82 mil (22%)",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 563.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 506.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "442 mil (22%)",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 641.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 584.390625,
+    "w": 549,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Custos fixos",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 641.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 584.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "43 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 641.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 584.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "154 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 641.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 584.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "405 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 719.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 662.390625,
+    "w": 56.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "EBIT",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 719.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 662.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "−28 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "B42318",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 719.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 662.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "−74 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "B42318",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 719.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 662.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "+31 mil",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 28,
+      "cor": {
+       "hex": "1D7A4B",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 797.390625,
+    "w": 601,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 740.390625,
+    "w": 549,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Atendimentos/mês para EBIT = 0",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 721,
+    "y": 797.390625,
+    "w": 340.78125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 747,
+    "y": 740.390625,
+    "w": 288.78125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "~870",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1061.78125,
+    "y": 797.390625,
+    "w": 327.1875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1087.78125,
+    "y": 740.390625,
+    "w": 275.1875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "~3.100",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1388.96875,
+    "y": 797.390625,
+    "w": 411.03125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1414.96875,
+    "y": 740.390625,
+    "w": 359.03125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "~7.300",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 965.609375,
+    "w": 1680,
+    "h": 30,
+    "runs": [
+     {
+      "t": "Todas as premissas são editáveis em docs/zelo-ebit-preliminar.xlsx. Alavancas: preço do acompanhante, percentual retido pelo Zelo e Zelo Empresas.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 21,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 29.4
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r10_0",
+    "arquivo": "pitch/pptx/build/raster/r10_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1779.1875,
+    "y": 1015,
+    "w": 20.8125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "A2",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ },
+ {
+  "fundo": {
+   "hex": "EEF4F3",
+   "a": 1
+  },
+  "notas": "APÊNDICE: visão de futuro no WhatsApp. Deixe claro que é uma simulação; o código do webhook existe, mas a integração oficial é o próximo passo.",
+  "itens": [
+   {
+    "tipo": "texto",
+    "x": 1611.828125,
+    "y": 44,
+    "w": 188.171875,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Apêndice · visão",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 308.71875,
+    "w": 822.6875,
+    "h": 35,
+    "runs": [
+     {
+      "t": "Próxima etapa",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 24,
+      "cor": {
+       "hex": "0B6B70",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 2.88
+     }
+    ],
+    "alinh": "l",
+    "lh": 28.799999999999997
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 388.71875,
+    "w": 822.6875,
+    "h": 150.390625,
+    "runs": [
+     {
+      "t": "A ",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": "Zélia",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "B4532A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     },
+     {
+      "t": " também no WhatsApp.",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 64,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": -0.96
+     }
+    ],
+    "alinh": "l",
+    "lh": 70.4
+   },
+   {
+    "tipo": "texto",
+    "x": 120,
+    "y": 561.5,
+    "w": 822.6875,
+    "h": 144.1875,
+    "runs": [
+     {
+      "t": "O filho, ou o próprio idoso, conversa onde já está acostumado. Escolhe horário e pacote respondendo com um número.",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 34,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 47.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 733.28125,
+    "w": 393.828125,
+    "h": 46,
+    "fundo": {
+     "hex": "FBF0D6",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 23,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "texto",
+    "x": 138,
+    "y": 742.28125,
+    "w": 357.828125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "Simulação · integração prevista",
+      "fam": "Source",
+      "peso": 700,
+      "tam": 20,
+      "cor": {
+       "hex": "8A5A00",
+       "a": 1
+      },
+      "caixa": true,
+      "esp": 1.2
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   },
+   {
+    "tipo": "img",
+    "x": 998.6875,
+    "y": 154,
+    "w": 372.65625,
+    "h": 780,
+    "src": "img/zelia-whatsapp-1.png",
+    "sombra": true
+   },
+   {
+    "tipo": "img",
+    "x": 1427.34375,
+    "y": 154,
+    "w": 372.65625,
+    "h": 780,
+    "src": "img/zelia-whatsapp-2.png",
+    "sombra": true
+   },
+   {
+    "tipo": "texto",
+    "x": 164,
+    "y": 1012.5,
+    "w": 52.390625,
+    "h": 33,
+    "runs": [
+     {
+      "t": "zelo",
+      "fam": "Lexend",
+      "peso": 600,
+      "tam": 26,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 31.2
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 1012,
+    "w": 34,
+    "h": 34,
+    "fundo": {
+     "hex": "0B6B70",
+     "a": 1
+    },
+    "borda": null,
+    "raio": 10,
+    "sombra": null,
+    "canto": null
+   },
+   {
+    "tipo": "raster",
+    "x": 126,
+    "y": 1018,
+    "w": 22,
+    "h": 22,
+    "id": "r11_0",
+    "arquivo": "pitch/pptx/build/raster/r11_0.png"
+   },
+   {
+    "tipo": "texto",
+    "x": 1779.1875,
+    "y": 1015,
+    "w": 20.8125,
+    "h": 28,
+    "runs": [
+     {
+      "t": "A3",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 20,
+      "cor": {
+       "hex": "4A6261",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 24
+   }
+  ]
+ }
+]

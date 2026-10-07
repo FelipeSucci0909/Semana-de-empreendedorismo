@@ -10,6 +10,7 @@ Este guia explica como o pitch do Zelo foi construído e como montá-lo de novo,
 |---|---|
 | `site/pitch/index.html` | O pitch publicado no Vercel, em `https://SEU-SITE.vercel.app/pitch/`. O QR code da demo aparece sozinho. |
 | `pitch/zelo-pitch.html` | O mesmo pitch num arquivo único, com imagens embutidas, que **abre sem internet**. É o plano B. |
+| `pitch/zelo-pitch.pptx` | O mesmo pitch em **PowerPoint editável** (textos, formas e notas do apresentador). Antes de abrir, instale as fontes de `pitch/fontes/`. |
 | `pitch/src/index.html` | O código-fonte dos slides. Edite este. |
 | `pitch/img/` | As capturas do app usadas nos slides. |
 | `pitch/build.py` | Gera os dois arquivos acima: `python3 pitch/build.py`. |
@@ -138,6 +139,10 @@ As capturas são do protótipo real, em alta resolução e com fundo transparent
 ---
 
 ## 5. Montar em outra ferramenta (Slides, Canva, PowerPoint)
+
+**Atalho:** `pitch/zelo-pitch.pptx` já é o pitch inteiro em PowerPoint, com a mesma cara do HTML. Instale as 5 fontes de `pitch/fontes/` (duplo clique ▸ Instalar) antes de abrir; sem elas o PowerPoint troca a fonte e os textos mudam de tamanho. Também abre no Keynote e no Google Slides (*Arquivo ▸ Importar slides*). Para regenerar depois de mudar o HTML: sirva `site/` (`cd site && python3 -m http.server 8765`), rode `node pitch/pptx/extrair.cjs` e depois `python3 pitch/pptx/gerar.py`.
+
+Para montar do zero:
 
 1. Crie uma apresentação **16:9** (1920×1080 no Canva; "Widescreen" no PowerPoint e no Google Slides).
 2. Instale e selecione **Lexend** e **Source Sans 3**. No Google Slides: *Fontes ▸ Mais fontes*.
