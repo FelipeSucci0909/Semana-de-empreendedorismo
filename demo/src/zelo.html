@@ -299,11 +299,14 @@ ul.feat svg.i{color:var(--success);width:20px;height:20px;margin-top:1px}
 .logo-mark svg{width:28px;height:28px}
 .logo-word{font-family:var(--font-head);font-size:30px;font-weight:600}
 .tip{display:flex;gap:10px;align-items:flex-start;margin:0;font-size:15px;color:var(--text-2);background:var(--surface-2);border-radius:14px;padding:12px}
-.qrcard{display:flex;gap:14px;align-items:center;background:var(--surface-2);border:1px solid var(--border);border-radius:18px;padding:12px}
-.qrbox{background:#fff;border-radius:12px;width:128px;height:128px;flex:none;display:grid;place-items:center;padding:4px}
-.qrbox svg{width:120px;height:120px;display:block}
+.qrgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--surface-2);border:1px solid var(--border);border-radius:18px;padding:12px}
+.qrfig{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.qrfig figcaption{display:flex;flex-direction:column;font-size:13px;line-height:1.3;color:var(--text-2)}
+.qrfig figcaption strong{font-size:15px;color:var(--text)}
+.qrbox{background:#fff;border-radius:12px;width:124px;height:124px;display:grid;place-items:center;padding:4px}
+.qrbox svg{width:116px;height:116px;display:block}
 .qr-off{font-size:12px;color:#4A6261;text-align:center;padding:6px}
-.qrtext{display:flex;flex-direction:column;gap:6px;min-width:0}
+.qrurl{grid-column:1/-1;margin:0;text-align:center;font-size:14px;font-weight:700;word-break:break-all}
 button,a{-webkit-tap-highlight-color:transparent}
 .tab,.btn,.qr,.slot,.svc,.ib{-webkit-user-select:none;user-select:none;touch-action:manipulation}
 @media (max-width:760px){html,body{overscroll-behavior:none;overflow:hidden;position:fixed;inset:0}.sheet{padding-bottom:max(34px,env(safe-area-inset-bottom))}}
@@ -333,12 +336,16 @@ button,a{-webkit-tap-highlight-color:transparent}
         <button data-action="mode" data-arg="lado">Lado a lado</button>
       </div>
     </div>
-    <div class="qrcard">
-      <div class="qrbox" id="qr" role="img" aria-label="QR code para abrir a demo no celular"></div>
-      <div class="qrtext"><p class="plabel" style="margin:0">Teste no celular</p>
-        <p style="margin:0;font-size:15px;line-height:1.35">Aponte a câmera. Abre como app, sem baixar nada.</p>
-        <strong id="qrUrl" style="font-size:13px;word-break:break-all"></strong>
-        <a id="apkLink" href="zelo.apk" download hidden style="font-size:14px;font-weight:700;color:var(--primary)">Android: baixar APK</a></div>
+    <div class="qrgrid">
+      <figure class="qrfig">
+        <div class="qrbox" id="qr" role="img" aria-label="QR code para abrir a demo no celular"></div>
+        <figcaption><strong>Usar no celular</strong><span>Abre como app, sem baixar</span></figcaption>
+      </figure>
+      <figure class="qrfig">
+        <div class="qrbox" id="qrApk" role="img" aria-label="QR code para baixar o app Android"></div>
+        <figcaption><strong>Android</strong><span>Baixar o app (APK)</span></figcaption>
+      </figure>
+      <p class="qrurl" id="qrUrl"></p>
     </div>
     <div>
       <p class="plabel">Roteiro da demo</p>
@@ -360,6 +367,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   <main class="stage" id="stage"></main>
 </div>
 
+<script>window.ZELO_API = ""; /* endereço da função da Zélia; vazio = mesmo site (api/zelia) */</script>
 <script>/*@QRLIB@*/</script>
 <script>
 "use strict";
@@ -542,12 +550,13 @@ function zelia(items) {
   };
   step();
 }
-function setFlow(f) { return () => { S.flow = f; }; }
+function setFlow(f) { return () => { S.flow = f; S.aiSug = null; }; }
 function iniciarConversa() {
   if (S.chat.length) return;
   zelia(["Oi! Eu sou a <strong>Zélia</strong>, do Zelo. Eu marco a consulta e cuido de todo o caminho até lá.", "Pra quem é a consulta?", setFlow("quem")]);
 }
 function quickReplies() {
+  if (iaAtiva() && FLUXOS_IA.includes(S.flow) && S.aiSug && S.aiSug.length) return S.aiSug;
   switch (S.flow) {
     case "quem": return ["Pra minha mãe, Maria", "Pra mim (sou a Maria)"];
     case "cidade": return ["São Paulo", "Outra cidade"];
@@ -564,6 +573,11 @@ function responder(texto, extra) {
   if (S.typing || !texto) return;
   const msg = Object.assign({ from: "me", text: texto }, extra || {});
   S.chat.push(msg); RT.scrollBottom.familia = true;
+  if (iaAtiva() && FLUXOS_IA.includes(S.flow)) { chamarIA(texto, extra); save(); renderAll(); return; }
+  roteiro(texto, extra);
+}
+/* Roteiro local da Zélia: usado quando a IA não está disponível (arquivo offline, sem rede) e nos passos de pagamento. */
+function roteiro(texto, extra) {
   const t = norm(texto), d = S.draft, quem = d.proprio ? "você" : "a Maria", dela = d.proprio ? "seu" : "da Maria";
   switch (S.flow) {
     case "quem":
@@ -632,9 +646,74 @@ function livre(t) {
   if (/whats/.test(t)) { zelia(["Pode falar comigo pelo WhatsApp também. A conversa é a mesma, e tudo aparece aqui no app.", setFlow("livre")]); return; }
   zelia(["Ainda estou aprendendo isso. Posso marcar consultas, organizar transporte e acompanhante e explicar os registros das consultas.", setFlow("livre")]);
 }
+/* ================= Zélia com IA (Claude, via função no Vercel) ================= */
+const FLUXOS_IA = ["inicio", "quem", "cidade", "convenio", "esp", "medico", "livre", "ia"];
+const IA = { url: window.ZELO_API || (/^https?:/.test(location.protocol) ? "api/zelia" : ""), off: false, falhas: 0 };
+function iaAtiva() { return !!IA.url && !IA.off; }
+const textoPuro = h => String(h || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+const mdSeguro = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+function historicoIA() {
+  return S.chat.slice(-24).map(m => {
+    if (m.from === "me") return { de: "familia", texto: m.att ? "[enviou a foto da carteirinha: Vida Plena Saúde, plano Ouro, final 4821]" : m.text };
+    if (m.kind === "medicos") return { de: "zelia", texto: `[mostrei ${m.docs.length} médicos de ${m.esp}: ${m.docs.map(d => `${d.nome}, ${d.bairro} (${d.slots.join(", ")})`).join("; ")}${m.pick ? `. Escolhido: ${m.docs[m.pick[0]].nome}, ${m.docs[m.pick[0]].slots[m.pick[1]]}` : ""}]` };
+    if (m.kind === "pacote") return { de: "zelia", texto: "[mostrei o pacote do dia para a família escolher]" };
+    if (m.kind === "confirm") return { de: "zelia", texto: "[consulta confirmada e paga]" };
+    if (m.kind === "cta") return null;
+    return { de: "zelia", texto: textoPuro(m.text) };
+  }).filter(Boolean);
+}
+function estadoIA() {
+  const b = S.booking, t = S.trip, r = S.registros[0], d = S.draft;
+  return {
+    paciente: "Maria, 82 anos, mora em Perdizes (São Paulo), usa bengala, precisa de ajuda para entrar no carro, enxerga pouco de perto",
+    quem_esta_usando: d.proprio ? "a própria Maria" : "filho ou filha da Maria",
+    familia: S.suzana ? "Suzana (irmã) também recebe os avisos" : "Suzana (irmã) ainda não foi convidada",
+    plano: nomePlano() + (S.plano === "empresas" ? ` (benefício de ${S.empresa})` : ""),
+    pedido_em_andamento: { cidade: d.cidade || "", convenio: d.convenio || "", especialidade: d.esp || "" },
+    consulta_marcada: b ? { especialidade: b.esp, medico: b.medico.nome, bairro: b.medico.bairro, horario: b.slot, servicos: resumoSv(b.servicos), total_pago: brl(b.total) } : null,
+    andamento_do_dia: b ? (t.finalizado ? "consulta concluída, Maria em casa, registro enviado à família" : t.etapa >= 0 ? `${famEtapa(t.etapa)} (${horaEtapa(t.etapa)})` : `ainda não começou; saída de casa às ${horaEtapa(1)}`) : null,
+    ultimo_registro: r ? { especialidade: r.esp, data: r.data, medico: r.medico, resumo: r.resumo, remedios: r.remedios, proximos_passos: r.proximos, observacao_acompanhante: r.notas || "" } : null
+  };
+}
+async function chamarIA(texto, extra) {
+  const d = S.draft;
+  if (extra && extra.att) d.convenio = "Vida Plena Saúde";
+  S.typing = true; RT.scrollBottom.familia = true; renderAll();
+  const ctrl = new AbortController(), timer = setTimeout(() => ctrl.abort(), 25000);
+  try {
+    const r = await fetch(IA.url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ historico: historicoIA(), estado: estadoIA() }), signal: ctrl.signal });
+    if (r.status === 404 || r.status === 503) IA.off = true; // função não publicada ou sem chave
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const out = await r.json();
+    if (!out || !Array.isArray(out.mensagens) || !out.mensagens.length) throw new Error("resposta vazia");
+    IA.falhas = 0;
+    if (out.cidade) d.cidade = out.cidade;
+    if (out.convenio) d.convenio = out.convenio;
+    if (out.especialidade) d.esp = out.especialidade;
+    const itens = out.mensagens.map(mdSeguro);
+    if (out.acao === "mostrar_medicos" && d.esp) {
+      d.servicos = svPadrao();
+      itens.push({ kind: "medicos", esp: d.esp, docs: medicosPara(d.esp), pick: null });
+      itens.push(() => { S.flow = "medico"; S.aiSug = null; });
+    } else {
+      if (out.acao === "abrir_planos") itens.push({ kind: "cta", label: "Ver planos", arg: "planos" });
+      const prox = S.booking ? "livre" : S.flow === "medico" ? "medico" : "ia";
+      itens.push(() => { S.flow = prox; S.aiSug = (out.sugestoes || []).slice(0, 4); });
+    }
+    S.typing = false;
+    zelia(itens);
+  } catch (e) {
+    if (++IA.falhas >= 2) IA.off = true;
+    S.typing = false;
+    if (S.flow === "ia") S.flow = S.booking ? "livre" : "esp";
+    roteiro(texto, extra); // a demo segue pelo roteiro local, sem travar
+  } finally {
+    clearTimeout(timer);
+  }
+}
 function escolherHorario(mi, di, si) {
   const m = S.chat[mi]; if (!m || S.flow !== "medico" || S.typing) return;
-  m.pick = [di, si]; const doc = m.docs[di], slot = doc.slots[si];
+  m.pick = [di, si]; S.aiSug = null; const doc = m.docs[di], slot = doc.slots[si];
   S.draft.medico = doc; S.draft.slot = slot; S.draft.esp = m.esp; S.flow = "x";
   S.chat.push({ from: "me", text: `${doc.nome} · ${slot}` });
   const conv = S.draft.convenio && S.draft.convenio !== "Particular";
@@ -893,7 +972,7 @@ function famZelia() {
   const typing = S.typing ? `<div class="msg z">${ZAV("sm")}<div class="bub typing" aria-label="Zélia está digitando"><i></i><i></i><i></i></div></div>` : "";
   const qrs = S.typing ? [] : quickReplies();
   const listening = RT.listening.familia;
-  return `<div class="screen">${bar("Zélia", { lead: ZAV(), sub: "Sua assistente do Zelo", right: `<span class="tag ok">${I("whats")}WhatsApp</span>` })}
+  return `<div class="screen">${bar("Zélia", { lead: ZAV(), sub: iaAtiva() ? "Assistente com IA" : "Sua assistente do Zelo", right: `<span class="tag ok">${I("whats")}WhatsApp</span>` })}
     <div class="scroll chat" aria-live="polite">${msgs}${typing}</div>
     <div class="composer">
       ${qrs.length ? `<div class="quick">${qrs.map(q => `<button class="qr" data-action="say" data-arg="${esc(q)}">${esc(q)}</button>`).join("")}</div>` : ""}
@@ -908,6 +987,7 @@ function famZelia() {
 }
 function chatMsg(m, i) {
   if (m.from === "me") return `<div class="msg me"><div class="bub">${m.att ? `<span class="att">${I("camera")}Foto da carteirinha</span>` : esc(m.text)}</div></div>`;
+  if (m.kind === "cta") return `<div class="msg z"><span class="spacer"></span><button class="btn sec sm" style="width:auto" data-action="push" data-arg="${esc(m.arg)}">${esc(m.label)}</button></div>`;
   if (m.kind === "note") return `<div class="msg z"><span class="spacer"></span><div class="bub note">${I(m.icon || "check")}<span>${m.text}</span></div></div>`;
   if (m.kind === "medicos") return `<div class="msg z"><div class="wide">${m.docs.map((d, di) => `<div class="doc">
       <div class="row"><span class="avatar">${I("doc")}</span><div class="grow"><strong>${d.nome}</strong><div class="muted" style="font-size:15px">${m.esp} · ${d.bairro} · ${d.dist}</div></div></div>
@@ -1158,7 +1238,7 @@ document.addEventListener("click", e => {
       RT.listening.familia = true; renderRole("familia");
       setTimeout(() => { RT.listening.familia = false; const q = quickReplies()[0]; if (q) responder(q); else renderRole("familia"); }, 1500); return;
     }
-    case "cam": if (S.flow === "convenio") responder("Foto da carteirinha", { att: true }); return;
+    case "cam": if (S.flow === "convenio" || (iaAtiva() && FLUXOS_IA.includes(S.flow) && !S.booking)) responder("Foto da carteirinha", { att: true }); return;
     case "slot": { const [mi, di, si] = arg.split("|").map(Number); escolherHorario(mi, di, si); return; }
     case "svc": { if (S.flow !== "pacote") return; const k = arg.split("|")[1]; const sv = S.draft.servicos; sv[k] = !sv[k]; ajustarSv(sv); save(); renderRole("familia"); return; }
     case "transp": { if (S.flow !== "pacote") return; const k = arg.split("|")[1]; const sv = S.draft.servicos; if (k === "app" && !sv.acompanhante) return; sv.transporte = k; if (k !== "zelo") sv.adaptado = false; save(); renderRole("familia"); return; }
@@ -1205,14 +1285,16 @@ window.zeloBack = function () {
   return false;
 };
 function montarQR() {
-  const box = document.getElementById("qr"), url = document.getElementById("qrUrl");
+  const box = document.getElementById("qr"), apk = document.getElementById("qrApk"), url = document.getElementById("qrUrl");
   if (!box) return;
-  if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") { box.innerHTML = '<span class="qr-off">O QR aparece quando a demo estiver publicada (Vercel).</span>'; return; }
-  const alvo = location.origin + location.pathname.replace(/index\.html$/, "");
-  const q = qrcode(0, "M"); q.addData(alvo); q.make();
-  box.innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
-  url.textContent = alvo.replace(/^https?:\/\//, "").replace(/\/$/, "");
-  document.getElementById("apkLink").hidden = false;
+  if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") {
+    box.innerHTML = apk.innerHTML = '<span class="qr-off">Aparece quando a demo estiver publicada (Vercel)</span>'; return;
+  }
+  const base = location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");
+  const svg = alvo => { const q = qrcode(0, "M"); q.addData(alvo); q.make(); return q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }); };
+  box.innerHTML = svg(base);
+  apk.innerHTML = `<a href="zelo.apk" download aria-label="Baixar o app Android">${svg(base + "zelo.apk")}</a>`;
+  url.textContent = base.replace(/^https?:\/\//, "").replace(/\/$/, "");
 }
 montarQR();
 applyTheme();

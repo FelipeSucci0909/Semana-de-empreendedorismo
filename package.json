@@ -1,0 +1,12 @@
+{
+  "name": "zelo-demo",
+  "private": true,
+  "type": "module",
+  "description": "Demo do Zelo: site estático (site/) + função da Zélia com IA (api/zelia.js) no Vercel",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0"
+  }
+}

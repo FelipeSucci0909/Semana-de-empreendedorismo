@@ -34,7 +34,16 @@ A pasta `site/` é publicada no **Vercel** e é o que o QR code abre.
 2. Importe o repositório `FelipeSucci0909/Semana-de-empreendedorismo`.
 3. Em **Project Name**, use algo curto, por exemplo `zelo-app`. Esse nome vira o endereço `zelo-app.vercel.app`.
 4. Deixe **Framework Preset = Other** e não mude mais nada. O `vercel.json` já aponta para a pasta `site/`.
-5. Clique em **Deploy**. A cada push na branch, o Vercel publica de novo sozinho.
+5. Em **Environment Variables**, adicione `ANTHROPIC_API_KEY` com a sua chave da API da Anthropic (crie em [console.anthropic.com](https://console.anthropic.com)). É ela que liga a IA da Zélia.
+6. Clique em **Deploy**. A cada push na branch, o Vercel publica de novo sozinho.
+
+### Zélia com IA
+
+O chat chama a função `api/zelia.js` no Vercel, que usa o Claude (`claude-opus-5-5`) com a chave guardada só no servidor. A Zélia entende texto livre ("minha mãe precisa de cardiologista, ela tem Vida Plena"), extrai cidade, convênio e especialidade, mostra os médicos e responde dúvidas usando o contexto do app: consulta, andamento do dia e último registro. Horário, pacote e pagamento continuam nos cartões do app, para não haver invenção de valores.
+
+- **Sem a chave, sem internet ou no arquivo offline** (`demo/zelo.html`), a Zélia volta sozinha para o roteiro local. A demo nunca trava.
+- **No APK:** para a IA funcionar no app Android, crie no GitHub a variável do repositório `ZELO_API_URL` (*Settings ▸ Secrets and variables ▸ Actions ▸ Variables*) com `https://SEU-PROJETO.vercel.app/api/zelia` e rode o workflow "APK Android" de novo.
+- **Custos:** cada mensagem custa alguns centavos. Vale definir um limite de gastos no console da Anthropic.
 
 ## Rodar a demo do pitch (qualquer computador)
 

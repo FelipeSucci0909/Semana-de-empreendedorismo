@@ -33,9 +33,16 @@ jobs:
           gradle-version: '8.9'
 
       - name: Copiar a demo para dentro do app
+        env:
+          # Opcional: variável do repositório com o endereço da função da Zélia
+          # (ex.: https://zelo-app.vercel.app/api/zelia). Sem ela, o APK usa o roteiro local.
+          ZELO_API: ${{ vars.ZELO_API_URL }}
         run: |
           mkdir -p android/app/src/main/assets
           cp site/index.html android/app/src/main/assets/index.html
+          if [ -n "$ZELO_API" ]; then
+            sed -i "s|window.ZELO_API = \"\";|window.ZELO_API = \"$ZELO_API\";|" android/app/src/main/assets/index.html
+          fi
 
       - name: Gerar APK
         working-directory: android
