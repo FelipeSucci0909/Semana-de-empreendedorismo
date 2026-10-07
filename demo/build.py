@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Gera demo/zelo.html (arquivo único, funciona offline) a partir de demo/src/zelo.html,
-embutindo as fontes Lexend e Source Sans 3 (subconjunto latino) em base64.
+"""Gera a demo do Zelo a partir de demo/src/zelo.html:
+
+- demo/zelo.html  arquivo único que funciona offline (abrir direto no navegador)
+- site/index.html a mesma página, publicada no Vercel (site/ tem também ícones,
+  manifest e o APK de Android gerado pelo GitHub Actions)
+
+Embute as fontes Lexend e Source Sans 3 (subconjunto latino) e a biblioteca de QR code.
 
 Uso: python3 demo/build.py
 """
@@ -12,6 +17,8 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC = ROOT / "src" / "zelo.html"
 OUT = ROOT / "zelo.html"
+SITE = ROOT.parent / "site" / "index.html"
+QRLIB = ROOT / "src" / "vendor" / "qrcode.js"  # qrcode-generator 1.4.4, MIT, Kazuhiko Arase
 CACHE = ROOT / "src" / "fonts"
 CSS_URL = ("https://fonts.googleapis.com/css2?family=Lexend:wght@500;600"
            "&family=Source+Sans+3:wght@400;600;700&display=swap")
@@ -51,8 +58,11 @@ def main():
     except Exception as e:  # sem internet: usa fontes do sistema
         print("Aviso: fontes não embutidas (%s); usando fontes do sistema." % e)
         faces = ""
-    OUT.write_text(html.replace("/*@FONTS@*/", faces), encoding="utf-8")
-    print("Gerado %s (%d KB)" % (OUT.relative_to(ROOT.parent), OUT.stat().st_size // 1024))
+    html = html.replace("/*@FONTS@*/", faces).replace("/*@QRLIB@*/", QRLIB.read_text(encoding="utf-8"))
+    for out in (OUT, SITE):
+        out.parent.mkdir(exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+        print("Gerado %s (%d KB)" % (out.relative_to(ROOT.parent), out.stat().st_size // 1024))
 
 
 if __name__ == "__main__":

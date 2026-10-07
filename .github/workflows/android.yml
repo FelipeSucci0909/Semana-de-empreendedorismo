@@ -1,0 +1,58 @@
+name: APK Android
+
+# Gera o APK do Zelo (app que abre a demo em tela cheia) sempre que a demo ou o
+# projeto Android mudam, e publica o arquivo em site/zelo.apk para o Vercel servir.
+on:
+  push:
+    paths:
+      - 'site/index.html'
+      - 'android/**'
+      - '.github/workflows/android.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Copiar a demo para dentro do app
+        run: |
+          mkdir -p android/app/src/main/assets
+          cp site/index.html android/app/src/main/assets/index.html
+
+      - name: Gerar APK
+        working-directory: android
+        run: gradle assembleDebug --no-daemon
+
+      - name: Publicar APK no site
+        run: |
+          cp android/app/build/outputs/apk/debug/app-debug.apk site/zelo.apk
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/zelo.apk
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "APK do Zelo atualizado"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zelo-apk
+          path: site/zelo.apk

@@ -3,3 +3,8 @@ xcuserdata/
 *.xcuserstate
 DerivedData/
 __pycache__/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/src/main/assets/
+android/local.properties

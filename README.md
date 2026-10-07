@@ -11,9 +11,30 @@ Filhos que trabalham faltam ao trabalho para levar os pais idosos a consultas. N
 ## A solução
 
 1. **Pedido e agendamento.** A Zélia, uma agente de IA dentro do app e também no WhatsApp, pergunta a cidade, o convênio (aceita foto da carteirinha) e a especialidade. Ela busca médicos, agenda e pede a autorização ao convênio. Pode ser usada pelo próprio idoso ou pelos filhos.
-2. **Pacote modular.** Transporte ida e volta (R$ 80), veículo adaptado (+R$ 40, estimativa) e acompanhante (R$ 300). O resumo da consulta para a família já vem incluso, e o preço é montado conforme o que se escolhe.
+2. **Pacote modular.** A família escolhe:
+   - acompanhante Zelo (R$ 180, até 4h);
+   - como ir até a clínica: carro por aplicativo chamado pela Zélia (cerca de R$ 60), motorista Zelo (R$ 80, ajuda o idoso e espera a consulta) ou sem transporte;
+   - veículo adaptado (+R$ 60).
+
+   O resumo da consulta já vem incluso. Planos: **Grátis** (taxa de serviço de R$ 15 por atendimento), **Zelo+** (R$ 29,90/mês, sem taxa) e **Zelo Empresas** (pago pelo RH).
 3. **No dia.** Motorista e acompanhante parceiros marcam cada etapa e a família acompanha em tempo real. A acompanhante grava a consulta, com consentimento, e registra o que o médico disse.
 4. **Registro.** Resumo em linguagem simples, remédios com horário e próximos passos. Um botão pede à Zélia que marque o retorno.
+
+## Demo online (QR code para os jurados)
+
+A pasta `site/` é publicada no **Vercel** e é o que o QR code abre.
+
+- **No celular:** abre como app, em tela cheia, com uma tela de boas-vindas ("Sou da família" / "Sou acompanhante"). No iPhone dá para "Adicionar à Tela de Início". No Android aparece o botão para baixar o APK.
+- **No computador:** abre o palco da apresentação. O QR code no painel aponta para o próprio endereço publicado.
+- **APK de Android (`site/zelo.apk`):** gerado pelo GitHub Actions (`.github/workflows/android.yml`) sempre que a demo muda. O projeto do app fica em `android/` e é um WebView com a mesma página.
+
+### Publicar no Vercel (uma vez, cerca de 2 minutos)
+
+1. Entre em [vercel.com](https://vercel.com) com a conta do GitHub e clique em **Add New… ▸ Project**.
+2. Importe o repositório `FelipeSucci0909/Semana-de-empreendedorismo`.
+3. Em **Project Name**, use algo curto, por exemplo `zelo-app`. Esse nome vira o endereço `zelo-app.vercel.app`.
+4. Deixe **Framework Preset = Other** e não mude mais nada. O `vercel.json` já aponta para a pasta `site/`.
+5. Clique em **Deploy**. A cada push na branch, o Vercel publica de novo sozinho.
 
 ## Rodar a demo do pitch (qualquer computador)
 
@@ -24,7 +45,7 @@ Abra **`demo/zelo.html`** no navegador (Chrome, Edge, Safari ou Firefox). É um 
 - **Reiniciar demo:** volta ao início.
 - No celular, a mesma página abre como app em tela cheia. Para trocar de perfil, use a aba Perfil.
 
-Para editar, mexa em `demo/src/zelo.html` e gere de novo com `python3 demo/build.py`.
+Para editar, mexa em `demo/src/zelo.html` e gere de novo com `python3 demo/build.py`, que atualiza `demo/zelo.html` e `site/index.html`. Os ícones e a imagem de prévia são gerados com `python3 demo/assets.py`.
 
 ## App iOS (SwiftUI)
 

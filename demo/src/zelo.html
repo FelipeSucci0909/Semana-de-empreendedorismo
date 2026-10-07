@@ -3,8 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B6B70">
-<title>Zelo — demo</title>
+<meta name="theme-color" content="#EEF4F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1716" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Zelo: a Zélia marca a consulta e cuida de todo o caminho até lá. A família acompanha tudo.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Zelo">
+<meta property="og:title" content="Zelo — demo do app">
+<meta property="og:description" content="A Zélia marca a consulta e cuida de todo o caminho até lá. A família acompanha tudo.">
+<meta property="og:image" content="og.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Zelo</title>
 <style>
 /*@FONTS@*/
 :root{
@@ -265,6 +277,36 @@ label.lbl{font-weight:700;font-size:15px}
 .prog i{display:block;height:100%;background:var(--success)}
 .prog.mid i{background:var(--warning)}
 
+/* planos, pacote, boas-vindas */
+.upsell{border:0;text-align:left;width:100%;color:inherit;cursor:pointer}
+.plan.cur{box-shadow:0 0 0 2px var(--primary)}
+.plan.feat:not(.cur){box-shadow:0 0 0 2px var(--accent)}
+.price-big{font-family:var(--font-head);font-size:30px;font-weight:600;line-height:1.1}
+.price-big small{font-size:16px;color:var(--text-2);font-weight:500}
+ul.feat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.feat li{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.35}
+ul.feat svg.i{color:var(--success);width:20px;height:20px;margin-top:1px}
+.subhead{font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);margin:12px 0 0}
+.radio{width:26px;height:26px;border-radius:13px;border:2px solid var(--border);flex:none;display:grid;place-items:center;transition:border-color .2s}
+[aria-checked="true"] .radio{border-color:var(--primary)}
+[aria-checked="true"] .radio::after{content:"";width:12px;height:12px;border-radius:6px;background:var(--primary)}
+.svc:disabled{cursor:default}
+.svc:disabled:not([aria-checked="true"]) .grow{opacity:.55}
+.linkbtn{background:none;border:0;color:var(--primary);font-weight:700;font-size:16px;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+.field{width:100%;height:56px;border-radius:16px;border:1.5px solid var(--border);background:var(--surface-2);padding:0 16px;font-size:18px;letter-spacing:.04em}
+.welcome .sheet{gap:14px;padding-top:26px}
+.logo-mark{width:44px;height:44px;border-radius:13px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center}
+.logo-mark svg{width:28px;height:28px}
+.logo-word{font-family:var(--font-head);font-size:30px;font-weight:600}
+.tip{display:flex;gap:10px;align-items:flex-start;margin:0;font-size:15px;color:var(--text-2);background:var(--surface-2);border-radius:14px;padding:12px}
+.qrcard{display:flex;gap:14px;align-items:center;background:var(--surface-2);border:1px solid var(--border);border-radius:18px;padding:12px}
+.qrbox{background:#fff;border-radius:12px;width:128px;height:128px;flex:none;display:grid;place-items:center;padding:4px}
+.qrbox svg{width:120px;height:120px;display:block}
+.qr-off{font-size:12px;color:#4A6261;text-align:center;padding:6px}
+.qrtext{display:flex;flex-direction:column;gap:6px;min-width:0}
+button,a{-webkit-tap-highlight-color:transparent}
+.tab,.btn,.qr,.slot,.svc,.ib{-webkit-user-select:none;user-select:none;touch-action:manipulation}
+@media (max-width:760px){html,body{overscroll-behavior:none;overflow:hidden;position:fixed;inset:0}.sheet{padding-bottom:max(34px,env(safe-area-inset-bottom))}}
 /* toast & sheet */
 .toast{position:absolute;top:52px;left:12px;right:12px;z-index:40;background:var(--text);color:var(--bg);border-radius:18px;padding:12px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:16px;font-weight:600;line-height:1.3}
 .toast.anim{animation:drop .35s cubic-bezier(.2,.9,.3,1.2)}
@@ -291,13 +333,20 @@ label.lbl{font-weight:700;font-size:15px}
         <button data-action="mode" data-arg="lado">Lado a lado</button>
       </div>
     </div>
+    <div class="qrcard">
+      <div class="qrbox" id="qr" role="img" aria-label="QR code para abrir a demo no celular"></div>
+      <div class="qrtext"><p class="plabel" style="margin:0">Teste no celular</p>
+        <p style="margin:0;font-size:15px;line-height:1.35">Aponte a câmera. Abre como app, sem baixar nada.</p>
+        <strong id="qrUrl" style="font-size:13px;word-break:break-all"></strong>
+        <a id="apkLink" href="zelo.apk" download hidden style="font-size:14px;font-weight:700;color:var(--primary)">Android: baixar APK</a></div>
+    </div>
     <div>
       <p class="plabel">Roteiro da demo</p>
       <ol class="steps">
         <li><span><strong>Peça a consulta à Zélia</strong>: cidade, convênio e especialidade.</span></li>
         <li><span><strong>Escolha médico e horário</strong>: a Zélia pede a autorização ao convênio.</span></li>
-        <li><span><strong>Monte o pacote</strong>: transporte, veículo adaptado, acompanhante.</span></li>
-        <li><span><strong>No parceiro</strong>, avance as etapas do dia.</span></li>
+        <li><span><strong>Monte o pacote</strong>: acompanhante, carro por app ou motorista Zelo.</span></li>
+        <li><span><strong>Na acompanhante</strong>, avance as etapas do dia.</span></li>
         <li><span><strong>A família acompanha</strong> em tempo real e recebe o registro.</span></li>
       </ol>
     </div>
@@ -311,13 +360,16 @@ label.lbl{font-weight:700;font-size:15px}
   <main class="stage" id="stage"></main>
 </div>
 
+<script>/*@QRLIB@*/</script>
 <script>
 "use strict";
 /* ================= Configuração (premissas a validar) ================= */
-const PRECOS = { transporte: 80, adaptado: 40 /* estimativa — a validar */, acompanhante: 300 };
-const REPASSE_MOTORISTA = 0.75; // parcela do transporte que vai ao motorista — a validar
-const MOTORISTA = { nome: "Carlos Mendes", ini: "CM", carro: "Spin prata", placa: "FZL-2B41", nota: "4,9" };
-const ACOMP = { nome: "Ana Souza", ini: "AS", cargo: "técnica de enfermagem" };
+const PRECOS = { acompanhante: 180 /* bloco de até 4h */, motorista: 80, carroApp: 60 /* estimativa: 2 corridas de ~6 km */, adaptado: 60, taxa: 15 };
+const PLANO_PLUS = 29.9, PLANO_EMPRESAS = 24.9; // por família/mês — a validar
+const REPASSE = 0.75; // parte do serviço que vai ao parceiro — a validar
+const MOTORISTA = { nome: "Carlos Mendes", ini: "CM", carro: "Spin prata", placa: "FZL-2B41", nota: "4,9", papel: "Motorista Zelo", funcao: "motorista" };
+const ACOMP = { nome: "Ana Souza", ini: "AS", cargo: "técnica de enfermagem", nota: "5,0", papel: "Acompanhante Zelo", funcao: "acompanhante" };
+const CARRO_APP = { nome: "99 Comfort", placa: "RTA-4E21" };
 const PACIENTE = { nome: "Maria", idade: 82, endereco: "Rua Apinajés, 300 — Perdizes" };
 
 const ESPECIALIDADES = ["Oftalmologista", "Cardiologista", "Clínico geral", "Ortopedista"];
@@ -359,12 +411,13 @@ function registroPara(b, t) {
 }
 
 /* ================= Estado ================= */
-const KEY = "zelo-demo-v1";
+const KEY = "zelo-demo-v2";
 function fresh() {
   return {
     mode: "familia", theme: null,
     chat: [], flow: "inicio", typing: false,
-    draft: { cidade: "", convenio: "", esp: "", proprio: false, servicos: { transporte: true, adaptado: false, acompanhante: true } },
+    draft: { cidade: "", convenio: "", esp: "", proprio: false, servicos: svPadrao() },
+    plano: "gratis", empresa: "", welcomed: false,
     booking: null,
     trip: { etapa: -1, consent: false, gravando: false, gravSeg: 0, gravou: false, notas: "", finalizado: false },
     registros: [REG_SEED], suzana: false, online: true,
@@ -374,6 +427,12 @@ function fresh() {
 let S;
 try { S = JSON.parse(localStorage.getItem(KEY)) || fresh(); } catch (e) { S = fresh(); }
 S.typing = false; S.trip.gravando = false;
+const UA = navigator.userAgent || "";
+const ENV = {
+  android: /Android/i.test(UA), ios: /iPhone|iPad|iPod/i.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1),
+  inApp: /ZeloApp/.test(UA), standalone: (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true
+};
+const isMobile = () => matchMedia("(max-width:760px)").matches;
 const RT = { toastShown: {}, chatSeen: null, toast: {}, modal: {}, listening: {}, draftText: {}, playing: {}, carPos: {}, scrollBottom: {} };
 function save() { try { const c = Object.assign({}, S); localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {} }
 
@@ -425,15 +484,47 @@ const ZAV = (cls = "") => `<span class="avatar z ${cls}" aria-hidden="true">Z</s
 function parseHora(slot) { const m = /(\d{1,2})h(\d{2})?/.exec(slot || ""); return m ? (+m[1]) * 60 + (+(m[2] || 0)) : 540; }
 function fmt(min) { const h = Math.floor(min / 60), m = min % 60; return h + "h" + (m ? String(m).padStart(2, "0") : ""); }
 function horaEtapa(i) { return S.booking ? fmt(parseHora(S.booking.slot) + ETAPAS[i].off) : ""; }
-function famEtapa(i) { const e = ETAPAS[i]; if (i === 3) return S.booking && S.booking.servicos.acompanhante ? "Em consulta, com a Ana" : "Em consulta (Carlos aguarda)"; return e.fam; }
-function totalDe(sv) { return (sv.transporte ? PRECOS.transporte : 0) + (sv.adaptado ? PRECOS.adaptado : 0) + (sv.acompanhante ? PRECOS.acompanhante : 0); }
-function resumoSv(sv) { const p = []; if (sv.transporte) p.push(sv.adaptado ? "Transporte adaptado" : "Transporte"); if (sv.acompanhante) p.push("Acompanhante"); return p.length ? p.join(" + ") : "Só o agendamento"; }
+function primeiro(n) { return n.split(" ")[0]; }
+function persona() { const b = S.booking; return (!b || b.servicos.acompanhante) ? ACOMP : MOTORISTA; }
+function famEtapa(i) {
+  const sv = S.booking ? S.booking.servicos : svPadrao(), quem = primeiro(persona().nome);
+  if (i === 0) return quem + " está a caminho";
+  if (i === 1) return sv.transporte === "app" ? "Maria saiu de casa com a Ana (carro por app)" : sv.transporte === "nenhum" ? "Ana encontrou a Maria" : "Maria entrou no carro";
+  if (i === 3) return sv.acompanhante ? "Em consulta, com a Ana" : "Em consulta (Carlos aguarda)";
+  return ETAPAS[i].fam;
+}
+function parEtapa(i) {
+  const sv = S.booking ? S.booking.servicos : svPadrao();
+  if (i === 0) return sv.acompanhante ? "Estou a caminho da casa da Maria" : "Estou a caminho";
+  if (i === 1) return sv.transporte === "app" ? "Chamei o carro e saímos" : sv.transporte === "nenhum" ? "Encontrei a Maria" : "Busquei a Maria em casa";
+  return ETAPAS[i].par;
+}
+function svPadrao() { return { acompanhante: true, transporte: "app", adaptado: false }; }
+function taxaAtual() { return S && S.plano === "gratis" ? PRECOS.taxa : 0; }
+function precoTransp(sv) { return sv.transporte === "app" ? PRECOS.carroApp : sv.transporte === "zelo" ? PRECOS.motorista : 0; }
+function temServico(sv) { return sv.acompanhante || sv.transporte !== "nenhum"; }
+function totalDe(sv) { return (sv.acompanhante ? PRECOS.acompanhante : 0) + precoTransp(sv) + (sv.adaptado ? PRECOS.adaptado : 0) + (temServico(sv) ? taxaAtual() : 0); }
+function ajustarSv(sv) {
+  if (sv.adaptado) sv.transporte = "zelo";
+  if (!sv.acompanhante && sv.transporte === "app") sv.transporte = "zelo";
+  return sv;
+}
+function resumoSv(sv) {
+  const p = [];
+  if (sv.acompanhante) p.push("Acompanhante");
+  if (sv.transporte === "app") p.push("carro por app");
+  if (sv.transporte === "zelo") p.push(sv.adaptado ? "motorista Zelo (adaptado)" : "motorista Zelo");
+  const t = p.join(" + ");
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : "Só o agendamento";
+}
 function medicosPara(esp) {
   const k = ESPECIALIDADES.indexOf(esp); const off = k < 0 ? 3 : k * 2;
   return [0, 1, 2].map(i => ({ nome: NOMES[(off + i) % NOMES.length], bairro: BAIRROS[i][0], dist: BAIRROS[i][1], acess: BAIRROS[i][2], slots: SLOTS[i] }));
 }
-function repasse(sv) { return Math.round(((sv.transporte ? PRECOS.transporte : 0) + (sv.adaptado ? PRECOS.adaptado : 0)) * REPASSE_MOTORISTA); }
-
+function repasse(sv) {
+  return sv.acompanhante ? Math.round(PRECOS.acompanhante * REPASSE)
+    : Math.round((precoTransp(sv) + (sv.adaptado ? PRECOS.adaptado : 0)) * REPASSE);
+}
 /* ================= Zélia (roteiro da conversa) ================= */
 function zelia(items) {
   S.typing = true; RT.scrollBottom.familia = true; renderAll();
@@ -510,7 +601,7 @@ function responder(texto, extra) {
     case "pagamento":
       d.pagamento = /cart/.test(t) ? "Cartão" : "Pix";
       zelia([{ kind: "note", icon: "check", text: d.pagamento === "Pix" ? "Pix recebido." : "Pagamento aprovado." }, () => criarAgendamento(), { kind: "confirm" },
-        `Tudo certo! Vou lembrar ${d.proprio ? "você" : "a Maria"} na véspera e uma hora antes. Quer que eu avise a Suzana também?`, setFlow("avisar")]);
+        `Tudo certo! Vou lembrar ${d.proprio ? "você" : "a Maria"} na véspera e uma hora antes.${d.servicos.transporte === "app" ? " No dia, eu chamo o carro quando a Ana estiver pronta para sair." : ""} Quer que eu avise a Suzana também?`, setFlow("avisar")]);
       break;
     case "avisar":
       if (/avisar|sim/.test(t)) { S.suzana = true; zelia(["Pronto, avisei a Suzana. Vocês vão receber cada etapa do dia e o registro da consulta.", setFlow("livre")]); }
@@ -522,7 +613,7 @@ function responder(texto, extra) {
 }
 function livre(t) {
   const b = S.booking, tr = S.trip;
-  if (/marcar|agendar|outra|nova|retorno/.test(t)) { zelia(["Claro! Qual especialidade?", () => { S.draft.servicos = { transporte: true, adaptado: false, acompanhante: true }; }, setFlow("esp")]); return; }
+  if (/marcar|agendar|outra|nova|retorno/.test(t)) { zelia(["Claro! Qual especialidade?", () => { S.draft.servicos = svPadrao(); }, setFlow("esp")]); return; }
   if (/remedio|colirio|tomar|dose|losartana/.test(t)) {
     const r = S.registros.find(x => x.remedios && x.remedios.length);
     if (!r) { zelia(["Ainda não tenho nenhum remédio registrado.", setFlow("livre")]); return; }
@@ -537,7 +628,7 @@ function livre(t) {
     else s = `Agora: <strong>${famEtapa(tr.etapa)}</strong> (${horaEtapa(tr.etapa)}). Está tudo bem.`;
     zelia([s, setFlow("livre")]); return;
   }
-  if (/preco|quanto|custa|valor/.test(t)) { zelia([`Você escolhe só o que precisa: transporte ida e volta ${brl(PRECOS.transporte)}, veículo adaptado +${brl(PRECOS.adaptado)}, acompanhante ${brl(PRECOS.acompanhante)}. O resumo da consulta para a família já vem incluso.`, setFlow("livre")]); return; }
+  if (/preco|quanto|custa|valor|plano/.test(t)) { zelia([`Você escolhe só o que precisa: acompanhante ${brl(PRECOS.acompanhante)} (até 4h), carro por aplicativo cerca de ${brl(PRECOS.carroApp)} ou motorista Zelo ${brl(PRECOS.motorista)}, veículo adaptado +${brl(PRECOS.adaptado)}.`, `No plano Grátis há uma taxa de serviço de ${brl(PRECOS.taxa)} por atendimento. No <strong>Zelo+</strong> (R$ 29,90/mês) e no <strong>Zelo Empresas</strong> ela é isenta.`, setFlow("livre")]); return; }
   if (/whats/.test(t)) { zelia(["Pode falar comigo pelo WhatsApp também. A conversa é a mesma, e tudo aparece aqui no app.", setFlow("livre")]); return; }
   zelia(["Ainda estou aprendendo isso. Posso marcar consultas, organizar transporte e acompanhante e explicar os registros das consultas.", setFlow("livre")]);
 }
@@ -548,12 +639,12 @@ function escolherHorario(mi, di, si) {
   S.chat.push({ from: "me", text: `${doc.nome} · ${slot}` });
   const conv = S.draft.convenio && S.draft.convenio !== "Particular";
   zelia([conv ? { kind: "note", icon: "shield", text: `Pedi a autorização ao ${S.draft.convenio}: autorizado.` } : { kind: "note", icon: "check", text: "Horário reservado." },
-    `Agora vamos montar o dia da consulta. Marque o que ${S.draft.proprio ? "você precisa" : "a Maria precisa"}:`, { kind: "pacote", locked: false }, setFlow("pacote")]);
+    `Agora vamos montar o dia da consulta. Escolha o que ${S.draft.proprio ? "você precisa" : "a Maria precisa"}:`, { kind: "pacote", locked: false }, setFlow("pacote")]);
   save(); renderAll();
 }
 function confirmarPacote(mi) {
   const m = S.chat[mi]; if (!m || m.locked || S.typing) return;
-  m.locked = true; const sv = S.draft.servicos, tot = totalDe(sv);
+  m.locked = true; const sv = ajustarSv(S.draft.servicos), tot = totalDe(sv);
   S.chat.push({ from: "me", text: `${resumoSv(sv)} · ${brl(tot)}` });
   if (tot === 0) { zelia([() => criarAgendamento(), { kind: "confirm" }, "Tudo certo! Quer que eu avise a Suzana também?", setFlow("avisar")]); }
   else zelia(["Quem vai pagar?", setFlow("pagador")]);
@@ -562,12 +653,13 @@ function confirmarPacote(mi) {
 function criarAgendamento() {
   const d = S.draft;
   S.booking = { esp: d.esp, medico: d.medico, slot: d.slot, convenio: d.convenio || "Vida Plena Saúde", cidade: d.cidade || "São Paulo",
-    servicos: Object.assign({}, d.servicos), total: totalDe(d.servicos), pagador: d.pagador || "Você", pagamento: d.pagamento || "Pix" };
+    servicos: Object.assign({}, d.servicos), total: totalDe(d.servicos), taxa: temServico(d.servicos) ? taxaAtual() : 0, pagador: d.pagador || "Você", pagamento: d.pagamento || "Pix" };
   S.trip = { etapa: -1, consent: false, gravando: false, gravSeg: 0, gravou: false, notas: "", finalizado: false };
-  toast("parceiro", "Novo atendimento: Maria, 82 · " + S.booking.slot, "car");
+  toast("parceiro", "Novo atendimento: Maria, 82 · " + S.booking.slot, S.booking.servicos.acompanhante ? "heart" : "car");
 }
 function autoAgendar() {
   const s = fresh(); s.mode = S.mode; s.theme = S.theme; s.views = S.views; s.views.familia.stack = []; s.views.parceiro.stack = [];
+  s.plano = S.plano; s.empresa = S.empresa; s.welcomed = true;
   S = s; const docs = medicosPara("Oftalmologista");
   Object.assign(S.draft, { cidade: "São Paulo", convenio: "Vida Plena Saúde", esp: "Oftalmologista", medico: docs[0], slot: docs[0].slots[0], pagador: "Você", pagamento: "Pix" });
   S.chat = [
@@ -577,7 +669,7 @@ function autoAgendar() {
     { from: "me", text: `${docs[0].nome} · ${docs[0].slots[0]}` },
     { from: "z", kind: "note", icon: "shield", text: "Pedi a autorização ao Vida Plena Saúde: autorizado." },
     { from: "z", kind: "pacote", locked: true },
-    { from: "me", text: "Transporte + Acompanhante · R$ 380" },
+    { from: "me", text: `${resumoSv(S.draft.servicos)} · ${brl(totalDe(S.draft.servicos))}` },
     { from: "z", kind: "note", icon: "check", text: "Pix recebido." }
   ];
   RT.chatSeen = null;
@@ -644,7 +736,7 @@ function famInicio() {
   if (live) h += `<section class="card live" aria-live="polite">
       <p class="eyebrow">Agora · ${horaEtapa(t.etapa)}</p>
       <h2 class="h2">${famEtapa(t.etapa)}</h2>
-      <div class="row">${I("car")}<span>${MOTORISTA.nome}${b.servicos.acompanhante ? " e " + ACOMP.nome.split(" ")[0] : ""} com a Maria</span></div>
+      <div class="row">${I(b.servicos.acompanhante ? "heart" : "car")}<span>${persona().nome} com a Maria</span></div>
       <button class="btn sm" data-action="push" data-arg="acompanhar">Acompanhar ao vivo</button></section>`;
   h += `<section class="card soft">
       <div class="row">${ZAV()}<div class="grow"><strong style="font-size:18px">Oi! Sou a Zélia.</strong><div class="muted" style="font-size:16px">${b ? "Posso marcar o retorno, tirar dúvidas ou explicar um remédio." : "Precisa marcar uma consulta? Eu cuido de tudo."}</div></div></div>
@@ -658,6 +750,7 @@ function famInicio() {
       <button class="btn sec sm" data-action="push" data-arg="registro|${ult.id}">Ver o que o médico disse</button></section>`;
   if (meds.length) h += `<section class="card"><p class="eyebrow">Remédios da Maria</p>${meds.slice(0, 3).map(m =>
       `<div class="med"><div class="ico">${I("pill")}</div><div class="grow"><strong>${m.nome}</strong><div class="muted" style="font-size:15px">${m.dose}</div></div><strong>${m.quando}</strong></div>`).join("")}</section>`;
+  if (S.plano === "gratis") h += `<button class="card upsell" data-action="push" data-arg="planos"><div class="row"><span class="avatar">${I("star")}</span><div class="grow" style="text-align:left"><strong>Conheça o Zelo+ e o Zelo Empresas</strong><div class="muted" style="font-size:15px">Sem taxa de serviço, família toda conectada</div></div>${I("chev")}</div></button>`;
   return `<div class="screen">${bar("Maria, 82", { sub: "Cuidando de", lead: `<span class="avatar">M</span>`, right: `<button class="ib" aria-label="Notificações">${I("bell")}${live ? '<span class="badge"></span>' : ""}</button>` })}
     <div class="scroll">${h}</div>${tabbar("familia")}</div>`;
 }
@@ -669,9 +762,10 @@ function consultaCard(b, t) {
     <div class="row muted" style="font-size:16px">${I("doc")}<span>${b.medico.nome} · ${b.medico.bairro}</span></div>
     <div class="tags">
       ${b.convenio !== "Particular" ? `<span class="tag ok">${I("shield")}Convênio autorizado</span>` : ""}
-      ${sv.transporte ? `<span class="tag ok">${I("car")}Busca às ${horaEtapa(1)}</span>` : ""}
+      ${sv.acompanhante ? `<span class="tag ok">${I("heart")}Acompanhante: ${primeiro(ACOMP.nome)}</span>` : ""}
+      ${sv.transporte === "zelo" ? `<span class="tag ok">${I("car")}Motorista Zelo às ${horaEtapa(1)}</span>` : ""}
+      ${sv.transporte === "app" ? `<span class="tag ok">${I("phone")}Carro por app às ${horaEtapa(1)}</span>` : ""}
       ${sv.adaptado ? `<span class="tag ok">${I("wheel")}Veículo adaptado</span>` : ""}
-      ${sv.acompanhante ? `<span class="tag ok">${I("heart")}Acompanhante: ${ACOMP.nome.split(" ")[0]}</span>` : ""}
     </div>
     ${t.finalizado ? `<button class="btn sm" data-action="push" data-arg="registro|${S.registros[0].id}">Ver registro da consulta</button>` : `<button class="btn sm" data-action="push" data-arg="acompanhar">Acompanhar o dia</button>`}
   </section>`;
@@ -702,12 +796,13 @@ function famAcompanhar() {
   return `<div class="screen">${bar(b.esp + " · hoje", { back: true, sub: "Consulta da Maria", small: true })}
     <div class="scroll">${map}
       <section class="card">
-        <div class="row"><span class="avatar">${MOTORISTA.ini}</span><div class="grow"><strong>${MOTORISTA.nome}</strong><div class="muted" style="font-size:15px">${MOTORISTA.carro} · ${MOTORISTA.placa} · ${I("star")} ${MOTORISTA.nota}</div></div></div>
-        ${b.servicos.acompanhante ? `<div class="row"><span class="avatar">${ACOMP.ini}</span><div class="grow"><strong>${ACOMP.nome}</strong><div class="muted" style="font-size:15px">Acompanhante · ${ACOMP.cargo}</div></div></div>` : ""}
+        ${b.servicos.acompanhante ? `<div class="row"><span class="avatar">${ACOMP.ini}</span><div class="grow"><strong>${ACOMP.nome}</strong><div class="muted" style="font-size:15px">Acompanhante · ${ACOMP.cargo} · COREN verificado</div></div></div>` : ""}
+        ${b.servicos.transporte === "zelo" ? `<div class="row"><span class="avatar">${MOTORISTA.ini}</span><div class="grow"><strong>${MOTORISTA.nome}</strong><div class="muted" style="font-size:15px">Motorista Zelo · ${MOTORISTA.carro} · ${MOTORISTA.placa}</div></div></div>` : ""}
+        ${b.servicos.transporte === "app" ? `<div class="row"><span class="avatar">${I("car")}</span><div class="grow"><strong>Carro por aplicativo</strong><div class="muted" style="font-size:15px">${t.etapa >= 1 ? `${CARRO_APP.nome} · ${CARRO_APP.placa} · chamado pela Zélia` : "A Zélia chama na hora de sair"}</div></div></div>` : ""}
       </section>
       <section class="card"><p class="eyebrow">Andamento</p>${tl}</section>
       ${t.finalizado ? `<button class="btn" data-action="push" data-arg="registro|${S.registros[0].id}">${I("file")}Ver registro da consulta</button>` : ""}
-      <div class="btns"><button class="btn sec sm" data-action="tab" data-arg="zelia">${I("chat")}Zélia</button><button class="btn sec sm">${I("phone")}Ligar</button></div>
+      <div class="btns"><button class="btn sec sm" data-action="tab" data-arg="zelia">${I("chat")}Zélia</button><button class="btn sec sm">${I("phone")}Ligar para ${primeiro(persona().nome)}</button></div>
     </div>${tabbar("familia")}</div>`;
 }
 function famRegistro(id) {
@@ -716,7 +811,8 @@ function famRegistro(id) {
   const playing = RT.playing.familia === r.id;
   return `<div class="screen">${bar(r.esp + " · " + r.data, { back: true, sub: "Registro da consulta", small: true })}
     <div class="scroll">
-      ${r.audio ? `<section class="card"><div class="player">
+      ${r.audio && S.plano === "gratis" ? `<section class="card soft"><div class="row"><span class="avatar">${I("mic")}</span><div class="grow"><strong>Áudio da consulta · ${r.audio}</strong><div class="muted" style="font-size:15px">Disponível no Zelo+ e no Zelo Empresas</div></div></div><button class="btn sec sm" data-action="push" data-arg="planos">Ver planos</button></section>` : ""}
+      ${r.audio && S.plano !== "gratis" ? `<section class="card"><div class="player">
         <button class="ib" data-action="play" data-arg="${r.id}" aria-label="${playing ? "Pausar" : "Ouvir"} áudio da consulta">${I(playing ? "pause" : "play")}</button>
         <div class="grow"><div class="pbar"><i class="${playing ? "go" : ""}"></i></div><div class="muted" style="font-size:14px;margin-top:6px">Áudio da consulta · ${r.audio} · gravado com consentimento</div></div></div></section>` : ""}
       <section class="card"><p class="eyebrow">O que ${/Dra\./.test(r.medico) ? "a médica" : "o médico"} disse</p><p class="big-text" style="margin:0">${r.resumo}</p>
@@ -746,14 +842,47 @@ function famConsultas() {
         </div></section>
     </div>${tabbar("familia")}</div>`;
 }
+function nomePlano() { return S.plano === "plus" ? "Zelo+" : S.plano === "empresas" ? "Zelo Empresas" : "Grátis"; }
+function demoCard(role) {
+  const outro = role === "familia" ? "parceiro" : "familia";
+  return `<section class="card"><p class="eyebrow">Demonstração</p>
+      <button class="btn sec sm" data-action="role" data-arg="${outro}">${I("swap")}${outro === "parceiro" ? "Entrar como acompanhante" : "Entrar como família"}</button>
+      <button class="btn sec sm" data-action="auto">${I("clock")}Pular para consulta agendada</button>
+      <button class="btn sec sm" data-action="reset">${I("swap")}Reiniciar demo</button>
+      ${ENV.android && !ENV.inApp ? `<a class="btn sec sm" href="zelo.apk" download>${I("plus")}Baixar o app para Android</a>` : ""}
+    </section>`;
+}
 function famPerfil() {
   return `<div class="screen">${bar("Perfil")}
     <div class="scroll">
+      <button class="card upsell" data-action="push" data-arg="planos"><div class="row"><span class="avatar">${I("star")}</span><div class="grow" style="text-align:left"><span class="eyebrow">Seu plano</span><br><strong style="font-size:19px">${nomePlano()}</strong>${S.plano === "empresas" ? `<div class="muted" style="font-size:15px">Benefício de ${esc(S.empresa)}</div>` : ""}</div>${I("chev")}</div></button>
       <section class="card"><div class="row"><span class="avatar lg">M</span><div class="grow"><h2 class="h2">Maria, 82</h2><div class="muted">${PACIENTE.endereco}</div></div></div>
         <div class="tags"><span class="tag">${I("cane")}Usa bengala</span><span class="tag">${I("car")}Ajuda para entrar no carro</span><span class="tag">${I("eye")}Enxerga pouco de perto</span></div></section>
       <section class="card"><p class="eyebrow">Convênio</p><div class="kv"><span>Plano</span><strong>Vida Plena Saúde · Ouro</strong></div><div class="kv"><span>Carteirinha</span><strong>final 4821</strong></div></section>
       <section class="card"><div class="row">${I("whats")}<div class="grow"><strong>Zélia no WhatsApp</strong><div class="muted" style="font-size:15px">Maria e você conversam com ela por lá também</div></div><span class="tag ok">conectado</span></div></section>
-      <button class="btn sec" data-action="role" data-arg="parceiro">${I("swap")}Entrar como parceiro</button>
+      ${demoCard("familia")}
+    </div>${tabbar("familia")}</div>`;
+}
+function famPlanos() {
+  const cur = S.plano;
+  const card = (k, titulo, preco, sub, itens, cta, destaque) => `<section class="card plan ${cur === k ? "cur" : ""} ${destaque ? "feat" : ""}">
+      <div class="row top"><div class="grow"><h2 class="h2">${titulo}</h2><div class="muted" style="font-size:15px">${sub}</div></div>${cur === k ? '<span class="tag ok">seu plano</span>' : destaque ? '<span class="tag acc">recomendado</span>' : ""}</div>
+      <div class="price-big">${preco}</div>
+      <ul class="feat">${itens.map(x => `<li>${I("check")}<span>${x}</span></li>`).join("")}</ul>${cta}</section>`;
+  return `<div class="screen">${bar("Planos", { back: true, sub: "Zelo", small: true })}
+    <div class="scroll">
+      <p class="muted" style="margin:4px 2px 0">Transporte e acompanhante são pagos por atendimento, em qualquer plano.</p>
+      ${card("gratis", "Grátis", "R$ 0", "Para começar",
+        ["A Zélia agenda consultas, no app e no WhatsApp", "Lembretes de consulta para a Maria", "Acompanhar o dia ao vivo", "Resumo simples de cada consulta", `Taxa de serviço de ${brl(PRECOS.taxa)} por atendimento`],
+        cur !== "gratis" ? `<button class="btn sec sm" data-action="plano" data-arg="gratis">Voltar ao Grátis</button>` : "")}
+      ${card("plus", "Zelo+", `R$ 29,90 <small>/mês</small>`, "Para quem cuida todo mês",
+        ["<strong>Sem taxa de serviço</strong> nos atendimentos", "A família toda conectada: irmãos dividem o cuidado", "Áudio da consulta e perguntas à Zélia sobre ela", "Lembrete de remédio por ligação para a Maria", "Sempre a mesma acompanhante", "Histórico completo de consultas e exames"],
+        cur !== "plus" ? `<button class="btn" data-action="plano" data-arg="plus">Assinar Zelo+</button>` : "", true)}
+      ${card("empresas", "Zelo Empresas", `R$ 0 <small>para você</small>`, "Benefício pago pela empresa onde você trabalha",
+        ["Tudo do Zelo+, pago pela empresa", "Você não precisa faltar ao trabalho para levar seus pais", "Ativação com o código do RH"],
+        cur === "empresas" ? `<div class="kv"><span>Benefício ativo</span><strong>${esc(S.empresa)}</strong></div>`
+          : `<button class="btn" data-action="codigo">Tenho o código da empresa</button><button class="btn sec sm" data-action="rh">Indicar o Zelo para o meu RH</button>`)}
+      <p class="muted" style="font-size:14px;margin:0 2px">Na demonstração, a assinatura é simulada.</p>
     </div>${tabbar("familia")}</div>`;
 }
 function famZelia() {
@@ -786,27 +915,40 @@ function chatMsg(m, i) {
       <div class="slots">${d.slots.map((s, si) => { const on = m.pick && m.pick[0] === di && m.pick[1] === si;
         return `<button class="slot" data-action="slot" data-arg="${i}|${di}|${si}" aria-pressed="${on}" ${m.pick || S.flow !== "medico" ? "disabled" : ""}>${s}</button>`; }).join("")}</div></div>`).join("")}</div></div>`;
   if (m.kind === "pacote") {
-    const sv = S.booking && m.locked ? S.booking.servicos : S.draft.servicos;
-    const row = (k, ic, t, sub, price) => `<button class="svc" data-action="svc" data-arg="${i}|${k}" role="switch" aria-checked="${!!sv[k]}" ${m.locked ? "disabled" : ""}>
+    const sv = S.booking && m.locked ? S.booking.servicos : S.draft.servicos, dis = m.locked ? "disabled" : "";
+    const sw = (k, ic, t, sub, price) => `<button class="svc" data-action="svc" data-arg="${i}|${k}" role="switch" aria-checked="${!!sv[k]}" ${dis}>
       <span class="ico">${I(ic)}</span><span class="grow"><strong>${t}</strong><br><span class="muted" style="font-size:15px">${sub}</span><br><span class="price">${price}</span></span><span class="switch" aria-hidden="true"></span></button>`;
+    const rd = (k, ic, t, sub, price, off) => `<button class="svc" data-action="transp" data-arg="${i}|${k}" role="radio" aria-checked="${sv.transporte === k}" ${dis || (off ? "disabled" : "")}>
+      <span class="ico">${I(ic)}</span><span class="grow"><strong>${t}</strong><br><span class="muted" style="font-size:15px">${sub}</span>${price ? `<br><span class="price">${price}</span>` : ""}</span><span class="radio" aria-hidden="true"></span></button>`;
+    const taxa = temServico(sv) ? (S.booking && m.locked ? S.booking.taxa : taxaAtual()) : 0;
+    const total = S.booking && m.locked ? S.booking.total : totalDe(sv);
     return `<div class="msg z"><div class="wide"><div class="doc">
-      <p class="eyebrow">Pacote do dia</p>
-      ${row("transporte", "car", "Transporte ida e volta", "Motorista treinado ajuda a entrar e sair", brl(PRECOS.transporte))}
-      ${row("adaptado", "wheel", "Veículo adaptado", "Para cadeira de rodas", "+" + brl(PRECOS.adaptado))}
-      ${row("acompanhante", "heart", "Acompanhante na consulta", "Fica com a Maria e registra tudo", brl(PRECOS.acompanhante))}
+      <p class="eyebrow">Quem vai junto</p>
+      ${sw("acompanhante", "heart", "Acompanhante Zelo", "Profissional de enfermagem fica com a Maria e registra a consulta", brl(PRECOS.acompanhante) + " · até 4h")}
+      <p class="subhead">Como ir até a clínica</p>
+      <div role="radiogroup" aria-label="Transporte">
+      ${rd("app", "phone", "Carro por aplicativo", sv.acompanhante ? "A Zélia chama um 99 ou Uber; a Ana ajuda a Maria a entrar" : "Só com acompanhante, para a Maria não ir sozinha", "≈ " + brl(PRECOS.carroApp) + " (valor da corrida)", !sv.acompanhante)}
+      ${rd("zelo", "car", "Motorista Zelo", "Motorista treinado desce, ajuda e espera a consulta", brl(PRECOS.motorista) + " ida e volta")}
+      ${rd("nenhum", "home", "Sem transporte", "A família leva a Maria", "")}
+      </div>
+      ${sw("adaptado", "wheel", "Veículo adaptado", "Rampa para cadeira de rodas (com motorista Zelo)", "+" + brl(PRECOS.adaptado))}
       <div class="svc" style="cursor:default"><span class="ico">${I("file")}</span><span class="grow"><strong>Resumo para a família</strong><br><span class="muted" style="font-size:15px">O que o médico disse, remédios e retorno</span></span><span class="tag ok">incluso</span></div>
-      <div class="total"><span class="muted">Total</span><strong>${brl(totalDe(sv))}</strong></div>
+      ${temServico(sv) ? `<div class="kv" style="padding-top:8px"><span>Taxa de serviço (${S.plano === "gratis" ? "plano Grátis" : S.plano === "plus" ? "Zelo+" : "Zelo Empresas"})</span><strong>${taxa ? brl(taxa) : "isenta"}</strong></div>` : ""}
+      <div class="total"><span class="muted">Total</span><strong>${brl(total)}</strong></div>
       ${m.locked ? "" : `<button class="btn" data-action="pacote" data-arg="${i}">Confirmar pacote</button>`}
+      ${m.locked || S.plano !== "gratis" ? "" : `<button class="linkbtn" data-action="push" data-arg="planos">Sem taxa no Zelo+ ou pelo Zelo Empresas</button>`}
     </div></div></div>`;
   }
   if (m.kind === "confirm") {
     const b = S.booking; if (!b) return "";
+    const sv = b.servicos;
     return `<div class="msg z"><div class="wide"><div class="doc">
       <div class="row" style="color:var(--success)">${I("check")}<strong>Consulta confirmada</strong></div>
       <div class="kv"><span>Consulta</span><strong>${b.esp} · ${b.slot}</strong></div>
       <div class="kv"><span>Médico</span><strong>${b.medico.nome}</strong></div>
-      ${b.servicos.transporte ? `<div class="kv"><span>Busca em casa</span><strong>${horaEtapa(1)}</strong></div><div class="kv"><span>Motorista</span><strong>${MOTORISTA.nome.split(" ")[0]} · ${MOTORISTA.placa}</strong></div>` : ""}
-      ${b.servicos.acompanhante ? `<div class="kv"><span>Acompanhante</span><strong>${ACOMP.nome}</strong></div>` : ""}
+      ${sv.acompanhante ? `<div class="kv"><span>Acompanhante</span><strong>${ACOMP.nome}</strong></div>` : ""}
+      ${sv.transporte === "zelo" ? `<div class="kv"><span>Busca em casa</span><strong>${horaEtapa(1)}</strong></div><div class="kv"><span>Motorista</span><strong>${primeiro(MOTORISTA.nome)} · ${MOTORISTA.placa}</strong></div>` : ""}
+      ${sv.transporte === "app" ? `<div class="kv"><span>Saída de casa</span><strong>${horaEtapa(1)}</strong></div><div class="kv"><span>Carro</span><strong>por aplicativo, chamado pela Zélia</strong></div>` : ""}
       <div class="divider"></div><div class="kv"><span>Pago (${b.pagamento})</span><strong>${brl(b.total)}</strong></div>
     </div></div></div>`;
   }
@@ -815,42 +957,49 @@ function chatMsg(m, i) {
 
 /* ---------- Parceiro ---------- */
 function parAgenda() {
-  const b = S.booking, t = S.trip;
-  const hoje = (b ? repasse(b.servicos) : 0) + 120;
+  const b = S.booking, t = S.trip, p = persona(), ehAcomp = p === ACOMP;
+  const hoje = (b ? repasse(b.servicos) : 0) + (ehAcomp ? 270 : 120);
+  const transp = b ? (b.servicos.transporte === "app" ? `<span class="tag">${I("phone")}Você chama o carro por app</span>` : b.servicos.transporte === "zelo" && ehAcomp ? `<span class="tag">${I("car")}Com motorista ${primeiro(MOTORISTA.nome)}</span>` : "") : "";
   const maria = b ? `<section class="card job">
-      <div class="row"><strong class="grow" style="font-size:19px">${fmt(parseHora(b.slot) - 65)} · Maria, 82</strong>${t.finalizado ? '<span class="tag ok">concluído</span>' : t.etapa >= 0 ? '<span class="tag acc">em andamento</span>' : '<span class="tag">próximo</span>'}</div>
-      <div class="row muted" style="font-size:16px">${I("pin")}<span>Perdizes → ${b.medico.bairro} · volta prevista ${horaEtapa(5)}</span></div>
-      <div class="tags"><span class="tag warn">${I("car")}Ajuda para entrar no carro</span><span class="tag warn">${I("cane")}Usa bengala</span>${b.servicos.adaptado ? `<span class="tag warn">${I("wheel")}Cadeira de rodas</span>` : ""}${b.servicos.acompanhante ? `<span class="tag">${I("heart")}Com ${ACOMP.nome.split(" ")[0]}</span>` : ""}</div>
+      <div class="row"><strong class="grow" style="font-size:19px">${fmt(parseHora(b.slot) + ETAPAS[0].off)} · Maria, 82</strong>${t.finalizado ? '<span class="tag ok">concluído</span>' : t.etapa >= 0 ? '<span class="tag acc">em andamento</span>' : '<span class="tag">próximo</span>'}</div>
+      <div class="row muted" style="font-size:16px">${I("pin")}<span>Perdizes → ${b.medico.bairro} · ${b.esp.toLowerCase()} às ${b.slot.split("· ")[1] || ""}</span></div>
+      <div class="tags"><span class="tag warn">${I("car")}Ajuda para entrar no carro</span><span class="tag warn">${I("cane")}Usa bengala</span>${b.servicos.adaptado ? `<span class="tag warn">${I("wheel")}Cadeira de rodas</span>` : ""}${transp}</div>
       <button class="btn" data-action="push" data-arg="atendimento">${t.finalizado ? "Ver atendimento" : t.etapa >= 0 ? "Continuar atendimento" : "Iniciar atendimento"}</button></section>`
     : `<section class="card"><div class="empty"><div class="ic">${I("calendar")}</div><h2 class="h2">Sem novos pedidos</h2><p class="muted" style="margin:0">Quando a família agendar com a Zélia, o atendimento aparece aqui.</p></div></section>`;
-  return `<div class="screen">${bar("Olá, Carlos", { par: true, sub: "Motorista parceiro · " + MOTORISTA.nota + " ★", right: `<button class="toggle-row" style="width:auto;color:#fff" data-action="online" role="switch" aria-checked="${S.online}"><span class="switch" aria-hidden="true"></span><span style="font-weight:700;font-size:15px">${S.online ? "Disponível" : "Pausado"}</span></button>` })}
+  const outros = ehAcomp
+    ? `<section class="card job dim"><div class="row"><strong class="grow" style="font-size:18px">13h00 · João, 76</strong><span class="tag">com motorista Zelo</span></div><div class="row muted" style="font-size:16px">${I("pin")}<span>Lapa → Hospital · Vila Clementino</span></div><div class="tags"><span class="tag warn">${I("wheel")}Cadeira de rodas</span></div></section>
+       <section class="card job dim"><div class="row"><strong class="grow" style="font-size:18px">16h30 · Lúcia, 88</strong><span class="tag">carro por app</span></div><div class="row muted" style="font-size:16px">${I("pin")}<span>Pompeia → Laboratório · Perdizes</span></div></section>`
+    : `<section class="card job dim"><div class="row"><strong class="grow" style="font-size:18px">13h00 · João, 76</strong><span class="tag">só transporte</span></div><div class="row muted" style="font-size:16px">${I("pin")}<span>Lapa → Hospital · Vila Clementino</span></div><div class="tags"><span class="tag warn">${I("wheel")}Cadeira de rodas</span></div></section>`;
+  return `<div class="screen">${bar("Olá, " + primeiro(p.nome), { par: true, sub: p.papel + " · " + p.nota + " ★", right: `<button class="toggle-row" style="width:auto;color:#fff" data-action="online" role="switch" aria-checked="${S.online}"><span class="switch" aria-hidden="true"></span><span style="font-weight:700;font-size:15px">${S.online ? "Disponível" : "Pausado"}</span></button>` })}
     <div class="scroll" style="padding-top:16px">
       <div class="stats"><div class="stat"><strong>${b ? 3 : 2}</strong><span>atendimentos hoje</span></div><div class="stat"><strong>${brl(hoje)}</strong><span>a receber hoje</span></div></div>
       <p class="eyebrow">Quinta, 15/10</p>
       ${maria}
-      <section class="card job dim"><div class="row"><strong class="grow" style="font-size:18px">13h00 · João, 76</strong><span class="tag">só transporte</span></div><div class="row muted" style="font-size:16px">${I("pin")}<span>Lapa → Hospital · Vila Clementino</span></div><div class="tags"><span class="tag warn">${I("wheel")}Cadeira de rodas</span></div></section>
-      <section class="card job dim"><div class="row"><strong class="grow" style="font-size:18px">16h30 · Lúcia, 88</strong><span class="tag">só transporte</span></div><div class="row muted" style="font-size:16px">${I("pin")}<span>Laboratório → Casa · Pompeia</span></div></section>
+      ${outros}
     </div>${tabbar("parceiro")}</div>`;
 }
 function parAtendimento() {
-  const b = S.booking, t = S.trip;
+  const b = S.booking, t = S.trip, p = persona();
   if (!b) return `<div class="screen">${bar("Atendimento", { back: true, par: true })}<div class="scroll"></div>${tabbar("parceiro")}</div>`;
-  const prox = t.etapa + 1;
-  const steps = ETAPAS.map((e, i) => `<div class="step ${t.etapa >= i ? "done" : "fut"}"><span class="tdot">${t.etapa >= i ? I("check") : ""}</span><span class="grow">${e.par}</span><small class="muted">${t.etapa >= i ? horaEtapa(i) : ""}</small></div>`).join("");
-  const showRec = b.servicos.acompanhante && t.etapa >= 3 && !t.finalizado;
-  const rec = showRec ? `<section class="card"><p class="eyebrow">Registro da consulta · ${ACOMP.nome.split(" ")[0]}</p>
+  const sv = b.servicos, prox = t.etapa + 1;
+  const steps = ETAPAS.map((e, i) => `<div class="step ${t.etapa >= i ? "done" : "fut"}"><span class="tdot">${t.etapa >= i ? I("check") : ""}</span><span class="grow">${parEtapa(i)}</span><small class="muted">${t.etapa >= i ? horaEtapa(i) : ""}</small></div>`).join("");
+  const showRec = sv.acompanhante && t.etapa >= 3 && !t.finalizado;
+  const rec = showRec ? `<section class="card"><p class="eyebrow">Registro da consulta</p>
       <button class="toggle-row" data-action="consent" role="switch" aria-checked="${t.consent}"><span class="switch" aria-hidden="true"></span><span>A Maria e ${/Dra\./.test(b.medico.nome) ? "a médica" : "o médico"} autorizaram a gravação</span></button>
       ${t.gravando ? `<div class="rec"><span class="d"></span>Gravando · ${fmtSeg(t.gravSeg)}</div>` : t.gravou ? `<div class="muted">Gravado: ${fmtSeg(t.gravSeg)}</div>` : ""}
       <button class="btn ${t.gravando ? "danger" : "sec"} sm" data-action="grav" ${t.consent ? "" : "disabled"}>${t.gravando ? "Parar gravação" : t.gravou ? "Continuar gravando" : "Gravar consulta"}</button>
       <label class="lbl" for="notes">Observações para a família</label>
       <textarea id="notes" class="notes" data-input="notes" placeholder="Ex.: a médica pediu para voltar em 3 meses com exame">${esc(t.notas)}</textarea></section>` : "";
-  const fim = t.finalizado ? `<section class="card soft"><div class="row" style="color:var(--success)">${I("check")}<strong>Atendimento finalizado</strong></div><p style="margin:0">Registro enviado à família. Você recebe <strong>${brl(repasse(b.servicos))}</strong> por este atendimento.</p></section>`
-    : prox < ETAPAS.length ? `<button class="btn" data-action="etapa">${I("check")}${ETAPAS[prox].par}</button>`
+  const fim = t.finalizado ? `<section class="card soft"><div class="row" style="color:var(--success)">${I("check")}<strong>Atendimento finalizado</strong></div><p style="margin:0">Registro enviado à família. Você recebe <strong>${brl(repasse(sv))}</strong> por este atendimento.</p></section>`
+    : prox < ETAPAS.length ? `<button class="btn" data-action="etapa">${I(prox === 1 && sv.transporte === "app" ? "phone" : "check")}${parEtapa(prox)}</button>`
     : `<button class="btn" data-action="finalizar">${I("file")}Finalizar e enviar à família</button>`;
+  const transp = sv.transporte === "app" ? `<div class="row">${I("phone")}<div class="grow"><strong>Carro por app:</strong> ${t.etapa >= 1 ? `${CARRO_APP.nome} · ${CARRO_APP.placa}` : "a Zélia chama quando você marcar a saída"}</div></div>`
+    : sv.transporte === "zelo" && p === ACOMP ? `<div class="row">${I("car")}<div class="grow"><strong>Motorista Zelo:</strong> ${MOTORISTA.nome} · ${MOTORISTA.placa}</div></div>` : "";
   return `<div class="screen">${bar("Maria, 82", { back: true, par: true, sub: b.esp + " · " + b.slot })}
     <div class="scroll" style="padding-top:16px">
       <section class="card">
         <div class="row">${I("pin")}<div class="grow"><strong>Buscar:</strong> ${PACIENTE.endereco}<br><strong>Levar:</strong> ${b.medico.nome} · ${b.medico.bairro}</div></div>
+        ${transp}
         <div class="tags"><span class="tag warn">${I("car")}Ajuda para entrar no carro</span><span class="tag warn">${I("cane")}Usa bengala</span><span class="tag warn">${I("eye")}Enxerga pouco de perto</span></div>
         <div class="btns"><button class="btn sec sm">${I("phone")}Família</button><button class="btn sec sm">${I("pin")}Rota</button></div>
       </section>
@@ -862,39 +1011,46 @@ function parAtendimento() {
 }
 function fmtSeg(s) { const m = Math.floor(s / 60), r = s % 60; return m + ":" + String(r).padStart(2, "0"); }
 function parGanhos() {
-  const b = S.booking, hojeV = (b ? repasse(b.servicos) : 0) + 120;
-  const dias = [["Seg", 180], ["Ter", 240], ["Qua", 120], ["Qui", hojeV]], max = 320, tot = dias.reduce((a, d) => a + d[1], 0);
+  const b = S.booking, p = persona(), ehAcomp = p === ACOMP, hojeV = (b ? repasse(b.servicos) : 0) + (ehAcomp ? 270 : 120);
+  const dias = ehAcomp ? [["Seg", 405], ["Ter", 270], ["Qua", 540], ["Qui", hojeV]] : [["Seg", 180], ["Ter", 240], ["Qua", 120], ["Qui", hojeV]];
+  const max = Math.max(...dias.map(d => d[1])) * 1.15, tot = dias.reduce((a, d) => a + d[1], 0);
   return `<div class="screen">${bar("Ganhos", { par: true, sub: "Semana de 12 a 18/10" })}
     <div class="scroll" style="padding-top:16px">
       <section class="card"><p class="eyebrow">Total da semana</p><strong style="font-family:var(--font-head);font-size:34px">${brl(tot)}</strong>
         <div class="bars" aria-label="Ganhos por dia">${dias.map((d, i) => `<div class="${i === 3 ? "today" : ""}"><span>${brl(d[1])}</span><b style="height:${Math.round(d[1] / max * 100)}%"></b>${d[0]}</div>`).join("")}</div></section>
-      <section class="card"><p class="eyebrow">Como você ganha</p><p style="margin:0">Você recebe ${Math.round(REPASSE_MOTORISTA * 100)}% do valor do transporte de cada atendimento. O pagamento cai toda semana.</p></section>
+      <section class="card"><p class="eyebrow">Como você ganha</p><p style="margin:0">${ehAcomp
+        ? `Você recebe ${Math.round(REPASSE * 100)}% de cada acompanhamento: ${brl(repasse({ acompanhante: true, transporte: "app" }))} por bloco de até 4h. Com agenda marcada com dias de antecedência.`
+        : `Você recebe ${Math.round(REPASSE * 100)}% do valor do transporte, com a espera da consulta incluída.`} O pagamento cai toda semana.</p></section>
     </div>${tabbar("parceiro")}</div>`;
 }
 function parTreino() {
-  const mods = [["Embarque e desembarque seguro", 100], ["Comunicação com idosos", 100], ["Cadeira de rodas e veículo adaptado", 100], ["Primeiros socorros", 60], ["Privacidade e consentimento (LGPD)", 0]];
-  return `<div class="screen">${bar("Treinamento", { par: true, sub: "Credenciamento Zelo" })}
+  const ehAcomp = persona() === ACOMP;
+  const mods = ehAcomp
+    ? [["Acompanhar e registrar a consulta", 100], ["Embarque seguro e transferência cadeira–carro", 100], ["Comunicação com idosos", 100], ["Primeiros socorros", 80], ["Privacidade e consentimento (LGPD)", 0]]
+    : [["Embarque e desembarque seguro", 100], ["Comunicação com idosos", 100], ["Cadeira de rodas e veículo adaptado", 100], ["Primeiros socorros", 60], ["Privacidade e consentimento (LGPD)", 0]];
+  return `<div class="screen">${bar("Treinamento", { par: true, sub: "Certificação Zelo" })}
     <div class="scroll" style="padding-top:16px">
-      <section class="card soft"><div class="row">${I("shield")}<div class="grow"><strong>Parceiro credenciado</strong><div style="font-size:15px">Antecedentes verificados · CNH com EAR · 3 de 5 módulos</div></div></div></section>
+      <section class="card soft"><div class="row">${I("shield")}<div class="grow"><strong>Parceira certificada</strong><div style="font-size:15px">${ehAcomp ? "COREN ativo verificado · antecedentes verificados · 3 de 5 módulos" : "CNH com EAR · antecedentes verificados · carro vistoriado · 3 de 5 módulos"}</div></div></div></section>
       <section class="card"><p class="eyebrow">Módulos</p>${mods.map(([n, p]) => `<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0">
         <div class="row"><strong class="grow">${n}</strong>${p === 100 ? '<span class="tag ok">concluído</span>' : p ? `<span class="tag warn">${p}%</span>` : '<span class="tag">começar</span>'}</div>
         <div class="prog ${p < 100 ? "mid" : ""}"><i style="width:${p}%"></i></div></div>`).join("")}</section>
     </div>${tabbar("parceiro")}</div>`;
 }
 function parPerfil() {
+  const p = persona();
   return `<div class="screen">${bar("Perfil", { par: true })}
     <div class="scroll" style="padding-top:16px">
-      <section class="card"><div class="row"><span class="avatar lg">${MOTORISTA.ini}</span><div class="grow"><h2 class="h2">${MOTORISTA.nome}</h2><div class="muted">Motorista parceiro · ${MOTORISTA.nota} ★</div></div></div>
-        <div class="kv"><span>Veículo</span><strong>${MOTORISTA.carro}</strong></div><div class="kv"><span>Placa</span><strong>${MOTORISTA.placa}</strong></div></section>
-      <button class="btn sec" data-action="role" data-arg="familia">${I("swap")}Entrar como família</button>
+      <section class="card"><div class="row"><span class="avatar lg">${p.ini}</span><div class="grow"><h2 class="h2">${p.nome}</h2><div class="muted">${p.papel} · ${p.nota} ★</div></div></div>
+        ${p === ACOMP ? `<div class="kv"><span>Formação</span><strong>Técnica de enfermagem</strong></div><div class="kv"><span>COREN</span><strong>ativo · verificado</strong></div>`
+          : `<div class="kv"><span>Veículo</span><strong>${p.carro}</strong></div><div class="kv"><span>Placa</span><strong>${p.placa}</strong></div>`}</section>
+      ${demoCard("parceiro")}
     </div>${tabbar("parceiro")}</div>`;
 }
-
 /* ---------- Montagem ---------- */
 function screenFor(role) {
   const v = S.views[role], top = v.stack[v.stack.length - 1];
   if (role === "familia") {
-    if (top) { const [s, a] = top.split("|"); if (s === "acompanhar") return famAcompanhar(); if (s === "registro") return famRegistro(a); }
+    if (top) { const [s, a] = top.split("|"); if (s === "acompanhar") return famAcompanhar(); if (s === "registro") return famRegistro(a); if (s === "planos") return famPlanos(); }
     return ({ inicio: famInicio, zelia: famZelia, consultas: famConsultas, perfil: famPerfil }[v.tab] || famInicio)();
   }
   if (top === "atendimento") return parAtendimento();
@@ -910,8 +1066,26 @@ function overlays(role) {
       <p class="muted" style="margin:0">A família recebe a sua localização na hora.</p>
       <button class="btn danger solid" data-action="sosok">${I("phone")}Sim, ligar 192</button>
       <button class="btn sec" data-action="modal-close">Cancelar</button></div></div>`;
+  if (RT.modal[role] === "codigo") h += `<div class="scrim"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cod-t">
+      <h2 class="h2" id="cod-t">Ativar Zelo Empresas</h2>
+      <p class="muted" style="margin:0">Digite o código que o RH da sua empresa enviou.</p>
+      <label class="sr" for="cod-in">Código da empresa</label>
+      <input id="cod-in" class="field" data-input="codigo" placeholder="Ex.: FGV2026" autocomplete="off" autocapitalize="characters">
+      <button class="btn" data-action="empresa-ok">Ativar benefício</button>
+      <button class="btn sec" data-action="modal-close">Cancelar</button></div></div>`;
+  if (isMobile() && !S.welcomed) h += `<div class="scrim welcome"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="wel-t">
+      <div class="row"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="currentColor" stroke="none"/></svg></span><span class="logo-word">zelo</span></div>
+      <h2 class="h2" id="wel-t">A Zélia marca a consulta e cuida de todo o caminho até lá.</h2>
+      <p class="muted" style="margin:0">Esta é uma demonstração do app. Como você quer experimentar?</p>
+      <button class="btn" data-action="welcome" data-arg="familia">${I("users")}Sou da família</button>
+      <button class="btn sec" data-action="welcome" data-arg="parceiro">${I("heart")}Sou acompanhante</button>
+      <button class="linkbtn" data-action="welcome" data-arg="auto">Ver uma consulta já agendada</button>
+      ${ENV.android && !ENV.inApp ? `<a class="btn sec sm" href="zelo.apk" download>${I("plus")}Baixar o app para Android</a>` : ""}
+      ${ENV.ios && !ENV.standalone ? `<p class="tip">${I("star")}<span>Dica: toque em <strong>Compartilhar</strong> e em <strong>Adicionar à Tela de Início</strong> para abrir o Zelo em tela cheia.</span></p>` : ""}
+    </div></div>`;
   return h;
 }
+function parceiroLabel() { const p = persona(); return "Parceiro · " + primeiro(p.nome) + ", " + p.funcao; }
 const phones = {};
 function renderRole(role) {
   const host = phones[role]; if (!host) return;
@@ -935,9 +1109,9 @@ function buildStage() {
   const st = document.getElementById("stage");
   const mobile = matchMedia("(max-width:760px)").matches;
   const roles = S.mode === "lado" && !mobile ? ["familia", "parceiro"] : [S.mode === "parceiro" ? "parceiro" : "familia"];
-  const label = { familia: "Família · você cuidando da Maria", parceiro: "Parceiro · Carlos, motorista" };
+  const label = { familia: "Família · você cuidando da Maria", parceiro: parceiroLabel() };
   st.innerHTML = roles.map((r, i) => (i === 1 ? `<div class="sync" aria-hidden="true"><span class="line"></span>tempo real</div>` : "") +
-    `<div class="col ${i ? "secondary" : ""}"><div class="col-label"><span class="dot"></span>${label[r]}</div><div class="dwrap"><div class="device"><div class="screen-wrap" data-phone="${r}"></div></div></div></div>`).join("");
+    `<div class="col ${i ? "secondary" : ""}"><div class="col-label" data-label="${r}"><span class="dot"></span><span>${label[r]}</span></div><div class="dwrap"><div class="device"><div class="screen-wrap" data-phone="${r}"></div></div></div></div>`).join("");
   for (const k in phones) delete phones[k];
   st.querySelectorAll("[data-phone]").forEach(el => { phones[el.dataset.phone] = el; });
   fit(); renderAll();
@@ -949,6 +1123,7 @@ function fit() {
   document.documentElement.style.setProperty("--s", Math.max(.45, s).toFixed(3));
 }
 function syncPanel() {
+  const pl = document.querySelector('[data-label="parceiro"] span:last-child'); if (pl) pl.textContent = parceiroLabel();
   document.querySelectorAll("#modeSeg button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.arg === S.mode)));
   const dark = document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
   document.getElementById("themeBtn").innerHTML = `${I(dark ? "sun" : "moon")}${dark ? "Tema claro" : "Tema escuro"}`;
@@ -963,7 +1138,7 @@ document.addEventListener("click", e => {
   switch (a) {
     case "mode": S.mode = arg; save(); buildStage(); return;
     case "theme": { const dark = document.documentElement.dataset.theme === "dark" || (!S.theme && matchMedia("(prefers-color-scheme: dark)").matches); S.theme = dark ? "light" : "dark"; applyTheme(); save(); renderAll(); return; }
-    case "reset": clearInterval(recTimer); { const m = S.mode, th = S.theme; S = fresh(); S.mode = m; S.theme = th; } RT.toast = {}; RT.modal = {}; RT.carPos = {}; RT.chatSeen = null; save(); buildStage(); return;
+    case "reset": clearInterval(recTimer); { const m = S.mode, th = S.theme; S = fresh(); S.mode = m; S.theme = th; S.welcomed = true; } RT.toast = {}; RT.modal = {}; RT.carPos = {}; RT.chatSeen = null; save(); buildStage(); return;
     case "auto": autoAgendar(); return;
     case "role":
       if (S.mode === "lado") { S.views[arg].stack = []; renderAll(); return; }
@@ -985,7 +1160,13 @@ document.addEventListener("click", e => {
     }
     case "cam": if (S.flow === "convenio") responder("Foto da carteirinha", { att: true }); return;
     case "slot": { const [mi, di, si] = arg.split("|").map(Number); escolherHorario(mi, di, si); return; }
-    case "svc": { const k = arg.split("|")[1]; const sv = S.draft.servicos; sv[k] = !sv[k]; if (k === "adaptado" && sv.adaptado) sv.transporte = true; if (k === "transporte" && !sv.transporte) sv.adaptado = false; save(); renderRole("familia"); return; }
+    case "svc": { if (S.flow !== "pacote") return; const k = arg.split("|")[1]; const sv = S.draft.servicos; sv[k] = !sv[k]; ajustarSv(sv); save(); renderRole("familia"); return; }
+    case "transp": { if (S.flow !== "pacote") return; const k = arg.split("|")[1]; const sv = S.draft.servicos; if (k === "app" && !sv.acompanhante) return; sv.transporte = k; if (k !== "zelo") sv.adaptado = false; save(); renderRole("familia"); return; }
+    case "plano": S.plano = arg; if (arg !== "empresas") S.empresa = ""; save(); renderAll(); toast("familia", arg === "plus" ? "Zelo+ ativado (simulação). Sem taxa de serviço." : "Você voltou ao plano Grátis.", "star"); return;
+    case "codigo": RT.modal.familia = "codigo"; renderRole("familia"); setTimeout(() => { const el = document.getElementById("cod-in"); if (el) el.focus(); }, 50); return;
+    case "empresa-ok": { const el = document.getElementById("cod-in"); const cod = (el && el.value.trim()) || "FGV2026"; S.plano = "empresas"; S.empresa = cod.toUpperCase(); RT.modal.familia = null; save(); renderAll(); toast("familia", "Zelo Empresas ativado: benefício de " + S.empresa, "star"); return; }
+    case "rh": toast("familia", "Enviamos uma apresentação do Zelo para o seu RH (simulação).", "users"); return;
+    case "welcome": S.welcomed = true; if (arg === "auto") { S.mode = "familia"; autoAgendar(); S.views.familia.tab = "inicio"; } else S.mode = arg; save(); buildStage(); return;
     case "pacote": confirmarPacote(Number(arg)); return;
     case "retorno": S.views.familia.tab = "zelia"; S.views.familia.stack = []; if (!S.chat.length) iniciarConversa(); else if (!S.typing) { S.draft.servicos = { transporte: true, adaptado: false, acompanhante: true }; S.flow = "esp"; responder("Quero marcar o retorno: " + arg.toLowerCase()); } renderRole("familia"); return;
     case "play": RT.playing.familia = RT.playing.familia === arg ? null : arg; renderRole("familia"); return;
@@ -996,7 +1177,7 @@ document.addEventListener("click", e => {
     case "finalizar": finalizar(); return;
     case "sos": RT.modal.parceiro = "sos"; renderRole("parceiro"); return;
     case "modal-close": RT.modal[role] = null; renderRole(role); return;
-    case "sosok": RT.modal.parceiro = null; toast("parceiro", "Ligando para o 192… família avisada (simulação)", "phone"); toast("familia", "Alerta: Carlos acionou a emergência e ligou para o 192 (simulação)", "alert"); return;
+    case "sosok": RT.modal.parceiro = null; toast("parceiro", "Ligando para o 192… família avisada (simulação)", "phone"); toast("familia", `Alerta: ${primeiro(persona().nome)} acionou a emergência e ligou para o 192 (simulação)`, "alert"); return;
   }
 });
 document.addEventListener("input", e => {
@@ -1004,6 +1185,7 @@ document.addEventListener("input", e => {
   if (k === "chat") RT.draftText.familia = e.target.value;
   if (k === "notes") { S.trip.notas = e.target.value; save(); }
 });
+document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.id === "cod-in") { const b = document.querySelector('[data-action="empresa-ok"]'); if (b) b.click(); } });
 document.addEventListener("keydown", e => {
   if (e.key === "Enter" && e.target.dataset && e.target.dataset.input === "chat") {
     const tx = e.target.value.trim(); if (tx) { RT.draftText.familia = ""; responder(tx); }
@@ -1012,6 +1194,27 @@ document.addEventListener("keydown", e => {
 addEventListener("resize", () => { const mobile = matchMedia("(max-width:760px)").matches; if (mobile !== buildStage.mobile) { buildStage.mobile = mobile; buildStage(); } else fit(); });
 addEventListener("storage", e => { if (e.key === KEY && e.newValue) { try { S = JSON.parse(e.newValue); renderAll(); } catch (x) {} } });
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => renderAll());
+/* Botão "voltar" do Android (chamado pelo app nativo) */
+window.zeloBack = function () {
+  const role = Object.keys(phones)[0]; if (!role) return false;
+  if (RT.modal[role]) { RT.modal[role] = null; renderRole(role); return true; }
+  const v = S.views[role];
+  if (v.stack.length) { v.stack.pop(); save(); renderRole(role); return true; }
+  const home = role === "familia" ? "inicio" : "agenda";
+  if (v.tab !== home) { v.tab = home; save(); renderRole(role); return true; }
+  return false;
+};
+function montarQR() {
+  const box = document.getElementById("qr"), url = document.getElementById("qrUrl");
+  if (!box) return;
+  if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") { box.innerHTML = '<span class="qr-off">O QR aparece quando a demo estiver publicada (Vercel).</span>'; return; }
+  const alvo = location.origin + location.pathname.replace(/index\.html$/, "");
+  const q = qrcode(0, "M"); q.addData(alvo); q.make();
+  box.innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+  url.textContent = alvo.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  document.getElementById("apkLink").hidden = false;
+}
+montarQR();
 applyTheme();
 buildStage.mobile = matchMedia("(max-width:760px)").matches;
 buildStage();
