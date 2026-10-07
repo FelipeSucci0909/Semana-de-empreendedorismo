@@ -378,6 +378,9 @@ const REPASSE = 0.75; // parte do serviço que vai ao parceiro — a validar
 const MOTORISTA = { nome: "Carlos Mendes", ini: "CM", carro: "Spin prata", placa: "FZL-2B41", nota: "4,9", papel: "Motorista Zelo", funcao: "motorista" };
 const ACOMP = { nome: "Ana Souza", ini: "AS", cargo: "técnica de enfermagem", nota: "5,0", papel: "Acompanhante Zelo", funcao: "acompanhante" };
 const CARRO_APP = { nome: "99 Comfort", placa: "RTA-4E21" };
+// Endereço público (produção) do site no Vercel. Os QR codes usam este endereço quando preenchido,
+// para não apontar para um link de pré-visualização protegido por login.
+const SITE_PUBLICO = "";
 const PACIENTE = { nome: "Maria", idade: 82, endereco: "Rua Apinajés, 300 — Perdizes" };
 
 const ESPECIALIDADES = ["Oftalmologista", "Cardiologista", "Clínico geral", "Ortopedista"];
@@ -1290,7 +1293,7 @@ function montarQR() {
   if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") {
     box.innerHTML = apk.innerHTML = '<span class="qr-off">Aparece quando a demo estiver publicada (Vercel)</span>'; return;
   }
-  const base = location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");
+  const base = SITE_PUBLICO ? SITE_PUBLICO.replace(/\/?$/, "/") : location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");
   const svg = alvo => { const q = qrcode(0, "M"); q.addData(alvo); q.make(); return q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }); };
   box.innerHTML = svg(base);
   apk.innerHTML = `<a href="zelo.apk" download aria-label="Baixar o app Android">${svg(base + "zelo.apk")}</a>`;

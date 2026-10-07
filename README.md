@@ -20,6 +20,13 @@ Filhos que trabalham faltam ao trabalho para levar os pais idosos a consultas. N
 3. **No dia.** Motorista e acompanhante parceiros marcam cada etapa e a família acompanha em tempo real. A acompanhante grava a consulta, com consentimento, e registra o que o médico disse.
 4. **Registro.** Resumo em linguagem simples, remédios com horário e próximos passos. Um botão pede à Zélia que marque o retorno.
 
+## Pitch
+
+- **Online:** `https://SEU-SITE.vercel.app/pitch/`. Use ← → para navegar, **N** para as notas com cronômetro, **F** para tela cheia e **P** para salvar em PDF.
+- **Offline:** `pitch/zelo-pitch.html`, um arquivo único com imagens embutidas.
+- **Para editar:** mexa em `pitch/src/index.html` e gere de novo com `python3 pitch/build.py`.
+- **Guias:** [`docs/pitch-guia-humano.md`](docs/pitch-guia-humano.md) (roteiro, visual, ensaio e perguntas da banca) e [`docs/pitch-guia-ia.md`](docs/pitch-guia-ia.md) (especificação para uma IA gerar o pitch no mesmo padrão).
+
 ## Demo online (QR code para os jurados)
 
 A pasta `site/` é publicada no **Vercel** e é o que o QR code abre.

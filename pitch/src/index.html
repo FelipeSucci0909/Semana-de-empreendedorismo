@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zelo · Pitch</title>
+<meta name="description" content="Pitch do Zelo: a Zélia marca a consulta e cuida de todo o caminho até lá. A família acompanha tudo.">
+<style>
+/*@FONTS@*/
+:root{
+  --bg:#EEF4F3;--surface:#FFFFFF;--surface-2:#F4F8F7;--text:#0F2B2A;--text-2:#4A6261;--border:#D3E2E0;
+  --primary:#0B6B70;--primary-soft:#DCEFEE;--ink:#08494C;--accent:#B4532A;--accent-2:#F0A27E;--accent-soft:#FBE9E0;
+  --success:#1D7A4B;--success-soft:#DDF2E6;--warning:#8A5A00;--warning-soft:#FBF0D6;--danger:#B42318;
+  --head:"Lexend",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#0B1716;overflow:hidden}
+body{font-family:var(--body);color:var(--text);-webkit-font-smoothing:antialiased}
+.palco{position:fixed;inset:0;display:grid;place-items:center}
+.deck{width:1920px;height:1080px;position:relative;transform-origin:center;flex:none}
+.slide{position:absolute;inset:0;background:var(--bg);padding:92px 120px 84px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s ease}
+.slide.on{opacity:1;visibility:visible}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}}
+.slide.escuro{background:var(--ink);color:#fff}
+.slide.escuro .rotulo,.slide.escuro .fonte{color:#BFE3E1}
+.rotulo{font-family:var(--body);font-size:24px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);margin:0 0 22px}
+h1,h2,h3{font-family:var(--head);margin:0;letter-spacing:-.015em;font-weight:600}
+h1{font-size:76px;line-height:1.08}
+h2{font-size:64px;line-height:1.1}
+h3{font-size:34px;line-height:1.2}
+p{margin:0}
+.grande{font-size:34px;line-height:1.4;color:var(--text-2)}
+.escuro .grande{color:#D7ECEA}
+em{font-style:normal;color:var(--accent)}
+.escuro em{color:var(--accent-2)}
+.fonte{margin-top:auto;font-size:21px;color:var(--text-2);line-height:1.4}
+.rodape{position:absolute;left:120px;right:120px;bottom:34px;display:flex;justify-content:space-between;align-items:center;font-size:20px;color:var(--text-2);pointer-events:none}
+.escuro .rodape{color:#9CC9C5}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:600;font-size:26px;color:var(--text)}
+.escuro .logo{color:#fff}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--primary);display:grid;place-items:center}
+.escuro .logo i{background:#fff}
+.escuro .logo i path{stroke:var(--ink)}
+.linha{display:flex;gap:56px;align-items:center;flex:1;min-height:0}
+.col{display:flex;flex-direction:column;gap:28px;flex:1;min-width:0}
+.fone{height:780px;filter:drop-shadow(0 26px 40px rgba(8,30,28,.25));flex:none}
+.fone.md{height:700px}
+.cards{display:grid;gap:28px}
+.c3{grid-template-columns:repeat(3,1fr)}
+.c2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 3px rgba(15,43,42,.05),0 12px 32px rgba(15,43,42,.07)}
+.card p{font-size:27px;line-height:1.4;color:var(--text-2)}
+.card .num{font-family:var(--head);font-size:64px;font-weight:600;line-height:1;color:var(--accent)}
+.ic{width:64px;height:64px;border-radius:18px;background:var(--primary-soft);display:grid;place-items:center;color:var(--primary)}
+.ic svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.citacao{font-family:var(--head);font-size:30px;line-height:1.35;color:var(--text);font-weight:500}
+.tag{display:inline-flex;align-self:flex-start;font-size:20px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:7px 16px;background:var(--surface-2);color:var(--text-2);border:2px solid var(--border)}
+.tag.hip{background:var(--warning-soft);color:var(--warning);border-color:transparent}
+.tag.ok{background:var(--success-soft);color:var(--success);border-color:transparent}
+/* gancho */
+.gancho{justify-content:center;gap:34px}
+.gancho .numero{font-family:var(--head);font-size:300px;line-height:.9;font-weight:600;color:var(--accent-2);letter-spacing:-.04em}
+.gancho h1{font-size:64px;max-width:1450px;font-weight:500}
+/* passos */
+.passos{display:flex;flex-direction:column;gap:30px}
+.passo{display:flex;gap:26px;align-items:flex-start}
+.passo b{flex:none;width:64px;height:64px;border-radius:32px;background:var(--primary);color:#fff;font-family:var(--head);font-size:32px;display:grid;place-items:center}
+.passo h3{margin-bottom:6px}
+.passo p{font-size:28px;line-height:1.4;color:var(--text-2)}
+/* tabela comparativa */
+table.comp{width:100%;border-collapse:separate;border-spacing:0;font-size:28px;background:var(--surface);border-radius:28px;overflow:hidden;box-shadow:0 12px 32px rgba(15,43,42,.07)}
+.comp th,.comp td{padding:22px 26px;text-align:center;border-bottom:2px solid var(--surface-2)}
+.comp th{font-family:var(--head);font-weight:600;font-size:27px;background:var(--surface-2)}
+.comp td:first-child,.comp th:first-child{text-align:left;color:var(--text);font-weight:600}
+.comp .zelo{background:var(--primary-soft);color:var(--primary)}
+.comp th.zelo{background:var(--primary);color:#fff}
+.sim{color:var(--success);font-weight:700}.nao{color:#9AAEAC}.meio{color:var(--warning);font-weight:700}
+.comp tr:last-child td{border-bottom:0}
+/* planos */
+.plano{gap:10px}
+.plano .preco{font-family:var(--head);font-size:46px;font-weight:600}
+.plano .preco small{font-size:24px;color:var(--text-2);font-weight:500}
+.plano.dest{box-shadow:0 0 0 4px var(--accent),0 12px 32px rgba(15,43,42,.07)}
+.conta{display:flex;align-items:center;gap:22px;background:var(--surface);border-radius:28px;padding:30px 36px;font-size:30px}
+.conta .seta{font-size:44px;color:var(--text-2)}
+.conta strong{font-family:var(--head);font-size:44px}
+/* validação */
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px}
+.lista li{display:flex;gap:18px;align-items:flex-start;font-size:28px;line-height:1.38}
+.lista li::before{content:"";flex:none;width:30px;height:30px;border-radius:15px;margin-top:4px;background:var(--success)}
+.lista.prox li::before{background:var(--surface);border:4px solid var(--warning)}
+.lista small{display:block;font-size:22px;color:var(--text-2)}
+/* QR */
+.qr{background:#fff;border-radius:24px;padding:16px;display:grid;place-items:center;flex:none}
+.qr svg{width:100%;height:100%;display:block}
+.qr .off{font-size:20px;color:#4A6261;text-align:center;padding:20px}
+.fechamento{justify-content:center;gap:40px}
+.fechamento h1{font-size:84px;max-width:1300px}
+/* tabela EBIT */
+table.ebit{border-collapse:collapse;font-size:28px;width:100%;background:var(--surface);border-radius:24px;overflow:hidden}
+.ebit th,.ebit td{padding:18px 26px;text-align:right;border-bottom:2px solid var(--surface-2)}
+.ebit th:first-child,.ebit td:first-child{text-align:left}
+.ebit th{background:var(--surface-2);font-family:var(--head);font-weight:600}
+.ebit .neg{color:var(--danger)}.ebit .pos{color:var(--success);font-weight:700}
+.apendice{position:absolute;top:44px;right:120px;font-size:20px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
+/* interface do apresentador */
+.barra{position:fixed;left:0;bottom:0;height:5px;background:var(--accent-2);transition:width .3s}
+.notas{position:fixed;left:16px;right:16px;bottom:16px;max-height:42vh;overflow:auto;background:rgba(10,24,23,.94);color:#E6F2F0;border-radius:16px;padding:18px 22px;font-size:18px;line-height:1.5;display:none;z-index:5}
+.notas.on{display:block}
+.notas header{display:flex;justify-content:space-between;gap:16px;font-weight:700;color:#F0A27E;margin-bottom:6px}
+.ajuda{position:fixed;top:12px;right:16px;color:#9CC9C5;font:14px var(--body);opacity:.75}
+@media print{
+  html,body{overflow:visible;background:#fff;height:auto}
+  .palco{position:static;display:block}
+  .deck{transform:none!important;width:1920px;height:auto}
+  .slide{position:relative;opacity:1;visibility:visible;page-break-after:always;break-after:page;height:1080px}
+  .barra,.notas,.ajuda{display:none}
+  @page{size:1920px 1080px;margin:0}
+}
+</style>
+</head>
+<body>
+<div class="palco"><div class="deck" id="deck">
+
+<!-- 1 · GANCHO -->
+<section class="slide escuro gancho" data-tempo="15"
+  data-notas="[0:00–0:15] Pausa de 1 segundo antes de falar. 'Quatro vezes. Foi quantas vezes a família que entrevistamos precisou faltar ao trabalho, em um só mês, para levar os avós ao médico.' Pergunte: 'Quem aqui já saiu do trabalho para levar um pai ou um avô a uma consulta?' e espere as mãos subirem.">
+  <p class="rotulo">Pesquisa de campo · 5 de outubro de 2026</p>
+  <div class="numero">4 vezes</div>
+  <h1>em um único mês, uma família que entrevistamos precisou <em>faltar ao trabalho</em> para levar os avós ao médico.</h1>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#0B6B70" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>1</span></div>
+</section>
+
+<!-- 2 · DOR -->
+<section class="slide" data-tempo="25"
+  data-notas="[0:15–0:40] O problema não é só o transporte. São três dores juntas: (1) a família se reveza num grupo de WhatsApp e alguém sempre falta ao trabalho; (2) o idoso não pode ir de Uber sozinho, porque o motorista não desce, não ajuda e não espera; (3) mesmo quando vai, sai da consulta sem entender o remédio ou o retorno. Quando ninguém pode ir, a família paga cerca de R$ 300 por dia a alguém de confiança.">
+  <p class="rotulo">A dor</p>
+  <h2>Levar um idoso ao médico virou um quebra-cabeça.</h2>
+  <div class="cards c3" style="margin-top:56px">
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg></div>
+      <h3>Ninguém disponível</h3><p>A família se reveza no grupo de WhatsApp. Alguém sempre falta ao trabalho.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 17h14v-4.5l-1.8-4.6a2 2 0 0 0-1.9-1.3H8.7a2 2 0 0 0-1.9 1.3L5 12.5z"/><path d="M5 12.5h14"/><circle cx="8.5" cy="17" r="1.8"/><circle cx="15.5" cy="17" r="1.8"/></svg></div>
+      <h3>Uber não resolve</h3><p>"O motorista precisa descer, ajudar a entrar e estacionar perto." Não dá para mandar sozinha.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></div>
+      <h3>Sai sem entender</h3><p>Remédio, retorno, o que levar: a informação se perde entre a consulta e a família.</p></div>
+  </div>
+  <p class="fonte">Quando ninguém da família pode ir: <strong>~R$ 300 por dia</strong> para alguém de confiança. Fonte: entrevista de campo com família cuidadora, 5/10/2026.</p>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>2</span></div>
+</section>
+
+<!-- 3 · QUEM E QUANTO -->
+<section class="slide" data-tempo="20"
+  data-notas="[0:40–1:00] Quem sofre é o idoso; quem paga é o filho de 35 a 60 anos que trabalha. O Brasil tem 32,1 milhões de pessoas com 60 anos ou mais, segundo o Censo 2022 do IBGE. A conta do mercado é uma hipótese explícita: se 1% desses idosos usar o Zelo uma vez por mês, com tíquete de R$ 260, são cerca de R$ 1 bilhão por ano em serviços. Começamos por São Paulo.">
+  <p class="rotulo">Quem tem o problema e quanto vale</p>
+  <div class="linha">
+    <div class="col" style="flex:1.05">
+      <div class="card" style="padding:44px">
+        <div class="num" style="font-size:150px;color:var(--primary)">32,1 mi</div>
+        <h3>de brasileiros têm 60 anos ou mais: 15,6% da população.</h3>
+        <p style="font-size:22px">Fonte: IBGE, Censo Demográfico 2022.</p>
+      </div>
+      <div class="cards c2">
+        <div class="card"><span class="tag">Quem usa</span><h3>O idoso</h3><p>Mobilidade reduzida, pouca intimidade com apps.</p></div>
+        <div class="card"><span class="tag">Quem paga</span><h3>O filho</h3><p>35 a 60 anos, trabalha e coordena o cuidado.</p></div>
+      </div>
+    </div>
+    <div class="col" style="flex:.95">
+      <span class="tag hip">Hipótese de mercado</span>
+      <div class="card" style="gap:24px;padding:44px">
+        <p style="font-size:30px;color:var(--text)">32,1 mi idosos × <strong>1%</strong> de adoção<br>× 1 atendimento/mês × <strong>R$ 260</strong> × 12</p>
+        <div class="num" style="font-size:120px">≈ R$ 1 bi</div>
+        <h3>por ano em serviços</h3>
+        <p style="font-size:24px">Cabeça de praia: cidade de São Paulo, consultas de rotina.</p>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>3</span></div>
+</section>
+
+<!-- 4 · SOLUÇÃO -->
+<section class="slide" data-tempo="25"
+  data-notas="[1:00–1:25] Apresento o Zelo. A Zélia é uma assistente com IA, no app e no WhatsApp. 1) A família ou o próprio idoso pede a consulta conversando. 2) Monta o dia: acompanhante Zelo, que é profissional de enfermagem, com carro por aplicativo ou com motorista Zelo. 3) Acompanha cada etapa ao vivo e recebe o registro: o que o médico disse, remédios e retorno.">
+  <div class="linha">
+    <div class="col" style="flex:1.25">
+      <p class="rotulo">A solução</p>
+      <h2>A <em>Zélia</em> marca a consulta e cuida de todo o caminho até lá.</h2>
+      <div class="passos" style="margin-top:20px">
+        <div class="passo"><b>1</b><div><h3>Pede à Zélia</h3><p>Conversa no app ou no WhatsApp: convênio, especialidade, horário.</p></div></div>
+        <div class="passo"><b>2</b><div><h3>Monta o dia</h3><p>Acompanhante Zelo + carro por aplicativo, ou motorista Zelo.</p></div></div>
+        <div class="passo"><b>3</b><div><h3>Acompanha e recebe o registro</h3><p>Cada etapa ao vivo e o resumo da consulta para a família.</p></div></div>
+      </div>
+    </div>
+    <img class="fone" src="img/app-chat-medicos.png" alt="Tela do chat com a Zélia mostrando médicos e horários">
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>4</span></div>
+</section>
+
+<!-- 5 · PROTÓTIPO -->
+<section class="slide" data-tempo="35"
+  data-notas="[1:25–2:00] DEMO. Não é só tela: o protótipo funciona e a Zélia usa IA de verdade. Mostre os três momentos: o pacote com preço montado na hora, o acompanhamento ao vivo, com a família vendo cada etapa que a acompanhante marca, e o registro da consulta. Convide: 'Apontem a câmera para o QR e testem agora, sem baixar nada.' Se der tempo, alterne para a demo ao vivo em 'Lado a lado'.">
+  <p class="rotulo">Protótipo funcionando · com IA real</p>
+  <div class="linha" style="gap:40px">
+    <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:16px"><img class="fone md" src="img/app-pacote.png" alt="Pacote do dia com preços"><figcaption class="grande" style="font-size:26px">Monta o pacote</figcaption></figure>
+    <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:16px"><img class="fone md" src="img/app-acompanhar.png" alt="Acompanhamento ao vivo"><figcaption class="grande" style="font-size:26px">Acompanha ao vivo</figcaption></figure>
+    <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:16px"><img class="fone md" src="img/app-registro.png" alt="Registro da consulta"><figcaption class="grande" style="font-size:26px">Recebe o registro</figcaption></figure>
+    <div class="col" style="align-items:center;text-align:center;gap:20px">
+      <div class="qr qr-demo" style="width:330px;height:330px"></div>
+      <h3>Teste agora no seu celular</h3>
+      <p class="grande" style="font-size:24px">Sem baixar nada · Android também tem APK</p>
+      <p class="url-demo" style="font-size:22px;font-weight:700;color:var(--primary)"></p>
+    </div>
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>5</span></div>
+</section>
+
+<!-- 6 · DIFERENCIAL -->
+<section class="slide" data-tempo="15"
+  data-notas="[2:00–2:15] Por que ninguém resolveu? Cada alternativa cobre só um pedaço. O app de corrida leva, mas não ajuda nem acompanha. O cuidador avulso acompanha, mas é caro, informal e sem registro. O app do convênio agenda, mas o idoso não consegue usar. O Zelo junta tudo, com parceiros certificados: COREN ativo, antecedentes verificados e treinamento.">
+  <p class="rotulo">Diferencial</p>
+  <h2 style="margin-bottom:44px">Cada alternativa resolve só um pedaço.</h2>
+  <table class="comp">
+    <thead><tr><th></th><th>App de corrida</th><th>Cuidador avulso</th><th>App do convênio</th><th class="zelo">Zelo</th></tr></thead>
+    <tbody>
+      <tr><td>Agenda conversando, sem app difícil</td><td class="nao">—</td><td class="nao">—</td><td class="meio">difícil</td><td class="zelo sim">✓</td></tr>
+      <tr><td>Ajuda a entrar e sair do carro</td><td class="nao">—</td><td class="sim">✓</td><td class="nao">—</td><td class="zelo sim">✓</td></tr>
+      <tr><td>Acompanha dentro da consulta</td><td class="nao">—</td><td class="sim">✓</td><td class="nao">—</td><td class="zelo sim">✓</td></tr>
+      <tr><td>Registro para a família, ao vivo</td><td class="nao">—</td><td class="nao">—</td><td class="nao">—</td><td class="zelo sim">✓</td></tr>
+      <tr><td>Profissional verificado</td><td class="meio">motorista</td><td class="nao">informal</td><td class="nao">—</td><td class="zelo sim">COREN + treino</td></tr>
+    </tbody>
+  </table>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>6</span></div>
+</section>
+
+<!-- 7 · MODELO DE NEGÓCIO -->
+<section class="slide" data-tempo="20"
+  data-notas="[2:15–2:35] Como ganhamos dinheiro: o serviço é pago por atendimento e o Zelo fica com cerca de 21% depois de pagar a acompanhante, o carro, impostos e IA. Em um atendimento de R$ 275, sobram cerca de R$ 58. Três planos: Grátis, com taxa de R$ 15 por atendimento; Zelo+, por R$ 29,90 ao mês, sem taxa; e Zelo Empresas, em que o RH paga como benefício, porque cada falta para levar os pais custa caro para a empresa também.">
+  <p class="rotulo">Como o Zelo ganha dinheiro</p>
+  <h2>Serviço pago por atendimento + planos.</h2>
+  <div class="cards c3" style="margin-top:44px">
+    <div class="card plano"><span class="tag">Grátis</span><div class="preco">R$ 0</div><p>Zélia agenda e acompanha. Taxa de <strong>R$ 15</strong> por atendimento.</p></div>
+    <div class="card plano dest"><span class="tag" style="background:var(--accent-soft);color:var(--accent);border-color:transparent">Zelo+</span><div class="preco">R$ 29,90 <small>/mês</small></div><p>Sem taxa, família toda conectada, áudio da consulta.</p></div>
+    <div class="card plano"><span class="tag ok">Zelo Empresas</span><div class="preco">RH paga</div><p>Benefício para quem cuida dos pais. Menos faltas no trabalho.</p></div>
+  </div>
+  <div class="conta" style="margin-top:36px">
+    <span>Família paga</span><strong>R$ 275</strong><span class="seta">→</span>
+    <span>acompanhante, carro, pagamento, impostos e IA</span><span class="seta">→</span>
+    <span>fica para o Zelo</span><strong style="color:var(--success)">R$ 58 (21%)</strong>
+  </div>
+  <p class="fonte">Premissas a validar: acompanhante R$ 180 (até 4h), carro por app ~R$ 60, repasse de 75% ao parceiro. Detalhes na planilha de EBIT (apêndice).</p>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>7</span></div>
+</section>
+
+<!-- 8 · EVIDÊNCIAS -->
+<section class="slide" data-tempo="15"
+  data-notas="[2:35–2:50] O que já temos e o que vamos testar, com métrica. Já validado: a dor e os preços de referência, na entrevista com a família; a direção, com a mentoria; e um protótipo funcionando, com IA, que vocês podem testar agora. Próximos testes: preço com 10 famílias, adesão de técnicos de enfermagem ao repasse, interesse de 3 RHs e 5 agendamentos reais feitos à mão.">
+  <p class="rotulo">Evidências</p>
+  <h2 style="margin-bottom:48px">O que já validamos e o que vamos medir.</h2>
+  <div class="cards c2" style="align-items:start">
+    <div class="card"><span class="tag ok">Já validado</span>
+      <ul class="lista">
+        <li><span>Dor real: ~4 faltas ao trabalho em 1 mês<small>Entrevista com família cuidadora</small></span></li>
+        <li><span>Preço de referência: R$ 300/dia (cuidador) e R$ 80 (app)<small>Mesma entrevista</small></span></li>
+        <li><span>Foco em simplicidade e parceria com apps de corrida<small>Mentoria de negócios, 6/10</small></span></li>
+        <li><span>Protótipo funcional com IA real<small>Disponível no QR, no celular de vocês</small></span></li>
+      </ul></div>
+    <div class="card"><span class="tag hip">Próximos testes · métrica</span>
+      <ul class="lista prox">
+        <li><span>Famílias pagam R$ 180–260 por consulta?<small>10 famílias · % que aceita o preço</small></span></li>
+        <li><span>Técnicos de enfermagem topam 75% de repasse?<small>10 conversas · nº de cadastros</small></span></li>
+        <li><span>RH oferece como benefício?<small>3 conversas · interesse em piloto</small></span></li>
+        <li><span>Agendar sem integração com convênio é viável?<small>5 consultas reais · tempo e sucesso</small></span></li>
+      </ul></div>
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>8</span></div>
+</section>
+
+<!-- 9 · FECHAMENTO -->
+<section class="slide escuro fechamento" data-tempo="10"
+  data-notas="[2:50–3:00] Frase final, devagar e olhando para a banca: 'Ninguém deveria ter que escolher entre o trabalho e o cuidado com os pais.' Depois: 'Zelo: a Zélia cuida do caminho, a família acompanha tudo.' Termine com o pedido: 3 empresas para o piloto do Zelo Empresas. Agradeça e pare.">
+  <div class="linha" style="gap:80px">
+    <div class="col" style="flex:1.4;gap:40px">
+      <h1>Ninguém deveria ter que escolher entre <em>o trabalho</em> e <em>o cuidado com os pais</em>.</h1>
+      <p class="grande">Zelo: a Zélia cuida do caminho. A família acompanha tudo.</p>
+      <p class="grande" style="color:#fff;font-weight:600">Próximo passo: piloto com 10 famílias em São Paulo e 3 empresas no Zelo Empresas.</p>
+    </div>
+    <div class="col" style="align-items:center;text-align:center;flex:.6;gap:20px">
+      <div class="qr qr-demo" style="width:360px;height:360px"></div>
+      <p class="grande" style="font-size:26px">Teste o Zelo agora</p>
+      <p class="url-demo" style="font-size:22px;font-weight:700;color:#F0A27E"></p>
+    </div>
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#0B6B70" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>Semana Concentrada de Empreendedorismo FGV · 2026</span></div>
+</section>
+
+<!-- A1 · OPERAÇÃO -->
+<section class="slide" data-tempo="0" data-notas="APÊNDICE, para perguntas: como garantimos a qualidade dos parceiros.">
+  <span class="apendice">Apêndice · perguntas</span>
+  <p class="rotulo">Operação e parceiros</p>
+  <h2 style="margin-bottom:44px">Dois jeitos de ir à consulta. Parceiros certificados.</h2>
+  <div class="cards c2">
+    <div class="card"><h3>Acompanhante + carro por app</h3><p>A acompanhante Zelo vai até a casa e a Zélia chama um 99 ou Uber para os dois. Sem frota própria: escala rápido.</p></div>
+    <div class="card"><h3>Acompanhante + motorista Zelo</h3><p>Para cadeirantes e casos que pedem um motorista treinado, com espera incluída.</p></div>
+    <div class="card"><h3>Requisitos da acompanhante</h3><p>Técnica de enfermagem com COREN ativo, ou cuidadora com curso. Antecedentes e referências verificados. Treinamento Zelo.</p></div>
+    <div class="card"><h3>Requisitos do motorista</h3><p>CNH com EAR, antecedentes verificados e carro vistoriado, com porta-malas para cadeira de rodas. Treinamento Zelo.</p></div>
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>A1</span></div>
+</section>
+
+<!-- A2 · EBIT -->
+<section class="slide" data-tempo="0" data-notas="APÊNDICE: EBIT preliminar. O negócio fica de pé com escala, por volta de 7.300 atendimentos por mês em São Paulo. As alavancas são o preço do acompanhante, o percentual que o Zelo retém e o Zelo Empresas.">
+  <span class="apendice">Apêndice · perguntas</span>
+  <p class="rotulo">EBIT preliminar (hipóteses)</p>
+  <h2 style="margin-bottom:40px">O negócio para em pé com escala.</h2>
+  <table class="ebit">
+    <thead><tr><th>R$ por mês</th><th>Piloto (mês 6)</th><th>Fim do ano 1</th><th>Ano 3 (escala SP)</th></tr></thead>
+    <tbody>
+      <tr><td>Atendimentos por mês</td><td>300</td><td>1.500</td><td>8.000</td></tr>
+      <tr><td>Entradas totais</td><td>73 mil</td><td>368 mil</td><td>1,97 mi</td></tr>
+      <tr><td>Margem de contribuição</td><td>16 mil (22%)</td><td>82 mil (22%)</td><td>442 mil (22%)</td></tr>
+      <tr><td>Custos fixos</td><td>43 mil</td><td>154 mil</td><td>405 mil</td></tr>
+      <tr><td><strong>EBIT</strong></td><td class="neg">−28 mil</td><td class="neg">−74 mil</td><td class="pos">+31 mil</td></tr>
+      <tr><td>Atendimentos/mês para EBIT = 0</td><td>~870</td><td>~3.100</td><td>~7.300</td></tr>
+    </tbody>
+  </table>
+  <p class="fonte">Todas as premissas são editáveis em docs/zelo-ebit-preliminar.xlsx. Alavancas: preço do acompanhante, percentual retido pelo Zelo e Zelo Empresas.</p>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>A2</span></div>
+</section>
+
+<!-- A3 · WHATSAPP -->
+<section class="slide" data-tempo="0" data-notas="APÊNDICE: visão de futuro no WhatsApp. Deixe claro que é uma simulação; o código do webhook existe, mas a integração oficial é o próximo passo.">
+  <span class="apendice">Apêndice · visão</span>
+  <div class="linha">
+    <div class="col">
+      <p class="rotulo">Próxima etapa</p>
+      <h2>A <em>Zélia</em> também no WhatsApp.</h2>
+      <p class="grande">O filho, ou o próprio idoso, conversa onde já está acostumado. Escolhe horário e pacote respondendo com um número.</p>
+      <span class="tag hip">Simulação · integração prevista</span>
+    </div>
+    <img class="fone" src="img/zelia-whatsapp-1.png" alt="Simulação: pedido da consulta pelo WhatsApp">
+    <img class="fone" src="img/zelia-whatsapp-2.png" alt="Simulação: confirmação e avisos do dia pelo WhatsApp">
+  </div>
+  <div class="rodape"><span class="logo"><i><svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></i>zelo</span><span>A3</span></div>
+</section>
+
+</div></div>
+<div class="barra" id="barra"></div>
+<div class="notas" id="notas" aria-live="polite"><header><span id="nTitulo"></span><span id="nTempo"></span></header><div id="nTexto"></div></div>
+<div class="ajuda" id="ajuda">← → navegar · N notas · F tela cheia · P imprimir/PDF</div>
+<script>/*@QRLIB@*/</script>
+<script>
+"use strict";
+// Endereço da demo para o QR code. Publicado no Vercel em /pitch/, a demo fica na raiz do site.
+// Para outro endereço, abra o pitch com ?demo=https://seu-site.vercel.app
+const DEMO_PADRAO = "";
+const params = new URLSearchParams(location.search);
+const DEMO = params.get("demo") || DEMO_PADRAO || (/^https?:/.test(location.protocol) ? new URL("../", location.href).href : "");
+
+const deck = document.getElementById("deck");
+const slides = [...document.querySelectorAll(".slide")];
+let atual = Math.min(slides.length - 1, Math.max(0, (parseInt(location.hash.slice(1), 10) || 1) - 1));
+let inicio = null;
+
+function ajustar() {
+  const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+  deck.style.transform = `scale(${s})`;
+}
+function mostrar(i) {
+  atual = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach((el, k) => el.classList.toggle("on", k === atual));
+  document.getElementById("barra").style.width = `${(atual + 1) / slides.length * 100}%`;
+  history.replaceState(null, "", `#${atual + 1}`);
+  const el = slides[atual];
+  document.getElementById("nTitulo").textContent = `Slide ${atual + 1} de ${slides.length}${el.dataset.tempo !== "0" ? ` · ~${el.dataset.tempo}s` : ""}`;
+  document.getElementById("nTexto").textContent = el.dataset.notas || "";
+}
+function relogio() {
+  if (inicio === null) return;
+  const s = Math.floor((Date.now() - inicio) / 1000);
+  document.getElementById("nTempo").textContent = `⏱ ${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")} / 3:00`;
+}
+setInterval(relogio, 500);
+function avancar(d) { if (inicio === null) inicio = Date.now(); mostrar(atual + d); }
+
+addEventListener("keydown", e => {
+  if (["ArrowRight", "PageDown", " ", "Enter"].includes(e.key)) { e.preventDefault(); avancar(1); }
+  else if (["ArrowLeft", "PageUp", "Backspace"].includes(e.key)) { e.preventDefault(); avancar(-1); }
+  else if (e.key === "Home") mostrar(0);
+  else if (e.key === "End") mostrar(slides.length - 1);
+  else if (e.key.toLowerCase() === "n") document.getElementById("notas").classList.toggle("on");
+  else if (e.key.toLowerCase() === "f") { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+  else if (e.key.toLowerCase() === "p") print();
+  else if (e.key.toLowerCase() === "r") { inicio = Date.now(); }
+});
+addEventListener("click", e => { if (e.target.closest("a")) return; avancar(e.clientX > innerWidth / 3 ? 1 : -1); });
+let toqueX = null;
+addEventListener("touchstart", e => { toqueX = e.touches[0].clientX; }, { passive: true });
+addEventListener("touchend", e => { if (toqueX === null) return; const dx = e.changedTouches[0].clientX - toqueX; if (Math.abs(dx) > 40) avancar(dx < 0 ? 1 : -1); toqueX = null; });
+addEventListener("resize", ajustar);
+setTimeout(() => { document.getElementById("ajuda").style.display = "none"; }, 6000);
+
+// QR codes da demo
+document.querySelectorAll(".qr-demo").forEach(el => {
+  if (!DEMO || typeof qrcode !== "function") { el.innerHTML = '<span class="off">QR aparece com o pitch publicado (ou abra com ?demo=URL)</span>'; return; }
+  const q = qrcode(0, "M"); q.addData(DEMO); q.make();
+  el.innerHTML = q.createSvgTag({ cellSize: 6, margin: 2, scalable: true });
+});
+document.querySelectorAll(".url-demo").forEach(el => { el.textContent = DEMO.replace(/^https?:\/\//, "").replace(/\/$/, ""); });
+
+ajustar();
+mostrar(atual);
+</script>
+</body>
+</html>
