@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Zélia no WhatsApp — simulação</title>
+<style>
+/*@FONTS@*/
+*{box-sizing:border-box}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;color:#0F2B2A}
+.slide{width:1920px;height:1080px;background:#EEF4F3;display:flex;align-items:center;gap:72px;padding:0 110px}
+.texto{width:560px;display:flex;flex-direction:column;gap:26px}
+.marca{display:flex;align-items:center;gap:14px}
+.marca .m{width:56px;height:56px;border-radius:16px;background:#0B6B70;display:grid;place-items:center}
+.marca span{font-family:Lexend,sans-serif;font-size:40px;font-weight:600}
+h1{font-family:Lexend,sans-serif;font-size:54px;line-height:1.12;margin:0;letter-spacing:-.01em}
+h1 em{font-style:normal;color:#B4532A}
+.texto p{font-size:26px;line-height:1.4;margin:0;color:#4A6261}
+.passos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.passos li{display:flex;gap:14px;align-items:flex-start;font-size:23px;line-height:1.35;color:#0F2B2A}
+.passos b{flex:none;width:36px;height:36px;border-radius:18px;background:#DCEFEE;color:#0B6B70;display:grid;place-items:center;font-size:19px}
+.selo{align-self:flex-start;font-size:17px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4A6261;border:2px dashed #A9C1BF;border-radius:999px;padding:8px 16px}
+
+/* celular */
+.fone{width:430px;height:900px;border-radius:58px;background:#111;padding:12px;box-shadow:0 30px 70px rgba(8,30,28,.28);flex:none}
+.tela{width:100%;height:100%;border-radius:47px;overflow:hidden;display:flex;flex-direction:column;background:#EFE7DE}
+.status{height:46px;background:#F6F6F6;display:flex;align-items:center;justify-content:space-between;padding:0 30px;font-size:16px;font-weight:700}
+.topo{background:#F6F6F6;display:flex;align-items:center;gap:12px;padding:6px 14px 12px;border-bottom:1px solid #DDD}
+.topo .voltar{color:#0A84FF;font-size:30px;line-height:1}
+.av{width:42px;height:42px;border-radius:21px;background:#B4532A;color:#fff;font-family:Lexend,sans-serif;font-weight:600;font-size:19px;display:grid;place-items:center}
+.topo .nome{display:flex;flex-direction:column;flex:1}
+.topo strong{font-size:18px}
+.topo small{font-size:14px;color:#667}
+.chat{flex:1;padding:12px 12px 8px;display:flex;flex-direction:column;gap:6px;overflow:hidden;
+  background-color:#EFE7DE;background-image:radial-gradient(rgba(0,0,0,.035) 1.2px,transparent 1.3px);background-size:18px 18px}
+.dia{align-self:center;background:#E1F2FB;color:#455;font-size:13px;font-weight:600;border-radius:8px;padding:4px 10px;margin:4px 0}
+.b{max-width:84%;min-width:84px;padding:7px 10px 18px;border-radius:10px;font-size:16px;line-height:1.35;position:relative;box-shadow:0 1px .5px rgba(0,0,0,.13);white-space:pre-line}
+.b.z{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+.b.u{align-self:flex-end;background:#D9FDD3;border-top-right-radius:2px}
+.b .h{position:absolute;right:8px;bottom:3px;font-size:11.5px;color:#7A8A8A}
+.b.u .h::after{content:" ✓✓";color:#53BDEB;letter-spacing:-2px}
+.b strong{font-weight:700}
+.b .n{font-weight:700;color:#0B6B70}
+.entrada{background:#F6F6F6;padding:10px 12px 26px;display:flex;gap:10px;align-items:center}
+.entrada .campo{flex:1;height:40px;border-radius:20px;background:#fff;border:1px solid #E2E2E2;color:#99A;font-size:16px;display:flex;align-items:center;padding:0 16px}
+.entrada .mic{width:40px;height:40px;border-radius:20px;background:#0B6B70;display:grid;place-items:center}
+</style>
+</head>
+<body>
+<div class="slide" id="slide">
+  <div class="texto">
+    <div class="marca"><div class="m"><svg width="34" height="34" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M6 21a10 10 0 0 1 20 0"/><circle cx="16" cy="21" r="3.6" fill="#F0A27E" stroke="none"/></svg></div><span>zelo</span></div>
+    <h1>A <em>Zélia</em> também atende no WhatsApp.</h1>
+    <p>Sem baixar nada: o filho, ou o próprio idoso, conversa onde já está acostumado.</p>
+    <ul class="passos">
+      <li><b>1</b><span>Pede a consulta em linguagem natural</span></li>
+      <li><b>2</b><span>Escolhe horário e pacote respondendo com um número</span></li>
+      <li><b>3</b><span>Recebe cada etapa do dia e o resumo da consulta</span></li>
+    </ul>
+    <span class="selo">Simulação · integração prevista</span>
+  </div>
+
+  <div class="fone" id="p1"><div class="tela">
+    <div class="status"><span>10:02</span><span>●●● 5G</span></div>
+    <div class="topo"><span class="voltar">‹</span><div class="av">Z</div><div class="nome"><strong>Zélia · Zelo</strong><small>online</small></div></div>
+    <div class="chat">
+      <span class="dia">HOJE</span>
+      <div class="b u">Oi! Minha mãe precisa ir no cardiologista. Ela tem Vida Plena<span class="h">10:02</span></div>
+      <div class="b z">Oi! Eu sou a <strong>Zélia</strong>, do Zelo. Vou cuidar da consulta da sua mãe, a Maria.<span class="h">10:02</span></div>
+      <div class="b z">Achei estes horários de <strong>cardiologista</strong> perto dela. Responda com o número:
+<span class="n">1.</span> Qui 15/10 · 9h · Dra. Beatriz Lemos, Pinheiros
+<span class="n">2.</span> Qui 15/10 · 14h · Dra. Beatriz Lemos, Pinheiros
+<span class="n">3.</span> Seg 19/10 · 8h · Dr. Paulo Ramos, Vila Mariana<span class="h">10:02</span></div>
+      <div class="b u">2<span class="h">10:03</span></div>
+      <div class="b z">Reservado! Pedi a autorização ao Vida Plena: <strong>autorizado</strong> ✅<span class="h">10:03</span></div>
+      <div class="b z">Agora o dia da consulta. Responda com o número:
+<span class="n">1.</span> Acompanhante + carro por app · R$ 255
+<span class="n">2.</span> Acompanhante + motorista Zelo · R$ 275
+<span class="n">3.</span> Só motorista Zelo · R$ 95<span class="h">10:03</span></div>
+    </div>
+    <div class="entrada"><span class="campo">Mensagem</span><span class="mic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span></div>
+  </div></div>
+
+  <div class="fone" id="p2"><div class="tela">
+    <div class="status"><span>14:58</span><span>●●● 5G</span></div>
+    <div class="topo"><span class="voltar">‹</span><div class="av">Z</div><div class="nome"><strong>Zélia · Zelo</strong><small>online</small></div></div>
+    <div class="chat">
+      <div class="b u">O que a acompanhante faz?<span class="h">10:04</span></div>
+      <div class="b z">É uma técnica de enfermagem: busca a Maria, fica com ela na consulta e anota tudo o que a médica disser.<span class="h">10:04</span></div>
+      <div class="b u">1<span class="h">10:05</span></div>
+      <div class="b z">✅ <strong>Consulta confirmada</strong>
+Qui 15/10 · 14h · Dra. Beatriz Lemos
+Acompanhante: Ana Souza
+Pagamento: Pix de R$ 255<span class="h">10:05</span></div>
+      <span class="dia">QUINTA-FEIRA</span>
+      <div class="b z">13h10 · A Maria saiu de casa com a Ana 🚗<span class="h">13:10</span></div>
+      <div class="b z">14h05 · Em consulta, com a Ana<span class="h">14:05</span></div>
+      <div class="b z">Consulta concluída. A médica disse que o coração está bem e manteve o remédio. O resumo completo está no app.<span class="h">14:58</span></div>
+      <div class="b u">Que alívio. Obrigado, Zélia!<span class="h">14:58</span></div>
+    </div>
+    <div class="entrada"><span class="campo">Mensagem</span><span class="mic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span></div>
+  </div></div>
+</div>
+</body>
+</html>
