@@ -1,6 +1,6 @@
 # Zelo — Estratégia de negócio
 
-Todos os números abaixo são **hipóteses a validar**, não dados.
+Todos os números abaixo são **hipóteses a validar**, não dados. A planilha com o EBIT preliminar está em [`zelo-ebit-preliminar.xlsx`](zelo-ebit-preliminar.xlsx).
 
 ## 1. Precificação: grátis + premium + serviços avulsos
 
@@ -18,7 +18,7 @@ Todos os números abaixo são **hipóteses a validar**, não dados.
 | Histórico, receitas e exames organizados | últimos 3 meses | completo |
 | Lembrete de remédio por ligação/WhatsApp para o idoso | — | ✓ |
 | Acompanhante preferencial (sempre a mesma pessoa) | — | ✓ |
-| Desconto nos serviços | — | 10% |
+| Taxa de serviço por atendimento | R$ 15 | **isenta** |
 
 **Serviços pagos à parte, por atendimento:**
 
@@ -29,7 +29,7 @@ Todos os números abaixo são **hipóteses a validar**, não dados.
 | Acompanhante (até 4h) | **R$ 180** | hoje está em R$ 300 |
 
 - **Por que baixar o acompanhante para R$ 180:** a entrevistada paga cerca de R$ 300 pelo **dia inteiro**. Cobrar R$ 300 por uma consulta de 3 a 4 horas fica acima do que a família já paga. Vale testar R$ 150, R$ 180 e R$ 220.
-- **O argumento de venda do Premium:** 10% de desconto em um atendimento de R$ 260 dá R$ 26. Quem usa os serviços uma vez por mês quase paga a mensalidade, e ganha o resto de brinde.
+- **Por que taxa de serviço, e não desconto:** um desconto de 10% sairia da margem do Zelo (cerca de R$ 26 de R$ 58 por atendimento). Isentar a taxa de R$ 15, no modelo do iFood Clube ou do Rappi Prime, protege a margem. Quem usa 2 atendimentos por mês economiza R$ 30, e a assinatura se paga.
 
 ### Outras ideias de receita
 
