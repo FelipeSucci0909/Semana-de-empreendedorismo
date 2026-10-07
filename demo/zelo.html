@@ -345,7 +345,6 @@ ul.feat svg.i{color:var(--success);width:20px;height:20px;margin-top:1px}
 .qrbox{background:#fff;border-radius:12px;width:124px;height:124px;display:grid;place-items:center;padding:4px}
 .qrbox svg{width:116px;height:116px;display:block}
 .qr-off{font-size:12px;color:#4A6261;text-align:center;padding:6px}
-.qrnote{margin:0;align-self:center;font-size:14px;line-height:1.35;color:var(--text-2)}
 .qrurl{grid-column:1/-1;margin:0;text-align:center;font-size:14px;font-weight:700;word-break:break-all}
 button,a{-webkit-tap-highlight-color:transparent}
 .tab,.btn,.qr,.slot,.svc,.ib{-webkit-user-select:none;user-select:none;touch-action:manipulation}
@@ -385,11 +384,6 @@ button,a{-webkit-tap-highlight-color:transparent}
         <div class="qrbox" id="qrApk" role="img" aria-label="QR code para baixar o app Android"></div>
         <figcaption><strong>Android</strong><span>Baixar o app (APK)</span></figcaption>
       </figure>
-      <figure class="qrfig">
-        <div class="qrbox" id="qrWhats" role="img" aria-label="QR code para conversar com a Zélia no WhatsApp"></div>
-        <figcaption><strong>WhatsApp</strong><span>Falar com a Zélia</span></figcaption>
-      </figure>
-      <p class="qrnote">No WhatsApp, envie a mensagem que já aparece pronta e converse com a Zélia.</p>
       <p class="qrurl" id="qrUrl"></p>
     </div>
     <div>
@@ -2720,9 +2714,6 @@ const REPASSE = 0.75; // parte do serviço que vai ao parceiro — a validar
 const MOTORISTA = { nome: "Carlos Mendes", ini: "CM", carro: "Spin prata", placa: "FZL-2B41", nota: "4,9", papel: "Motorista Zelo", funcao: "motorista" };
 const ACOMP = { nome: "Ana Souza", ini: "AS", cargo: "técnica de enfermagem", nota: "5,0", papel: "Acompanhante Zelo", funcao: "acompanhante" };
 const CARRO_APP = { nome: "99 Comfort", placa: "RTA-4E21" };
-// WhatsApp da Zélia (sandbox do Twilio): a primeira mensagem precisa ser o código de entrada.
-const WHATS = { numero: "17372508034", codigo: "join twilio-trial" };
-const WHATS_LINK = `https://wa.me/${WHATS.numero}?text=${encodeURIComponent(WHATS.codigo)}`;
 const PACIENTE = { nome: "Maria", idade: 82, endereco: "Rua Apinajés, 300 — Perdizes" };
 
 const ESPECIALIDADES = ["Oftalmologista", "Cardiologista", "Clínico geral", "Ortopedista"];
@@ -3283,8 +3274,7 @@ function famPerfil() {
       <section class="card"><div class="row"><span class="avatar lg">M</span><div class="grow"><h2 class="h2">Maria, 82</h2><div class="muted">${PACIENTE.endereco}</div></div></div>
         <div class="tags"><span class="tag">${I("cane")}Usa bengala</span><span class="tag">${I("car")}Ajuda para entrar no carro</span><span class="tag">${I("eye")}Enxerga pouco de perto</span></div></section>
       <section class="card"><p class="eyebrow">Convênio</p><div class="kv"><span>Plano</span><strong>Vida Plena Saúde · Ouro</strong></div><div class="kv"><span>Carteirinha</span><strong>final 4821</strong></div></section>
-      <section class="card"><div class="row">${I("whats")}<div class="grow"><strong>Zélia no WhatsApp</strong><div class="muted" style="font-size:15px">Maria e você conversam com ela por lá também</div></div></div>
-        <a class="btn sec sm" href="${WHATS_LINK}" target="_blank" rel="noopener">${I("whats")}Conversar no WhatsApp</a></section>
+      <section class="card"><div class="row">${I("whats")}<div class="grow"><strong>Zélia no WhatsApp</strong><div class="muted" style="font-size:15px">Maria e você vão poder conversar com ela por lá também</div></div><span class="tag">em breve</span></div></section>
       ${demoCard("familia")}
     </div>${tabbar("familia")}</div>`;
 }
@@ -3318,7 +3308,7 @@ function famZelia() {
   const typing = S.typing ? `<div class="msg z">${ZAV("sm")}<div class="bub typing" aria-label="Zélia está digitando"><i></i><i></i><i></i></div></div>` : "";
   const qrs = S.typing ? [] : quickReplies();
   const listening = RT.listening.familia;
-  return `<div class="screen">${bar("Zélia", { lead: ZAV(), sub: iaAtiva() ? "Assistente com IA" : "Sua assistente do Zelo", right: `<a class="tag ok" href="${WHATS_LINK}" target="_blank" rel="noopener" style="text-decoration:none">${I("whats")}WhatsApp</a>` })}
+  return `<div class="screen">${bar("Zélia", { lead: ZAV(), sub: iaAtiva() ? "Assistente com IA" : "Sua assistente do Zelo", right: `<span class="tag ok">${I("whats")}WhatsApp</span>` })}
     <div class="scroll chat" aria-live="polite">${msgs}${typing}</div>
     <div class="composer">
       ${qrs.length ? `<div class="quick">${qrs.map(q => `<button class="qr" data-action="say" data-arg="${esc(q)}">${esc(q)}</button>`).join("")}</div>` : ""}
@@ -3506,7 +3496,6 @@ function overlays(role) {
       <button class="btn" data-action="welcome" data-arg="familia">${I("users")}Sou da família</button>
       <button class="btn sec" data-action="welcome" data-arg="parceiro">${I("heart")}Sou acompanhante</button>
       <button class="linkbtn" data-action="welcome" data-arg="auto">Ver uma consulta já agendada</button>
-      <a class="btn sec sm" href="${WHATS_LINK}" target="_blank" rel="noopener">${I("whats")}Falar com a Zélia no WhatsApp</a>
       ${ENV.android && !ENV.inApp ? `<a class="btn sec sm" href="zelo.apk" download>${I("plus")}Baixar o app para Android</a>` : ""}
       ${ENV.ios && !ENV.standalone ? `<p class="tip">${I("star")}<span>Dica: toque em <strong>Compartilhar</strong> e em <strong>Adicionar à Tela de Início</strong> para abrir o Zelo em tela cheia.</span></p>` : ""}
     </div></div>`;
@@ -3634,8 +3623,6 @@ window.zeloBack = function () {
 function montarQR() {
   const box = document.getElementById("qr"), apk = document.getElementById("qrApk"), url = document.getElementById("qrUrl");
   if (!box) return;
-  const zap = document.getElementById("qrWhats");
-  if (typeof qrcode === "function") { const q = qrcode(0, "M"); q.addData(WHATS_LINK); q.make(); zap.innerHTML = `<a href="${WHATS_LINK}" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">${q.createSvgTag({ cellSize: 4, margin: 2, scalable: true })}</a>`; }
   if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") {
     box.innerHTML = apk.innerHTML = '<span class="qr-off">Aparece quando a demo estiver publicada (Vercel)</span>'; return;
   }

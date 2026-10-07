@@ -45,16 +45,16 @@ O chat chama a função `api/zelia.js` no Vercel, que usa o Claude (`claude-opus
 - **No APK:** para a IA funcionar no app Android, crie no GitHub a variável do repositório `ZELO_API_URL` (*Settings ▸ Secrets and variables ▸ Actions ▸ Variables*) com `https://SEU-PROJETO.vercel.app/api/zelia` e rode o workflow "APK Android" de novo.
 - **Custos:** cada mensagem custa alguns centavos. Vale definir um limite de gastos no console da Anthropic.
 
-### Zélia no WhatsApp (Twilio)
+### Zélia no WhatsApp (visão de futuro)
 
-A mesma Zélia atende pelo WhatsApp (`api/whatsapp.js`). Os médicos chegam como lista numerada, depois vêm os pacotes e por fim a confirmação, com o link do app para acompanhar o dia. Para recomeçar a conversa, mande "reiniciar".
+Para o pitch, a conversa no WhatsApp aparece como **simulação**, em `docs/whatsapp/`:
 
-1. **No Twilio**, vá em *Messaging ▸ Try it out ▸ Send a WhatsApp message ▸ Sandbox settings*. Em **When a message comes in**, cole `https://SEU-PROJETO.vercel.app/api/whatsapp`, deixe o método **POST** e clique em **Save**.
-2. **No Vercel**, em *Settings ▸ Environment Variables*, adicione `TWILIO_ACCOUNT_SID` e `TWILIO_AUTH_TOKEN`. Os dois aparecem na página inicial do console do Twilio, em *Account Info*. Depois faça o **Redeploy**.
-   - Com eles, a Zélia responde sem o limite de 15 segundos do Twilio e a função só aceita mensagens que vêm de fato do Twilio.
-   - Sem eles também funciona, mas uma resposta lenta da IA pode se perder.
-3. **Memória da conversa (opcional, recomendado):** no Vercel, em *Storage* (ou *Marketplace*), adicione **Upstash Redis** ao projeto e faça o Redeploy. Sem isso, a conversa pode "esquecer" o contexto depois de alguns minutos parada.
-4. **Para entrar:** cada pessoa escaneia o QR do WhatsApp no painel da demo (ou toca em "Conversar no WhatsApp" no app). A primeira mensagem, `join twilio-trial`, já vem pronta. É só enviar e começar a conversar.
+- `zelia-whatsapp-slide.png`: slide 16:9 com os dois celulares;
+- `zelia-whatsapp-1.png` e `zelia-whatsapp-2.png`: cada celular separado, para montar o slide do jeito que quiserem.
+
+Para mudar o texto, edite `docs/whatsapp/simulacao.src.html`, rode `python3 docs/whatsapp/gerar.py` e tire um print de `simulacao.html` no navegador.
+
+O código da integração já existe (`api/whatsapp.js`, webhook do Twilio com a mesma IA do app), mas não está ligado: a configuração do webhook no Twilio não ficou disponível na conta gratuita.
 
 ## Rodar a demo do pitch (qualquer computador)
 
