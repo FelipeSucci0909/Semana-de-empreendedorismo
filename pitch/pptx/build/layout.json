@@ -3206,7 +3206,7 @@
    "hex": "EEF4F3",
    "a": 1
   },
-  "notas": "[2:15–2:35] Como ganhamos dinheiro: o serviço é pago por atendimento e o Zelo fica com cerca de 21% depois de pagar a acompanhante, o carro, impostos e IA. Em um atendimento de R$ 275, sobram cerca de R$ 58. Três planos: Grátis, com taxa de R$ 15 por atendimento; Zelo+, por R$ 29,90 ao mês, sem taxa; e Zelo Empresas, em que o RH paga como benefício, porque cada falta para levar os pais custa caro para a empresa também.",
+  "notas": "[2:15–2:35] Como ganhamos dinheiro: o serviço é pago por atendimento e o Zelo fica com cerca de 21% depois de pagar a acompanhante, o carro, impostos e IA. Em um atendimento de R$ 275, sobram cerca de R$ 58. Três planos: Grátis, com taxa de R$ 15 por atendimento; Zelo+, por R$ 29,90 ao mês, sem taxa; e Zelo Empresas: a empresa paga R$ 5 por funcionário ao mês, como benefício, porque cada falta para levar os pais custa caro para ela também. Essa mensalidade é o que paga a estrutura: com ela, o Zelo fica no azul no ano 2 (detalhes no apêndice).",
   "itens": [
    {
     "tipo": "texto",
@@ -3574,12 +3574,24 @@
     "h": 58,
     "runs": [
      {
-      "t": "RH paga",
+      "t": "R$ 5 ",
       "fam": "Lexend",
       "peso": 600,
       "tam": 46,
       "cor": {
        "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     },
+     {
+      "t": "/funcionário",
+      "fam": "Lexend",
+      "peso": 500,
+      "tam": 24,
+      "cor": {
+       "hex": "4A6261",
        "a": 1
       },
       "caixa": false,
@@ -3597,7 +3609,7 @@
     "h": 76.796875,
     "runs": [
      {
-      "t": "Benefício para quem cuida dos pais. Menos faltas no trabalho.",
+      "t": "A empresa paga por todos; quem cuida dos pais usa sem taxa.",
       "fam": "Source",
       "peso": 400,
       "tam": 27,
@@ -5297,7 +5309,7 @@
    "hex": "EEF4F3",
    "a": 1
   },
-  "notas": "APÊNDICE: EBIT preliminar. O negócio fica de pé com escala, por volta de 7.300 atendimentos por mês em São Paulo. As alavancas são o preço do acompanhante, o percentual que o Zelo retém e o Zelo Empresas.",
+  "notas": "APÊNDICE: DRE de 3 anos. Ano 1 é investimento: cerca de R$ 370 mil negativos. No ano 2 o EBIT fica positivo e no ano 3 chega a R$ 2,2 milhões, pagando o investimento ainda no ano 3. O motor é o Zelo Empresas: R$ 5 por funcionário ao mês, receita recorrente quase sem custo. Sem ele, o negócio ficaria no vermelho nos três anos, com margem de cerca de R$ 58 por atendimento. Por isso o piloto pede 3 empresas. Se perguntarem: 45 mil funcionários cobertos no ano 3 equivalem a 90 empresas de 500 pessoas; 5% deles usando por mês.",
   "itens": [
    {
     "tipo": "texto",
@@ -5330,7 +5342,7 @@
     "h": 35,
     "runs": [
      {
-      "t": "EBIT preliminar (hipóteses)",
+      "t": "DRE preliminar de 3 anos (hipóteses)",
       "fam": "Source",
       "peso": 700,
       "tam": 24,
@@ -5353,7 +5365,7 @@
     "h": 80,
     "runs": [
      {
-      "t": "O negócio para em pé com escala.",
+      "t": "No azul a partir do ano 2, puxado pelo B2B.",
       "fam": "Lexend",
       "peso": 600,
       "tam": 64,
@@ -5373,7 +5385,7 @@
     "x": 120,
     "y": 259.390625,
     "w": 1680,
-    "h": 541,
+    "h": 619,
     "fundo": {
      "hex": "FFFFFF",
      "a": 1
@@ -5387,7 +5399,7 @@
     "tipo": "rect",
     "x": 120,
     "y": 259.390625,
-    "w": 601,
+    "w": 766.28125,
     "h": 72,
     "fundo": {
      "hex": "F4F8F7",
@@ -5405,7 +5417,7 @@
     "tipo": "rect",
     "x": 120,
     "y": 329.390625,
-    "w": 601,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5417,11 +5429,11 @@
     "tipo": "texto",
     "x": 146,
     "y": 277.390625,
-    "w": 549,
+    "w": 714.28125,
     "h": 35,
     "runs": [
      {
-      "t": "R$ por mês",
+      "t": "R$ por ano",
       "fam": "Lexend",
       "peso": 600,
       "tam": 28,
@@ -5438,9 +5450,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
+    "x": 886.28125,
     "y": 259.390625,
-    "w": 340.78125,
+    "w": 318.8125,
     "h": 72,
     "fundo": {
      "hex": "F4F8F7",
@@ -5453,9 +5465,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
+    "x": 886.28125,
     "y": 329.390625,
-    "w": 340.78125,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5465,13 +5477,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
+    "x": 912.28125,
     "y": 277.390625,
-    "w": 288.78125,
+    "w": 266.8125,
     "h": 35,
     "runs": [
      {
-      "t": "Piloto (mês 6)",
+      "t": "Ano 1",
       "fam": "Lexend",
       "peso": 600,
       "tam": 28,
@@ -5488,9 +5500,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
+    "x": 1205.09375,
     "y": 259.390625,
-    "w": 327.1875,
+    "w": 297.4375,
     "h": 72,
     "fundo": {
      "hex": "F4F8F7",
@@ -5503,9 +5515,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
+    "x": 1205.09375,
     "y": 329.390625,
-    "w": 327.1875,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5515,13 +5527,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
+    "x": 1231.09375,
     "y": 277.390625,
-    "w": 275.1875,
+    "w": 245.4375,
     "h": 35,
     "runs": [
      {
-      "t": "Fim do ano 1",
+      "t": "Ano 2",
       "fam": "Lexend",
       "peso": 600,
       "tam": 28,
@@ -5538,9 +5550,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
+    "x": 1502.53125,
     "y": 259.390625,
-    "w": 411.03125,
+    "w": 297.46875,
     "h": 72,
     "fundo": {
      "hex": "F4F8F7",
@@ -5556,9 +5568,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
+    "x": 1502.53125,
     "y": 329.390625,
-    "w": 411.03125,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5568,13 +5580,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
+    "x": 1528.53125,
     "y": 277.390625,
-    "w": 359.03125,
+    "w": 245.46875,
     "h": 35,
     "runs": [
      {
-      "t": "Ano 3 (escala SP)",
+      "t": "Ano 3",
       "fam": "Lexend",
       "peso": 600,
       "tam": 28,
@@ -5593,7 +5605,7 @@
     "tipo": "rect",
     "x": 120,
     "y": 407.390625,
-    "w": 601,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5605,11 +5617,11 @@
     "tipo": "texto",
     "x": 146,
     "y": 350.390625,
-    "w": 549,
+    "w": 714.28125,
     "h": 40,
     "runs": [
      {
-      "t": "Atendimentos por mês",
+      "t": "Atendimentos por mês (média)",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5626,9 +5638,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
+    "x": 886.28125,
     "y": 407.390625,
-    "w": 340.78125,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5638,13 +5650,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
+    "x": 912.28125,
     "y": 350.390625,
-    "w": 288.78125,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "300",
+      "t": "275",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5661,9 +5673,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
+    "x": 1205.09375,
     "y": 407.390625,
-    "w": 327.1875,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5673,13 +5685,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
+    "x": 1231.09375,
     "y": 350.390625,
-    "w": 275.1875,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "1.500",
+      "t": "1.400",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5696,9 +5708,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
+    "x": 1502.53125,
     "y": 407.390625,
-    "w": 411.03125,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5708,13 +5720,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
+    "x": 1528.53125,
     "y": 350.390625,
-    "w": 359.03125,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "8.000",
+      "t": "4.250",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5733,7 +5745,7 @@
     "tipo": "rect",
     "x": 120,
     "y": 485.390625,
-    "w": 601,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5745,7 +5757,147 @@
     "tipo": "texto",
     "x": 146,
     "y": 428.390625,
-    "w": 549,
+    "w": 714.28125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "Funcionários cobertos (Zelo Empresas)",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "l",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 886.28125,
+    "y": 485.390625,
+    "w": 318.8125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 912.28125,
+    "y": 428.390625,
+    "w": 266.8125,
+    "h": 40,
+    "runs": [
+     {
+      "t": "2.500",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1205.09375,
+    "y": 485.390625,
+    "w": 297.4375,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1231.09375,
+    "y": 428.390625,
+    "w": 245.4375,
+    "h": 40,
+    "runs": [
+     {
+      "t": "15 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 1502.53125,
+    "y": 485.390625,
+    "w": 297.46875,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 1528.53125,
+    "y": 428.390625,
+    "w": 245.46875,
+    "h": 40,
+    "runs": [
+     {
+      "t": "45 mil",
+      "fam": "Source",
+      "peso": 400,
+      "tam": 28,
+      "cor": {
+       "hex": "0F2B2A",
+       "a": 1
+      },
+      "caixa": false,
+      "esp": 0
+     }
+    ],
+    "alinh": "r",
+    "lh": 33.6
+   },
+   {
+    "tipo": "rect",
+    "x": 120,
+    "y": 563.390625,
+    "w": 766.28125,
+    "h": 2,
+    "fundo": {
+     "hex": "F4F8F7",
+     "a": 1
+    },
+    "raio": 0
+   },
+   {
+    "tipo": "texto",
+    "x": 146,
+    "y": 506.390625,
+    "w": 714.28125,
     "h": 40,
     "runs": [
      {
@@ -5766,9 +5918,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
-    "y": 485.390625,
-    "w": 340.78125,
+    "x": 886.28125,
+    "y": 563.390625,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5778,13 +5930,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
-    "y": 428.390625,
-    "w": 288.78125,
+    "x": 912.28125,
+    "y": 506.390625,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "73 mil",
+      "t": "940 mil",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5801,9 +5953,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
-    "y": 485.390625,
-    "w": 327.1875,
+    "x": 1205.09375,
+    "y": 563.390625,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5813,13 +5965,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
-    "y": 428.390625,
-    "w": 275.1875,
+    "x": 1231.09375,
+    "y": 506.390625,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "368 mil",
+      "t": "4,9 mi",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5836,9 +5988,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
-    "y": 485.390625,
-    "w": 411.03125,
+    "x": 1502.53125,
+    "y": 563.390625,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5848,13 +6000,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
-    "y": 428.390625,
-    "w": 359.03125,
+    "x": 1528.53125,
+    "y": 506.390625,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "1,97 mi",
+      "t": "14,7 mi",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5872,8 +6024,8 @@
    {
     "tipo": "rect",
     "x": 120,
-    "y": 563.390625,
-    "w": 601,
+    "y": 641.390625,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5884,8 +6036,8 @@
    {
     "tipo": "texto",
     "x": 146,
-    "y": 506.390625,
-    "w": 549,
+    "y": 584.390625,
+    "w": 714.28125,
     "h": 40,
     "runs": [
      {
@@ -5906,9 +6058,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
-    "y": 563.390625,
-    "w": 340.78125,
+    "x": 886.28125,
+    "y": 641.390625,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5918,13 +6070,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
-    "y": 506.390625,
-    "w": 288.78125,
+    "x": 912.28125,
+    "y": 584.390625,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "16 mil (22%)",
+      "t": "297 mil (32%)",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5941,9 +6093,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
-    "y": 563.390625,
-    "w": 327.1875,
+    "x": 1205.09375,
+    "y": 641.390625,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5953,13 +6105,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
-    "y": 506.390625,
-    "w": 275.1875,
+    "x": 1231.09375,
+    "y": 584.390625,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "82 mil (22%)",
+      "t": "1,6 mi (33%)",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -5976,9 +6128,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
-    "y": 563.390625,
-    "w": 411.03125,
+    "x": 1502.53125,
+    "y": 641.390625,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -5988,13 +6140,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
-    "y": 506.390625,
-    "w": 359.03125,
+    "x": 1528.53125,
+    "y": 584.390625,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "442 mil (22%)",
+      "t": "4,8 mi (33%)",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6012,8 +6164,8 @@
    {
     "tipo": "rect",
     "x": 120,
-    "y": 641.390625,
-    "w": 601,
+    "y": 719.390625,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6024,8 +6176,8 @@
    {
     "tipo": "texto",
     "x": 146,
-    "y": 584.390625,
-    "w": 549,
+    "y": 662.390625,
+    "w": 714.28125,
     "h": 40,
     "runs": [
      {
@@ -6046,9 +6198,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
-    "y": 641.390625,
-    "w": 340.78125,
+    "x": 886.28125,
+    "y": 719.390625,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6058,13 +6210,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
-    "y": 584.390625,
-    "w": 288.78125,
+    "x": 912.28125,
+    "y": 662.390625,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "43 mil",
+      "t": "660 mil",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6081,9 +6233,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
-    "y": 641.390625,
-    "w": 327.1875,
+    "x": 1205.09375,
+    "y": 719.390625,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6093,13 +6245,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
-    "y": 584.390625,
-    "w": 275.1875,
+    "x": 1231.09375,
+    "y": 662.390625,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "154 mil",
+      "t": "1,4 mi",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6116,9 +6268,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
-    "y": 641.390625,
-    "w": 411.03125,
+    "x": 1502.53125,
+    "y": 719.390625,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6128,13 +6280,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
-    "y": 584.390625,
-    "w": 359.03125,
+    "x": 1528.53125,
+    "y": 662.390625,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "405 mil",
+      "t": "2,5 mi",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6152,8 +6304,8 @@
    {
     "tipo": "rect",
     "x": 120,
-    "y": 719.390625,
-    "w": 601,
+    "y": 797.390625,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6164,7 +6316,7 @@
    {
     "tipo": "texto",
     "x": 146,
-    "y": 662.390625,
+    "y": 740.390625,
     "w": 56.28125,
     "h": 40,
     "runs": [
@@ -6186,9 +6338,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
-    "y": 719.390625,
-    "w": 340.78125,
+    "x": 886.28125,
+    "y": 797.390625,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6198,13 +6350,13 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
-    "y": 662.390625,
-    "w": 288.78125,
+    "x": 912.28125,
+    "y": 740.390625,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "−28 mil",
+      "t": "−369 mil",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6221,9 +6373,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
-    "y": 719.390625,
-    "w": 327.1875,
+    "x": 1205.09375,
+    "y": 797.390625,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6233,18 +6385,18 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
-    "y": 662.390625,
-    "w": 275.1875,
+    "x": 1231.09375,
+    "y": 740.390625,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "−74 mil",
+      "t": "+147 mil",
       "fam": "Source",
-      "peso": 400,
+      "peso": 700,
       "tam": 28,
       "cor": {
-       "hex": "B42318",
+       "hex": "1D7A4B",
        "a": 1
       },
       "caixa": false,
@@ -6256,9 +6408,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
-    "y": 719.390625,
-    "w": 411.03125,
+    "x": 1502.53125,
+    "y": 797.390625,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6268,13 +6420,13 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
-    "y": 662.390625,
-    "w": 359.03125,
+    "x": 1528.53125,
+    "y": 740.390625,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "+31 mil",
+      "t": "+2,2 mi",
       "fam": "Source",
       "peso": 700,
       "tam": 28,
@@ -6292,8 +6444,8 @@
    {
     "tipo": "rect",
     "x": 120,
-    "y": 797.390625,
-    "w": 601,
+    "y": 875.390625,
+    "w": 766.28125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6304,12 +6456,12 @@
    {
     "tipo": "texto",
     "x": 146,
-    "y": 740.390625,
-    "w": 549,
+    "y": 818.390625,
+    "w": 714.28125,
     "h": 40,
     "runs": [
      {
-      "t": "Atendimentos/mês para EBIT = 0",
+      "t": "EBIT acumulado",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
@@ -6326,9 +6478,9 @@
    },
    {
     "tipo": "rect",
-    "x": 721,
-    "y": 797.390625,
-    "w": 340.78125,
+    "x": 886.28125,
+    "y": 875.390625,
+    "w": 318.8125,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6338,18 +6490,18 @@
    },
    {
     "tipo": "texto",
-    "x": 747,
-    "y": 740.390625,
-    "w": 288.78125,
+    "x": 912.28125,
+    "y": 818.390625,
+    "w": 266.8125,
     "h": 40,
     "runs": [
      {
-      "t": "~870",
+      "t": "−369 mil",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
       "cor": {
-       "hex": "0F2B2A",
+       "hex": "B42318",
        "a": 1
       },
       "caixa": false,
@@ -6361,9 +6513,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1061.78125,
-    "y": 797.390625,
-    "w": 327.1875,
+    "x": 1205.09375,
+    "y": 875.390625,
+    "w": 297.4375,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6373,18 +6525,18 @@
    },
    {
     "tipo": "texto",
-    "x": 1087.78125,
-    "y": 740.390625,
-    "w": 275.1875,
+    "x": 1231.09375,
+    "y": 818.390625,
+    "w": 245.4375,
     "h": 40,
     "runs": [
      {
-      "t": "~3.100",
+      "t": "−221 mil",
       "fam": "Source",
       "peso": 400,
       "tam": 28,
       "cor": {
-       "hex": "0F2B2A",
+       "hex": "B42318",
        "a": 1
       },
       "caixa": false,
@@ -6396,9 +6548,9 @@
    },
    {
     "tipo": "rect",
-    "x": 1388.96875,
-    "y": 797.390625,
-    "w": 411.03125,
+    "x": 1502.53125,
+    "y": 875.390625,
+    "w": 297.46875,
     "h": 2,
     "fundo": {
      "hex": "F4F8F7",
@@ -6408,18 +6560,18 @@
    },
    {
     "tipo": "texto",
-    "x": 1414.96875,
-    "y": 740.390625,
-    "w": 359.03125,
+    "x": 1528.53125,
+    "y": 818.390625,
+    "w": 245.46875,
     "h": 40,
     "runs": [
      {
-      "t": "~7.300",
+      "t": "+2,0 mi",
       "fam": "Source",
-      "peso": 400,
+      "peso": 700,
       "tam": 28,
       "cor": {
-       "hex": "0F2B2A",
+       "hex": "1D7A4B",
        "a": 1
       },
       "caixa": false,
@@ -6437,7 +6589,7 @@
     "h": 30,
     "runs": [
      {
-      "t": "Todas as premissas são editáveis em docs/zelo-ebit-preliminar.xlsx. Alavancas: preço do acompanhante, percentual retido pelo Zelo e Zelo Empresas.",
+      "t": "Sem a mensalidade das empresas (R$ 5 por funcionário), o EBIT do ano 3 seria −257 mil. Premissas editáveis em docs/zelo-ebit-preliminar.xlsx.",
       "fam": "Source",
       "peso": 400,
       "tam": 21,

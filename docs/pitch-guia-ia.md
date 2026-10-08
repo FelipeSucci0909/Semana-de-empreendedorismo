@@ -22,7 +22,7 @@
 |---|---|
 | Problema, solução, preços | `README.md` |
 | Estratégia, planos, parceiros, canvas, hipóteses | `docs/estrategia.md` |
-| Números do EBIT | `docs/zelo-ebit-preliminar.xlsx` (aba EBIT; recalcule se mudar premissas) |
+| Números do EBIT | `docs/zelo-ebit-preliminar.xlsx` (aba DRE 3 anos; gerada por `docs/gerar_ebit.py`; recalcule se mudar premissas) |
 | Design system (tokens) | `design-system/zelo/MASTER.md` |
 | Evidências de campo | entrevista de 5/10/2026: ~4 faltas ao trabalho em 1 mês; cuidador ~R$ 300/dia; transporte por app ~R$ 80; idoso não vai de Uber sozinho; sai da consulta sem entender orientações |
 | Dado de mercado | IBGE, Censo 2022: 32,1 mi de pessoas com 60+ (15,6% da população) |
@@ -54,11 +54,11 @@
 | 4 | `slide` | 25 | Frase da solução + 3 passos numerados + 1 captura do app (`img/app-chat-medicos.png`) |
 | 5 | `slide` | 35 | 3 capturas (pacote, acompanhar, registro) + QR da demo + URL legível |
 | 6 | `slide` | 15 | Tabela comparativa: 4 colunas (app de corrida, cuidador avulso, app do convênio, **Zelo**) × 5 critérios |
-| 7 | `slide` | 20 | 3 planos (Grátis R$ 0 + taxa R$ 15; Zelo+ R$ 29,90/mês; Zelo Empresas, o RH paga) + conta unitária (R$ 275 → R$ 58, 21%) + `.fonte` com as premissas |
+| 7 | `slide` | 20 | 3 planos (Grátis R$ 0 + taxa R$ 15; Zelo+ R$ 29,90/mês; Zelo Empresas R$ 5/funcionário/mês, pago pela empresa) + conta unitária (R$ 275 → R$ 58, 21%) + `.fonte` com as premissas |
 | 8 | `slide` | 15 | Duas listas: "Já validado" (com origem) e "Próximos testes" (com amostra · métrica) |
 | 9 | `slide escuro fechamento` | 10 | Frase final + slogan + pedido de piloto + QR |
 | A1 | `slide` | 0 | Apêndice: modelos de operação e requisitos dos parceiros |
-| A2 | `slide` | 0 | Apêndice: tabela de EBIT (3 cenários, ponto de equilíbrio) |
+| A2 | `slide` | 0 | Apêndice: DRE de 3 anos (Ano 1, 2, 3: atendimentos, funcionários cobertos, entradas, margem, fixos, EBIT, EBIT acumulado) + `.fonte` com o EBIT sem B2B |
 | A3 | `slide` | 0 | Apêndice: simulação do WhatsApp, etiquetada "Simulação · integração prevista" |
 
 Cada `<section class="slide">` **DEVE** ter:

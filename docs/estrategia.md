@@ -1,6 +1,6 @@
 # Zelo — Estratégia de negócio
 
-Todos os números abaixo são **hipóteses a validar**, não dados. A planilha com o EBIT preliminar está em [`zelo-ebit-preliminar.xlsx`](zelo-ebit-preliminar.xlsx).
+Todos os números abaixo são **hipóteses a validar**, não dados. A planilha com a DRE preliminar de 3 anos está em [`zelo-ebit-preliminar.xlsx`](zelo-ebit-preliminar.xlsx) (gerada por `docs/gerar_ebit.py`).
 
 ## 1. Precificação: grátis + premium + serviços avulsos
 
@@ -33,7 +33,7 @@ Todos os números abaixo são **hipóteses a validar**, não dados. A planilha c
 
 ### Outras ideias de receita
 
-1. **Zelo Empresas (B2B2C).** O RH oferece o Zelo como benefício para quem tem pais idosos. A empresa paga o Premium ou um pacote de atendimentos. O argumento é o mesmo da aula: na entrevista, a família faltou ao trabalho cerca de 4 vezes em um mês. Isso conversa com o caso dos benefícios flexíveis, o grupo que ficou em 2º lugar no semestre passado.
+1. **Zelo Empresas (B2B2C).** O RH oferece o Zelo como benefício para quem tem pais idosos. A empresa paga **R$ 5 por funcionário ao mês, por todos os funcionários** (modelo de benefício corporativo), e quem cuida dos pais tem o Zelo+ incluído, sem taxa de serviço. O argumento é o mesmo da aula: na entrevista, a família faltou ao trabalho cerca de 4 vezes em um mês. Isso conversa com o caso dos benefícios flexíveis, o grupo que ficou em 2º lugar no semestre passado.
 2. **Pacotes pré-pagos.** Por exemplo, 4 atendimentos por mês com desconto. Dá previsibilidade de receita e ajuda a montar a escala dos parceiros.
 3. **Futuro: clínicas e operadoras.** Menos faltas em consultas (no-show) e mais adesão ao tratamento interessam a eles. **Nunca vender dado de saúde.** A LGPD trata dado de saúde como sensível; qualquer uso exige consentimento e só vale para dados agregados.
 
@@ -100,7 +100,7 @@ O maior gargalo levantado na ideação foi o **duplo match** (achar motorista e 
 | **Proposta de valor** | **Família:** "você não precisa faltar ao trabalho, e fica sabendo de tudo." **Idoso:** ir à consulta com segurança e dignidade, sem app difícil, só conversando. **Parceiro:** renda extra com agenda previsível e espera paga. **Empresa:** menos faltas da equipe. |
 | **Canais** | Zélia no WhatsApp (onde a família já se organiza) e no app. Indicação de geriatras e clínicas. RH de empresas. Centros de convivência e igrejas. Conteúdo para filhos cuidadores. **Cabeça de praia:** zona oeste de SP, consultas de rotina. |
 | **Relacionamento** | A Zélia disponível 24h, com equipe humana na retaguarda. Acompanhante preferencial (a mesma pessoa). Registro de cada consulta enviado à família. |
-| **Fontes de receita** | 1) Margem de cerca de 25% sobre transporte e acompanhante (principal). 2) Assinatura Zelo+ (R$ 29,90/mês). 3) Zelo Empresas (B2B). 4) Futuro: parcerias com clínicas e operadoras. |
+| **Fontes de receita** | 1) Margem de cerca de 25% sobre transporte e acompanhante (principal). 2) Assinatura Zelo+ (R$ 29,90/mês). 3) Zelo Empresas: R$ 5 por funcionário ao mês (receita recorrente que paga a estrutura). 4) Futuro: parcerias com clínicas e operadoras. |
 | **Recursos-chave** | Rede de parceiros certificados. A Zélia (IA + operação). Marca de confiança. Base de clínicas com informação de acessibilidade. |
 | **Atividades-chave** | Recrutar, certificar e treinar parceiros. Despacho e operação do dia (match parceiro × consulta). Atendimento à família. Desenvolvimento do app e da IA. |
 | **Parcerias-chave** | Escolas técnicas de enfermagem e Senac. Cooperativas de cuidadores. Locadoras de veículos adaptados. Seguradora (acidentes pessoais por atendimento). Clínicas e geriatras. Provedor da API do WhatsApp Business. Futuro: operadoras de saúde. |
@@ -120,6 +120,24 @@ Exemplo: transporte (R$ 80) + acompanhante (R$ 180) = **R$ 260 pagos pela famíl
 | **Margem de contribuição** | **≈ 51 (≈ 20%)** |
 
 No modelo Duo (uma pessoa faz os dois papéis), o repasse fica com um só profissional, que ganha mais por atendimento.
+
+### DRE de 3 anos (cenário-base, hipóteses)
+
+| R$ por ano | Ano 1 | Ano 2 | Ano 3 |
+|---|---|---|---|
+| Atendimentos por mês (média) | 275 | 1.400 | 4.250 |
+| Funcionários cobertos (Zelo Empresas) | 2.500 | 15 mil | 45 mil |
+| Entradas totais | 940 mil | 4,9 mi | 14,7 mi |
+| Margem de contribuição | 297 mil (32%) | 1,6 mi (33%) | 4,8 mi (33%) |
+| Custos fixos | 660 mil | 1,4 mi | 2,5 mi |
+| **EBIT** | **−369 mil** | **+147 mil** | **+2,2 mi** |
+| EBIT acumulado | −369 mil | −221 mil | +2,0 mi |
+
+**Por que mudou:** só com a margem por atendimento (cerca de R$ 58, 21%), o negócio fica no vermelho nos três anos (EBIT do ano 3 seria −257 mil). O que paga a estrutura é a mensalidade do Zelo Empresas cobrada por funcionário: quase toda vira margem e, de quebra, traz famílias sem custo de aquisição. Por isso os custos de marketing B2C são menores que no modelo anterior.
+
+**Premissas que mais mexem no resultado:** mensalidade por funcionário (cada R$ 1 muda o EBIT do ano 3 em cerca de R$ 500 mil; veja a aba Sensibilidade), número de empresas (5 / 30 / 90, com 500 funcionários em média) e % de funcionários usando por mês (3% / 4% / 5%).
+
+**Investimento:** o pior acumulado é cerca de R$ 370 mil no fim do ano 1 (sem contar capital de giro); ele se paga ao longo do ano 3.
 
 ## 5. Hipóteses a validar primeiro
 

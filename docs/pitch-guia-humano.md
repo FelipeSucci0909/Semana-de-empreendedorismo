@@ -53,10 +53,10 @@ Se o pitch não estiver publicado, abra o arquivo com `?demo=https://SEU-SITE.ve
 | 4 | **Solução:** a Zélia + 3 passos | 1:00–1:25 | Pede à Zélia; monta o dia (acompanhante com carro por app, ou motorista Zelo); acompanha ao vivo e recebe o registro. |
 | 5 | **Protótipo + QR** | 1:25–2:00 | "Funciona, com IA de verdade." Mostre o pacote, o acompanhamento e o registro. "Apontem a câmera e testem agora." |
 | 6 | **Diferencial:** tabela | 2:00–2:15 | Cada alternativa resolve só um pedaço. O Zelo junta tudo, com parceiros certificados (COREN ativo e treinamento). |
-| 7 | **Modelo de negócio** | 2:15–2:35 | Pago por atendimento; o Zelo fica com cerca de 21% (R$ 58 de R$ 275). Planos Grátis, Zelo+ (R$ 29,90) e Zelo Empresas (o RH paga). |
+| 7 | **Modelo de negócio** | 2:15–2:35 | Pago por atendimento; o Zelo fica com cerca de 21% (R$ 58 de R$ 275). Planos Grátis, Zelo+ (R$ 29,90) e Zelo Empresas (R$ 5 por funcionário ao mês, pago pela empresa). |
 | 8 | **Evidências** | 2:35–2:50 | Já validado: dor, preços de referência, mentoria, protótipo. Próximos testes, cada um com sua métrica. |
 | 9 | **Fechamento** | 2:50–3:00 | "Ninguém deveria ter que escolher entre o trabalho e o cuidado com os pais." Pedido: piloto com 10 famílias e 3 empresas. Agradeça e pare. |
-| A1–A3 | **Apêndice** | Perguntas | Operação e parceiros · EBIT preliminar · Zélia no WhatsApp (simulação). |
+| A1–A3 | **Apêndice** | Perguntas | Operação e parceiros · DRE de 3 anos · Zélia no WhatsApp (simulação). |
 
 O texto completo de cada slide está nas notas do apresentador (tecla **N**).
 
@@ -187,7 +187,7 @@ Para montar do zero:
 |---|---|
 | "Como vocês integram com o convênio?" | "Hoje é simulado. No piloto, nossa equipe agenda pelos canais que as clínicas já usam (MVP concierge). A integração direta com as operadoras, pelo padrão TISS da ANS, é o próximo passo." |
 | "Como garantem a qualidade da acompanhante?" | "Exigimos COREN ativo ou curso de cuidador, verificamos antecedentes e referências, aplicamos o treinamento Zelo, e a família avalia cada atendimento." (apêndice A1) |
-| "O negócio para em pé?" | "Com escala. O EBIT fica positivo por volta de 7.300 atendimentos por mês em São Paulo; as alavancas são o preço, o percentual retido e o Zelo Empresas." (apêndice A2) |
+| "O negócio para em pé?" | "Sim. O ano 1 é investimento, cerca de R$ 370 mil negativos. Com o Zelo Empresas cobrando R$ 5 por funcionário, o EBIT fica positivo no ano 2 e chega a R$ 2,2 milhões no ano 3, pagando o investimento. Só com a margem por atendimento não pararia em pé; por isso o B2B é prioridade." (apêndice A2) |
 | "Por que não o Uber fazer isso?" | "Porque o Uber vende corrida e nós vendemos cuidado. O carro é commodity; a confiança está na acompanhante. Podemos inclusive usar o Uber e a 99 como parceiros de transporte." |
 | "E a privacidade?" | "A gravação só acontece com consentimento da paciente e do médico. Dado de saúde é sensível pela LGPD e não vendemos dados." |
 | "Quanto custa para a família?" | "Cerca de R$ 255 a R$ 275 por consulta com acompanhante, contra cerca de R$ 300 pelo dia de um cuidador informal, e com registro e acompanhamento ao vivo." |
