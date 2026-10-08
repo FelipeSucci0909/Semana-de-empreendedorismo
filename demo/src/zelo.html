@@ -1290,7 +1290,7 @@ window.zeloBack = function () {
 function montarQR() {
   const box = document.getElementById("qr"), apk = document.getElementById("qrApk"), url = document.getElementById("qrUrl");
   if (!box) return;
-  if (!/^https?:/.test(location.protocol) || typeof qrcode !== "function") {
+  if (!(SITE_PUBLICO || /^https?:/.test(location.protocol)) || typeof qrcode !== "function") {
     box.innerHTML = apk.innerHTML = '<span class="qr-off">Aparece quando a demo estiver publicada (Vercel)</span>'; return;
   }
   const base = SITE_PUBLICO ? SITE_PUBLICO.replace(/\/?$/, "/") : location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");

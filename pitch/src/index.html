@@ -16,7 +16,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:#0B1716;overflow:hidden}
 body{font-family:var(--body);color:var(--text);-webkit-font-smoothing:antialiased}
-.palco{position:fixed;inset:0;display:grid;place-items:center}
+.palco{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
 .deck{width:1920px;height:1080px;position:relative;transform-origin:center;flex:none}
 .slide{position:absolute;inset:0;background:var(--bg);padding:92px 120px 84px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s ease}
 .slide.on{opacity:1;visibility:visible}
